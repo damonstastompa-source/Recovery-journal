@@ -23,6 +23,24 @@ label{display:block;font-size:13px;font-weight:700;margin:10px 0 6px}.muted{colo
 .nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e7eb;display:flex;justify-content:center;gap:5px;padding:8px max(8px,env(safe-area-inset-left)) calc(8px + env(safe-area-inset-bottom));z-index:5}.nav button{background:transparent;color:#6b7280;padding:9px 12px}.nav button.active{color:#111827;background:#eef2f7}
 .hidden{display:none}.meeting{border:1px solid #e5e7eb;border-radius:14px;padding:12px;margin-top:9px}.topic{font-size:12px;color:#6b7280}
 @media(max-width:430px){.grid3{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.counter .big{font-size:25px}}
+
+.print-only{display:none}
+@media print{
+  body{background:#fff!important}
+  .app{max-width:none;padding:0}
+  header,.counter,.nav,#todayView,#calendarView,#searchView>.card,#results,#settingsView{display:none!important}
+  #searchView{display:block!important}
+  #searchView #printReportArea{display:block!important}
+  .print-only{display:block!important}
+  .print-report{font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;color:#111827}
+  .print-report h1{font-size:24px;margin-bottom:4px}
+  .print-report h2{font-size:17px;margin:18px 0 7px;border-bottom:1px solid #ccc;padding-bottom:4px}
+  .print-report .dayblock{page-break-inside:avoid;margin-bottom:20px}
+  .print-report .meta{font-size:12px;color:#555}
+  .print-report .item{margin:5px 0}
+  .print-report .meeting{border:1px solid #ccc;padding:8px;margin:7px 0;border-radius:6px}
+  .print-report .label{font-weight:700}
+}
 </style>
 </head>
 <body>
@@ -49,7 +67,37 @@ label{display:block;font-size:13px;font-weight:700;margin:10px 0 6px}.muted{colo
 
 <section id="calendarView" class="hidden"><div class="card"><div class="row between"><button class="secondary" id="prevMonth">‹</button><h2 id="monthLabel"></h2><button class="secondary" id="nextMonth">›</button></div><div class="calendar" id="calendar"></div></div></section>
 
-<section id="searchView" class="hidden"><div class="card"><h2>🔎 Search</h2><label>Keyword</label><input id="q" placeholder="Search journal, meetings, topics..."><div class="grid2"><div><label>From</label><input type="date" id="from"></div><div><label>To</label><input type="date" id="to"></div></div><button class="primary" style="margin-top:10px" id="runSearch">Search</button><button class="secondary" style="margin:10px 0 0 6px" id="printResults">Print / PDF</button></div><div id="results"></div></section>
+<section id="searchView" class="hidden">
+<div class="card">
+  <h2>🔎 Search & Reports</h2>
+  <label>Keyword</label>
+  <input id="q" placeholder="Search journal, meetings, topics...">
+  <div class="grid2">
+    <div><label>From</label><input type="date" id="from"></div>
+    <div><label>To</label><input type="date" id="to"></div>
+  </div>
+  <button class="primary" style="margin-top:10px" id="runSearch">Search</button>
+</div>
+
+<div class="card">
+  <div class="row between"><h3>🖨️ Print Report</h3><span class="muted">Choose what to include</span></div>
+  <div class="grid2" style="margin-top:10px">
+    <button type="button" class="secondary" id="setWholeDay">Whole day</button>
+    <button type="button" class="secondary" id="clearFields">Clear fields</button>
+  </div>
+  <div class="grid2" style="margin-top:10px">
+    <label><input type="checkbox" class="reportField" value="affirmations" checked> Affirmations</label>
+    <label><input type="checkbox" class="reportField" value="gratitude" checked> Gratitude</label>
+    <label><input type="checkbox" class="reportField" value="journal" checked> Journal</label>
+    <label><input type="checkbox" class="reportField" value="meetings" checked> Meetings</label>
+  </div>
+  <button class="primary" style="width:100%;margin-top:10px" id="printReport">Print selected report / PDF</button>
+  <p class="muted" style="margin-top:8px">Print one day or a date range. Only the selected sections will appear in the report.</p>
+</div>
+
+<div id="results"></div>
+<div id="printReportArea" class="print-only"></div>
+</section>
 
 <section id="settingsView" class="hidden"><div class="card"><h2>⚙️ Settings</h2><label>Clean date</label><input type="date" id="cleanDate"><button class="primary" style="margin-top:10px" id="saveCleanDate">Save recovery date</button><p class="muted" style="margin-top:10px">Your journal, meetings, templates, and recovery date stay on this phone.</p></div>
 <div class="card"><h3>Quick meeting templates</h3><div id="templates"></div></div></section>
@@ -73,11 +121,48 @@ function fillTemplate(){let x=db.templates[Number($("meetingTemplate").value)];i
 function saveMeeting(){let name=$("mName").value.trim();if(!name){alert("Enter a meeting name.");return}let place=$("mPlace").value.trim(),time=$("mTime").value.trim(),topic=$("mTopic").value.trim(),notes=$("mNotes").value.trim();db.meetings.push({id:crypto.randomUUID(),date:iso(selected),name,place,time,topic,notes});if(!db.templates.some(x=>x.name===name&&x.place===place&&x.time===time))db.templates.push({name,place,time});if(topic&&!db.topics.includes(topic))db.topics.push(topic);persist();renderMeetings();closeMeetingForm();}
 function renderCalendar(){let y=month.getFullYear(),m=month.getMonth();$("monthLabel").textContent=month.toLocaleDateString(undefined,{month:"long",year:"numeric"});let c=$("calendar");c.innerHTML=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].map(x=>`<div class="dow">${x}</div>`).join("");let first=new Date(y,m,1).getDay(),last=new Date(y,m+1,0).getDate();for(let i=0;i<first;i++)c.insertAdjacentHTML("beforeend","<div></div>");for(let d=1;d<=last;d++){let dt=new Date(y,m,d),key=iso(dt),has=!!db.days[key]||db.meetings.some(x=>x.date===key),sel=key===iso(selected);c.insertAdjacentHTML("beforeend",`<button class="day ${has?"has":""} ${sel?"sel":""}" data-date="${key}">${d}</button>`)}c.querySelectorAll("[data-date]").forEach(b=>b.onclick=()=>{selected=new Date(b.dataset.date+"T12:00:00");loadDay();show("today");renderCalendar()})}
 function runSearch(){let q=$("q").value.toLowerCase(),from=$("from").value,to=$("to").value;let out=[];Object.entries(db.days).forEach(([date,x])=>{if((!from||date>=from)&&(!to||date<=to)&&JSON.stringify(x).toLowerCase().includes(q))out.push({date,type:"Journal",text:x.journal||"Daily entry",x})});db.meetings.forEach(x=>{if((!from||x.date>=from)&&(!to||x.date<=to)&&JSON.stringify(x).toLowerCase().includes(q))out.push({date:x.date,type:"Meeting",text:`${x.name} — ${x.topic}`,x})});$("results").innerHTML=out.length?out.sort((a,b)=>b.date.localeCompare(a.date)).map(r=>`<div class="card"><div class="muted">${r.date} • ${r.type}</div><h3>${esc(r.text)}</h3><p style="margin-top:7px">${esc(r.type==="Journal"?r.x.journal:r.x.notes)}</p></div>`).join(""):"<div class='card muted'>No matching records.</div>"}
-function printResults(){window.print()}
+
+function selectedReportFields(){
+  return [...document.querySelectorAll(".reportField:checked")].map(x=>x.value);
+}
+function inRange(date, from, to){ return (!from||date>=from)&&(!to||date<=to); }
+function dateRangeKeys(from,to){
+  let start=from?new Date(from+"T12:00:00"):new Date(selected);
+  let end=to?new Date(to+"T12:00:00"):new Date(start);
+  if(end<start){let t=start;start=end;end=t}
+  let out=[]; for(let d=new Date(start);d<=end;d.setDate(d.getDate()+1)) out.push(iso(d)); return out;
+}
+function escHtml(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));}
+function buildPrintReport(){
+  let fields=selectedReportFields();
+  let from=$("from").value, to=$("to").value;
+  if(!from) from=iso(selected); if(!to) to=from;
+  let keys=dateRangeKeys(from,to);
+  if(!fields.length){alert("Select at least one section to print.");return false}
+  let title = from===to ? new Date(from+"T12:00:00").toLocaleDateString(undefined,{month:"long",day:"numeric",year:"numeric"}) : `${new Date(from+"T12:00:00").toLocaleDateString()} – ${new Date(to+"T12:00:00").toLocaleDateString()}`;
+  let out=`<div class="print-report"><h1>Recovery Journal</h1><div class="meta">${escHtml(title)}</div>`;
+  keys.forEach(date=>{
+    let d=db.days[date]||{}, meetings=db.meetings.filter(x=>x.date===date);
+    let has = (fields.includes("affirmations")&&(d.a1||d.a2||d.a3)) || (fields.includes("gratitude")&&(d.g1||d.g2||d.g3)) || (fields.includes("journal")&&d.journal) || (fields.includes("meetings")&&meetings.length);
+    if(!has) return;
+    let nice=new Date(date+"T12:00:00").toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric",year:"numeric"});
+    out+=`<div class="dayblock"><h2>${escHtml(nice)}</h2>`;
+    if(fields.includes("affirmations")) out+=`<div><h2>Positive Affirmations</h2>${[d.a1,d.a2,d.a3].filter(Boolean).map((x,i)=>`<div class="item"><span class="label">${i+1}.</span> ${escHtml(x)}</div>`).join("")||'<div class="meta">None recorded.</div>'}</div>`;
+    if(fields.includes("gratitude")) out+=`<div><h2>Three Things I'm Grateful For</h2>${[d.g1,d.g2,d.g3].filter(Boolean).map((x,i)=>`<div class="item"><span class="label">${i+1}.</span> ${escHtml(x)}</div>`).join("")||'<div class="meta">None recorded.</div>'}</div>`;
+    if(fields.includes("journal")) out+=`<div><h2>Journal</h2><div class="item">${escHtml(d.journal).replace(/\n/g,"<br>")||'<span class="meta">No journal entry.</span>'}</div></div>`;
+    if(fields.includes("meetings")) out+=`<div><h2>Meetings</h2>${meetings.map(m=>`<div class="meeting"><div><span class="label">${escHtml(m.name)}</span></div><div class="meta">${escHtml(m.time)} • ${escHtml(m.place)}</div><div><span class="label">Table topic:</span> ${escHtml(m.topic)||"—"}</div><div><span class="label">Notes:</span> ${escHtml(m.notes)||"—"}</div></div>`).join("")||'<div class="meta">No meetings recorded.</div>'}</div>`;
+    out+="</div>";
+  });
+  out+="</div>";
+  $("printReportArea").innerHTML=out;
+  return true;
+}
+function printReport(){if(buildPrintReport())setTimeout(()=>window.print(),100)}
+
 function esc(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
-function show(tab){["today","calendar","search","settings"].forEach(x=>$(x+"View").classList.toggle("hidden",x!==tab));document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));if(tab==="calendar")renderCalendar();if(tab==="settings"){$("cleanDate").value=db.cleanDate;renderTemplates()}}
+function show(tab){["today","calendar","search","settings"].forEach(x=>$(x+"View").classList.toggle("hidden",x!==tab));if(tab==="search"){$("from").value=iso(selected);$("to").value=iso(selected)}document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));if(tab==="calendar")renderCalendar();if(tab==="settings"){$("cleanDate").value=db.cleanDate;renderTemplates()}}
 function renderTemplates(){$("templates").innerHTML=db.templates.length?db.templates.map(x=>`<div class="meeting"><strong>${esc(x.name)}</strong><div class="muted">${esc(x.place)} • ${esc(x.time)}</div></div>`).join(""):"<p class='muted'>Templates appear automatically as you enter meetings.</p>"}
-document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>show(b.dataset.tab));$("todayBtn").onclick=()=>{selected=new Date();selected.setHours(12,0,0,0);loadDay()};$("prevDay").onclick=()=>{selected.setDate(selected.getDate()-1);loadDay()};$("nextDay").onclick=()=>{selected.setDate(selected.getDate()+1);loadDay()};$("saveDay").onclick=saveDay;$("addMeeting").onclick=openMeetingForm;$("meetingTemplate").onchange=fillTemplate;$("saveMeeting").onclick=saveMeeting;$("cancelMeeting").onclick=closeMeetingForm;$("prevMonth").onclick=()=>{month.setMonth(month.getMonth()-1);renderCalendar()};$("nextMonth").onclick=()=>{month.setMonth(month.getMonth()+1);renderCalendar()};$("runSearch").onclick=runSearch;$("printResults").onclick=printResults;$("settingsBtn").onclick=()=>show("settings");$("saveCleanDate").onclick=()=>{let v=$("cleanDate").value;if(v&&new Date(v+"T12:00:00")>new Date()){alert("Clean date cannot be in the future.");return}if(db.cleanDate&&!confirm("Change your recovery date?"))return;db.cleanDate=v;persist();cleanCounter();alert("Recovery date saved locally.")};loadDay();cleanCounter();setInterval(cleanCounter,60000);
+document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>show(b.dataset.tab));$("todayBtn").onclick=()=>{selected=new Date();selected.setHours(12,0,0,0);loadDay()};$("prevDay").onclick=()=>{selected.setDate(selected.getDate()-1);loadDay()};$("nextDay").onclick=()=>{selected.setDate(selected.getDate()+1);loadDay()};$("saveDay").onclick=saveDay;$("addMeeting").onclick=openMeetingForm;$("meetingTemplate").onchange=fillTemplate;$("saveMeeting").onclick=saveMeeting;$("cancelMeeting").onclick=closeMeetingForm;$("prevMonth").onclick=()=>{month.setMonth(month.getMonth()-1);renderCalendar()};$("nextMonth").onclick=()=>{month.setMonth(month.getMonth()+1);renderCalendar()};$("runSearch").onclick=runSearch;$("printReport").onclick=printReport;$("setWholeDay").onclick=()=>document.querySelectorAll(".reportField").forEach(x=>x.checked=true);$("clearFields").onclick=()=>document.querySelectorAll(".reportField").forEach(x=>x.checked=false);$("settingsBtn").onclick=()=>show("settings");$("saveCleanDate").onclick=()=>{let v=$("cleanDate").value;if(v&&new Date(v+"T12:00:00")>new Date()){alert("Clean date cannot be in the future.");return}if(db.cleanDate&&!confirm("Change your recovery date?"))return;db.cleanDate=v;persist();cleanCounter();alert("Recovery date saved locally.")};loadDay();cleanCounter();setInterval(cleanCounter,60000);
 if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js");
 </script>
 </body></html>
