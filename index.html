@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111827">
+<link rel="manifest" href="manifest.webmanifest">
+<title>Recovery Journal</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,sans-serif;color:#111827;background:#f5f5f7}
+*{box-sizing:border-box}body{margin:0}.app{max-width:720px;margin:auto;padding:16px 16px 92px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+h1,h2,h3,p{margin:0}.eyebrow{font-size:11px;letter-spacing:.12em;color:#6b7280;font-weight:700}
+h1{font-size:27px}.counter{background:#111827;color:#fff;border-radius:20px;padding:16px;margin-bottom:14px}.counter .big{font-size:28px;font-weight:800}.counter small{opacity:.72}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:16px;margin:12px 0;box-shadow:0 2px 10px #00000008}
+.row{display:flex;gap:8px;align-items:center}.between{justify-content:space-between}
+button,input,textarea,select{font:inherit}button{border:0;border-radius:12px;padding:11px 14px;font-weight:700;cursor:pointer}button.primary{background:#111827;color:#fff}button.secondary{background:#eef2f7;color:#111827}button.danger{background:#fee2e2;color:#991b1b}
+input,textarea,select{width:100%;border:1px solid #d1d5db;border-radius:12px;padding:11px;background:#fff}textarea{min-height:110px}
+label{display:block;font-size:13px;font-weight:700;margin:10px 0 6px}.muted{color:#6b7280;font-size:13px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.dow{text-align:center;color:#6b7280;font-size:11px;font-weight:700;padding:5px}
+.day{min-height:46px;background:#fff;border:1px solid #e5e7eb;padding:6px;border-radius:10px}.day.sel{outline:2px solid #111827}.day.has:after{content:"";display:block;width:5px;height:5px;border-radius:50%;background:#111827;margin:3px auto 0}
+.nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e7eb;display:flex;justify-content:center;gap:5px;padding:8px max(8px,env(safe-area-inset-left)) calc(8px + env(safe-area-inset-bottom));z-index:5}.nav button{background:transparent;color:#6b7280;padding:9px 12px}.nav button.active{color:#111827;background:#eef2f7}
+.hidden{display:none}.meeting{border:1px solid #e5e7eb;border-radius:14px;padding:12px;margin-top:9px}.topic{font-size:12px;color:#6b7280}
+@media(max-width:430px){.grid3{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.counter .big{font-size:25px}}
+
+.print-only{display:none}
+@media print{
+  body{background:#fff!important}
+  .app{max-width:none;padding:0}
+  header,.counter,.nav,#todayView,#calendarView,#searchView>.card,#results,#settingsView{display:none!important}
+  #searchView{display:block!important}
+  #searchView #printReportArea{display:block!important}
+  .print-only{display:block!important}
+  .print-report{font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;color:#111827}
+  .print-report h1{font-size:24px;margin-bottom:4px}
+  .print-report h2{font-size:17px;margin:18px 0 7px;border-bottom:1px solid #ccc;padding-bottom:4px}
+  .print-report .dayblock{page-break-inside:avoid;margin-bottom:20px}
+  .print-report .meta{font-size:12px;color:#555}
+  .print-report .item{margin:5px 0}
+  .print-report .meeting{border:1px solid #ccc;padding:8px;margin:7px 0;border-radius:6px}
+  .print-report .label{font-weight:700}
+}
+
+.entrybox{display:block;width:100%;height:52px;min-height:52px;overflow:hidden;line-height:1.4;margin-top:10px;padding:13px 14px;border:1px solid #d1d5db;border-radius:12px;background:#fff;font:inherit}.entrybox:focus{outline:2px solid #111827;outline-offset:1px}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div><div class="eyebrow">RECOVERY JOURNAL</div><h1 id="title">Today</h1></div><button class="secondary" id="settingsBtn">⚙️</button></header>
+<div class="counter"><div class="eyebrow" style="color:#c7cbd1">TIME CLEAN</div><div class="big" id="counter">Set your clean date</div><small id="daysClean"></small></div>
+
+<section id="todayView">
+<div class="card"><div class="row between"><h2>📅 <span id="dateLabel"></span></h2><button class="secondary" id="todayBtn">Today</button></div><div class="row between" style="margin-top:12px"><button class="secondary" id="prevDay">‹</button><button class="secondary" id="nextDay">›</button></div></div>
+<div class="card"><h3>✨ Positive affirmations</h3>
+<textarea class="entrybox" id="a1" placeholder="Affirmation 1" rows="1"></textarea>
+<textarea class="entrybox" id="a2" placeholder="Affirmation 2" rows="1"></textarea>
+<textarea class="entrybox" id="a3" placeholder="Affirmation 3" rows="1"></textarea>
+</div>
+<div class="card"><h3>❤️ Three things I'm grateful for</h3>
+<textarea class="entrybox" id="g1" placeholder="Gratitude 1" rows="1"></textarea>
+<textarea class="entrybox" id="g2" placeholder="Gratitude 2" rows="1"></textarea>
+<textarea class="entrybox" id="g3" placeholder="Gratitude 3" rows="1"></textarea>
+</div>
+<div class="card"><h3>📖 Journal</h3><textarea id="journal" placeholder="Write about your day..."></textarea></div>
+<div class="card"><div class="row between"><h3>🤝 Meetings</h3><button class="primary" id="addMeeting">+ Add</button></div><div id="meetingList"></div>
+<div id="meetingForm" class="hidden" style="margin-top:14px;border-top:1px solid #e5e7eb;padding-top:12px">
+<label>Quick Enter</label><select id="meetingTemplate"><option value="">New meeting</option></select>
+<div class="grid2"><div><label>Meeting name</label><input id="mName" placeholder="Meeting name"></div><div><label>Time</label><input id="mTime" placeholder="7:00 PM"></div></div>
+<label>Place</label><input id="mPlace" placeholder="Place">
+<label>Table topic</label><input id="mTopic" list="topicList" placeholder="Table topic"><datalist id="topicList"></datalist>
+<label>Notes</label><textarea id="mNotes" placeholder="Meeting notes"></textarea>
+<div class="row" style="margin-top:10px"><button class="primary" id="saveMeeting">Save meeting</button><button class="secondary" id="cancelMeeting">Cancel</button></div>
+</div></div>
+<button class="primary" style="width:100%" id="saveDay">Save today's entry</button>
+</section>
+
+<section id="calendarView" class="hidden"><div class="card"><div class="row between"><button class="secondary" id="prevMonth">‹</button><h2 id="monthLabel"></h2><button class="secondary" id="nextMonth">›</button></div><div class="calendar" id="calendar"></div></div></section>
+
+<section id="searchView" class="hidden">
+<div class="card">
+  <h2>🔎 Search & Reports</h2>
+  <label>Keyword</label>
+  <input id="q" placeholder="Search journal, meetings, topics...">
+  <div class="grid2">
+    <div><label>From</label><input type="date" id="from"></div>
+    <div><label>To</label><input type="date" id="to"></div>
+  </div>
+  <button class="primary" style="margin-top:10px" id="runSearch">Search</button>
+</div>
+
+<div class="card">
+  <div class="row between"><h3>🖨️ Print Report</h3><span class="muted">Choose what to include</span></div>
+  <div class="grid2" style="margin-top:10px">
+    <button type="button" class="secondary" id="setWholeDay">Whole day</button>
+    <button type="button" class="secondary" id="clearFields">Clear fields</button>
+  </div>
+  <div class="grid2" style="margin-top:10px">
+    <label><input type="checkbox" class="reportField" value="affirmations" checked> Affirmations</label>
+    <label><input type="checkbox" class="reportField" value="gratitude" checked> Gratitude</label>
+    <label><input type="checkbox" class="reportField" value="journal" checked> Journal</label>
+    <label><input type="checkbox" class="reportField" value="meetings" checked> Meetings</label>
+  </div>
+  <button class="primary" style="width:100%;margin-top:10px" id="printReport">Print selected report / PDF</button>
+  <p class="muted" style="margin-top:8px">Print one day or a date range. Only the selected sections will appear in the report.</p>
+</div>
+
+<div id="results"></div>
+<div id="printReportArea" class="print-only"></div>
+</section>
+
+<section id="settingsView" class="hidden"><div class="card"><h2>⚙️ Settings</h2><label>Clean date</label><input type="date" id="cleanDate"><button class="primary" style="margin-top:10px" id="saveCleanDate">Save recovery date</button><p class="muted" style="margin-top:10px">Your journal, meetings, templates, and recovery date stay on this phone.</p></div>
+<div class="card"><h3>Quick meeting templates</h3><div id="templates"></div></div></section>
+</div>
+<nav class="nav"><button data-tab="today" class="active">Today</button><button data-tab="calendar">Calendar</button><button data-tab="search">Search</button><button data-tab="settings">Settings</button></nav>
+
+<script>
+function growTextArea(el){if(!el)return;el.style.height="auto";el.style.height=Math.max(el.scrollHeight,52)+"px";}
+function initGrowingFields(){document.querySelectorAll(".entrybox,#journal,#mNotes").forEach(el=>{growTextArea(el);if(!el.dataset.growBound){el.addEventListener("input",()=>growTextArea(el));el.dataset.growBound="1";}});}
+const KEY="recoveryJournalV1"; let db=JSON.parse(localStorage.getItem(KEY)||'{"days":{},"meetings":[],"templates":[],"topics":[],"cleanDate":""}');
+let selected=new Date(); selected.setHours(12,0,0,0); let month=new Date(selected.getFullYear(),selected.getMonth(),1);
+const $=id=>document.getElementById(id), iso=d=>{const x=new Date(d);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0")};
+function persist(){localStorage.setItem(KEY,JSON.stringify(db))}
+function fmt(d){return d.toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric",year:"numeric"})}
+function loadDay(){let x=db.days[iso(selected)]||{};$("dateLabel").textContent=fmt(selected);["a1","a2","a3","g1","g2","g3","journal"].forEach(k=>$(k).value=x[k]||""); renderMeetings();initGrowingFields()}
+function saveDay(){let x=db.days[iso(selected)]||{};["a1","a2","a3","g1","g2","g3","journal"].forEach(k=>x[k]=$(k).value);db.days[iso(selected)]=x;persist();alert("Saved locally.")}
+function cleanCounter(){if(!db.cleanDate){$("counter").textContent="Set your clean date";$("daysClean").textContent="Settings → Recovery Date";return}let start=new Date(db.cleanDate+"T12:00:00"),now=new Date();let days=Math.max(0,Math.floor((new Date(now.getFullYear(),now.getMonth(),now.getDate())-new Date(start.getFullYear(),start.getMonth(),start.getDate()))/86400000));let y=now.getFullYear()-start.getFullYear(),m=now.getMonth()-start.getMonth(),d=now.getDate()-start.getDate();if(d<0){m--;d+=new Date(now.getFullYear(),now.getMonth(),0).getDate()}if(m<0){y--;m+=12} $("counter").textContent=`${y}y ${m}m ${d}d`;$("daysClean").textContent=`${days.toLocaleString()} days clean`}
+function renderMeetings(){let arr=db.meetings.filter(x=>x.date===iso(selected));$("meetingList").innerHTML=arr.length?arr.map(x=>`<div class="meeting"><div class="row between"><strong>${esc(x.name)}</strong><button class="danger" data-del="${x.id}">Delete</button></div><div class="muted">${esc(x.time)} • ${esc(x.place)}</div><div class="topic">Topic: ${esc(x.topic)}</div><div style="margin-top:6px">${esc(x.notes)}</div></div>`).join(""):"<p class='muted' style='margin-top:10px'>No meetings recorded.</p>";document.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{db.meetings=db.meetings.filter(x=>x.id!==b.dataset.del);persist();renderMeetings()})}
+function openMeetingForm(){ $("meetingForm").classList.remove("hidden"); renderMeetingTemplates(); $("mName").focus(); }
+function closeMeetingForm(){ $("meetingForm").classList.add("hidden"); ["mName","mTime","mPlace","mTopic","mNotes"].forEach(k=>$(k).value=""); $("meetingTemplate").value=""; }
+function renderMeetingTemplates(){let s=$("meetingTemplate");s.innerHTML='<option value="">New meeting</option>'+db.templates.map((x,i)=>`<option value="${i}">${esc(x.name)} — ${esc(x.place)} • ${esc(x.time)}</option>`).join("");let dl=$("topicList");dl.innerHTML=db.topics.map(x=>`<option value="${esc(x)}"></option>`).join("");}
+function fillTemplate(){let x=db.templates[Number($("meetingTemplate").value)];if(!x)return; $("mName").value=x.name; $("mTime").value=x.time; $("mPlace").value=x.place;}
+function saveMeeting(){let name=$("mName").value.trim();if(!name){alert("Enter a meeting name.");return}let place=$("mPlace").value.trim(),time=$("mTime").value.trim(),topic=$("mTopic").value.trim(),notes=$("mNotes").value.trim();db.meetings.push({id:crypto.randomUUID(),date:iso(selected),name,place,time,topic,notes});if(!db.templates.some(x=>x.name===name&&x.place===place&&x.time===time))db.templates.push({name,place,time});if(topic&&!db.topics.includes(topic))db.topics.push(topic);persist();renderMeetings();closeMeetingForm();}
+function renderCalendar(){let y=month.getFullYear(),m=month.getMonth();$("monthLabel").textContent=month.toLocaleDateString(undefined,{month:"long",year:"numeric"});let c=$("calendar");c.innerHTML=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].map(x=>`<div class="dow">${x}</div>`).join("");let first=new Date(y,m,1).getDay(),last=new Date(y,m+1,0).getDate();for(let i=0;i<first;i++)c.insertAdjacentHTML("beforeend","<div></div>");for(let d=1;d<=last;d++){let dt=new Date(y,m,d),key=iso(dt),has=!!db.days[key]||db.meetings.some(x=>x.date===key),sel=key===iso(selected);c.insertAdjacentHTML("beforeend",`<button class="day ${has?"has":""} ${sel?"sel":""}" data-date="${key}">${d}</button>`)}c.querySelectorAll("[data-date]").forEach(b=>b.onclick=()=>{selected=new Date(b.dataset.date+"T12:00:00");loadDay();show("today");renderCalendar()})}
+function runSearch(){let q=$("q").value.toLowerCase(),from=$("from").value,to=$("to").value;let out=[];Object.entries(db.days).forEach(([date,x])=>{if((!from||date>=from)&&(!to||date<=to)&&JSON.stringify(x).toLowerCase().includes(q))out.push({date,type:"Journal",text:x.journal||"Daily entry",x})});db.meetings.forEach(x=>{if((!from||x.date>=from)&&(!to||x.date<=to)&&JSON.stringify(x).toLowerCase().includes(q))out.push({date:x.date,type:"Meeting",text:`${x.name} — ${x.topic}`,x})});$("results").innerHTML=out.length?out.sort((a,b)=>b.date.localeCompare(a.date)).map(r=>`<div class="card"><div class="muted">${r.date} • ${r.type}</div><h3>${esc(r.text)}</h3><p style="margin-top:7px">${esc(r.type==="Journal"?r.x.journal:r.x.notes)}</p></div>`).join(""):"<div class='card muted'>No matching records.</div>"}
+
+function selectedReportFields(){
+  return [...document.querySelectorAll(".reportField:checked")].map(x=>x.value);
+}
+function inRange(date, from, to){ return (!from||date>=from)&&(!to||date<=to); }
+function dateRangeKeys(from,to){
+  let start=from?new Date(from+"T12:00:00"):new Date(selected);
+  let end=to?new Date(to+"T12:00:00"):new Date(start);
+  if(end<start){let t=start;start=end;end=t}
+  let out=[]; for(let d=new Date(start);d<=end;d.setDate(d.getDate()+1)) out.push(iso(d)); return out;
+}
+function escHtml(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));}
+function buildPrintReport(){
+  let fields=selectedReportFields();
+  let from=$("from").value, to=$("to").value;
+  if(!from) from=iso(selected); if(!to) to=from;
+  let keys=dateRangeKeys(from,to);
+  if(!fields.length){alert("Select at least one section to print.");return false}
+  let title = from===to ? new Date(from+"T12:00:00").toLocaleDateString(undefined,{month:"long",day:"numeric",year:"numeric"}) : `${new Date(from+"T12:00:00").toLocaleDateString()} – ${new Date(to+"T12:00:00").toLocaleDateString()}`;
+  let out=`<div class="print-report"><h1>Recovery Journal</h1><div class="meta">${escHtml(title)}</div>`;
+  keys.forEach(date=>{
+    let d=db.days[date]||{}, meetings=db.meetings.filter(x=>x.date===date);
+    let has = (fields.includes("affirmations")&&(d.a1||d.a2||d.a3)) || (fields.includes("gratitude")&&(d.g1||d.g2||d.g3)) || (fields.includes("journal")&&d.journal) || (fields.includes("meetings")&&meetings.length);
+    if(!has) return;
+    let nice=new Date(date+"T12:00:00").toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric",year:"numeric"});
+    out+=`<div class="dayblock"><h2>${escHtml(nice)}</h2>`;
+    if(fields.includes("affirmations")) out+=`<div><h2>Positive Affirmations</h2>${[d.a1,d.a2,d.a3].filter(Boolean).map((x,i)=>`<div class="item"><span class="label">${i+1}.</span> ${escHtml(x)}</div>`).join("")||'<div class="meta">None recorded.</div>'}</div>`;
+    if(fields.includes("gratitude")) out+=`<div><h2>Three Things I'm Grateful For</h2>${[d.g1,d.g2,d.g3].filter(Boolean).map((x,i)=>`<div class="item"><span class="label">${i+1}.</span> ${escHtml(x)}</div>`).join("")||'<div class="meta">None recorded.</div>'}</div>`;
+    if(fields.includes("journal")) out+=`<div><h2>Journal</h2><div class="item">${escHtml(d.journal).replace(/\n/g,"<br>")||'<span class="meta">No journal entry.</span>'}</div></div>`;
+    if(fields.includes("meetings")) out+=`<div><h2>Meetings</h2>${meetings.map(m=>`<div class="meeting"><div><span class="label">${escHtml(m.name)}</span></div><div class="meta">${escHtml(m.time)} • ${escHtml(m.place)}</div><div><span class="label">Table topic:</span> ${escHtml(m.topic)||"—"}</div><div><span class="label">Notes:</span> ${escHtml(m.notes)||"—"}</div></div>`).join("")||'<div class="meta">No meetings recorded.</div>'}</div>`;
+    out+="</div>";
+  });
+  out+="</div>";
+  $("printReportArea").innerHTML=out;
+  return true;
+}
+function printReport(){if(buildPrintReport())setTimeout(()=>window.print(),100)}
+
+function esc(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
+function show(tab){["today","calendar","search","settings"].forEach(x=>$(x+"View").classList.toggle("hidden",x!==tab));if(tab==="search"){$("from").value=iso(selected);$("to").value=iso(selected)}document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));if(tab==="calendar")renderCalendar();if(tab==="settings"){$("cleanDate").value=db.cleanDate;renderTemplates()}}
+function renderTemplates(){$("templates").innerHTML=db.templates.length?db.templates.map(x=>`<div class="meeting"><strong>${esc(x.name)}</strong><div class="muted">${esc(x.place)} • ${esc(x.time)}</div></div>`).join(""):"<p class='muted'>Templates appear automatically as you enter meetings.</p>"}
+document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>show(b.dataset.tab));$("todayBtn").onclick=()=>{selected=new Date();selected.setHours(12,0,0,0);loadDay()};$("prevDay").onclick=()=>{selected.setDate(selected.getDate()-1);loadDay()};$("nextDay").onclick=()=>{selected.setDate(selected.getDate()+1);loadDay()};$("saveDay").onclick=saveDay;$("addMeeting").onclick=openMeetingForm;$("meetingTemplate").onchange=fillTemplate;$("saveMeeting").onclick=saveMeeting;$("cancelMeeting").onclick=closeMeetingForm;$("prevMonth").onclick=()=>{month.setMonth(month.getMonth()-1);renderCalendar()};$("nextMonth").onclick=()=>{month.setMonth(month.getMonth()+1);renderCalendar()};$("runSearch").onclick=runSearch;$("printReport").onclick=printReport;$("setWholeDay").onclick=()=>document.querySelectorAll(".reportField").forEach(x=>x.checked=true);$("clearFields").onclick=()=>document.querySelectorAll(".reportField").forEach(x=>x.checked=false);$("settingsBtn").onclick=()=>show("settings");$("saveCleanDate").onclick=()=>{let v=$("cleanDate").value;if(v&&new Date(v+"T12:00:00")>new Date()){alert("Clean date cannot be in the future.");return}if(db.cleanDate&&!confirm("Change your recovery date?"))return;db.cleanDate=v;persist();cleanCounter();alert("Recovery date saved locally.")};loadDay();initGrowingFields();cleanCounter();setInterval(cleanCounter,60000);
+if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js");
+</script>
+</body></html>
