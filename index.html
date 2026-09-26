@@ -50,6 +50,16 @@ label{display:block;font-size:13px;font-weight:750;margin:10px 0 6px}.muted{colo
 .about-content h4:first-child{margin-top:0}
 .about-content p{margin:0 0 8px;line-height:1.5}
 .about-content ul,.about-content ol{padding-left:22px;margin:8px 0;line-height:1.55}
+
+#printPreviewModal{position:fixed;inset:0;background:rgba(20,35,31,.58);display:none;align-items:flex-end;justify-content:center;z-index:20000;padding:12px;box-sizing:border-box;overflow:hidden}#printPreviewModal.open{display:flex}.print-preview-sheet{width:min(900px,100%);height:min(92dvh,900px);overflow:auto;background:#FFFDF8;border-radius:22px;padding:16px;box-sizing:border-box;-webkit-overflow-scrolling:touch}.print-preview-actions{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;gap:8px;padding-bottom:12px;background:#FFFDF8}.print-preview-actions button{flex:1}.print-preview-actions .primary{background:var(--forest);color:#fff}.print-preview-actions .secondary{background:#E8E5DC;color:var(--ink)}#printPreviewContent{padding:8px 2px 24px}
+@media print{
+ body.printing-recovery-journal>*{display:none!important}
+ body.printing-recovery-journal #printPreviewModal{display:block!important;position:static!important;background:#fff!important;padding:0!important;overflow:visible!important}
+ body.printing-recovery-journal #printPreviewModal .print-preview-sheet{width:100%!important;height:auto!important;overflow:visible!important;border-radius:0!important;padding:0!important;background:#fff!important}
+ body.printing-recovery-journal #printPreviewModal .print-preview-actions{display:none!important}
+ body.printing-recovery-journal #printPreviewContent{display:block!important;padding:0!important}
+ body.printing-recovery-journal .print-report{display:block!important;font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;color:#20312D}
+}
 </style>
 </head>
 <body>

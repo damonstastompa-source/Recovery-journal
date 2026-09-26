@@ -150,16 +150,29 @@ function buildMeetingAttendance(){
 }
 function openPrintWindow(){
   const area=document.getElementById("printReportArea");
-  if(!area || !area.innerHTML.trim()) return;
-  const w=window.open("", "_blank");
-  if(!w){ alert("Please allow pop-ups for Recovery Journal to print."); return; }
-  const styles=`body{font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;color:#20312D;margin:24px}.print-report h1{font-size:24px;margin-bottom:4px}.print-report h2{font-size:17px;margin:18px 0 7px;border-bottom:1px solid #BFC8C1;padding-bottom:4px}.print-report .dayblock{page-break-inside:avoid;margin-bottom:20px}.print-report .meta{font-size:12px;color:#65716D}.print-report .item{margin:5px 0;line-height:1.45}.print-report .meeting{border:1px solid #C9CEC8;padding:8px;margin:7px 0;border-radius:6px}.print-report .label{font-weight:700}.attendance-sheet{width:100%;border-collapse:collapse;margin-top:14px;font-size:12px}.attendance-sheet th,.attendance-sheet td{border:1px solid #BFC8C1;padding:8px;text-align:left;vertical-align:top}.attendance-sheet th{font-weight:700}.attendance-sheet td.date{white-space:nowrap}.attendance-sheet td.initials{text-align:center;width:105px}.attendance-sheet img.initials-print{max-width:88px;height:34px;object-fit:contain;vertical-align:middle}`;
-  w.document.open();
-  w.document.write(`<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Recovery Journal — Print</title><style>${styles}@media print{body{margin:12mm}}</style></head><body>${area.innerHTML}</body></html>`);
-  w.document.close();
-  w.focus();
-  setTimeout(()=>w.print(),250);
+  if(!area || !area.innerHTML.trim()){alert("Nothing to print yet.");return}
+  let modal=document.getElementById("printPreviewModal");
+  if(!modal){
+    modal=document.createElement("div");
+    modal.id="printPreviewModal";
+    modal.innerHTML=`<div class="print-preview-sheet"><div class="print-preview-actions"><button type="button" id="closePrintPreview" class="secondary">Back</button><button type="button" id="confirmPrintPreview" class="primary">Print / Save PDF</button></div><div id="printPreviewContent"></div></div>`;
+    document.body.appendChild(modal);
+    document.getElementById("closePrintPreview").onclick=closePrintPreview;
+    document.getElementById("confirmPrintPreview").onclick=()=>{
+      document.body.classList.add("printing-recovery-journal");
+      window.print();
+    };
+  }
+  document.getElementById("printPreviewContent").innerHTML=area.innerHTML;
+  modal.classList.add("open");
+  document.body.classList.add("print-preview-open");
 }
+function closePrintPreview(){
+  const modal=document.getElementById("printPreviewModal");
+  if(modal) modal.classList.remove("open");
+  document.body.classList.remove("print-preview-open","printing-recovery-journal");
+}
+window.addEventListener("afterprint",()=>document.body.classList.remove("printing-recovery-journal"));
 function printMeetingAttendance(){if(buildMeetingAttendance())openPrintWindow()}
 function printAllReports(){if(buildAllReports())openPrintWindow()}
 function printReport(){if(buildPrintReport())openPrintWindow()}
