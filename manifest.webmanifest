@@ -1,0 +1,23 @@
+{
+  "id": "./",
+  "name": "Recovery Journal",
+  "short_name": "Recovery Journal",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone"],
+  "orientation": "portrait",
+  "background_color": "#F3F0E7",
+  "theme_color": "#23433B",
+  "description": "A simple, private recovery journal.",
+  "categories": ["lifestyle", "health", "productivity"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "recovery-journal-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
