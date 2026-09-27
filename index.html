@@ -234,10 +234,10 @@ label{display:block;font-size:13px;font-weight:750;margin:10px 0 6px}.muted{colo
 </div>
 </details>
 </div>
-<div style="text-align:center;margin:18px 0 4px"><span class="muted" style="font-size:11px;letter-spacing:.04em;opacity:.75">Recovery Journal v36</span></div>
+<div style="text-align:center;margin:18px 0 4px"><span class="muted" style="font-size:11px;letter-spacing:.04em;opacity:.75">Recovery Journal v37</span></div>
 </section>
 </div>
-<div id="attendanceModal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="attendanceModalTitle"><div class="attendance-sheet"><div class="row between"><div><h3 id="attendanceModalTitle">🖨️ Print Meeting Attendance Sheet</h3><p class="muted" style="margin-top:5px">Choose which meetings to include on the attendance sheet.</p></div><button class="secondary" id="attendanceModalClose" type="button">✕</button></div><div class="attendance-toggle"><label><input type="radio" name="attendanceMode" value="date"> Date Range</label><label><input type="radio" name="attendanceMode" value="count" checked> Number of Meetings</label></div><div id="attendanceDateFields"><label>Start Date</label><input type="date" id="attendanceFrom"><label>End Date</label><input type="date" id="attendanceTo"><p class="muted" style="margin-top:7px">Choose both dates to select meetings. The current day does not limit this report.</p></div><div id="attendanceCountFields" class="hidden"><label>Number of Meetings</label><div class="attendance-option-list"><label><input type="radio" name="attendanceCountOption" value="10" checked> 10 meetings</label><label><input type="radio" name="attendanceCountOption" value="25"> 25 meetings</label><label><input type="radio" name="attendanceCountOption" value="50"> 50 meetings</label><label><input type="radio" name="attendanceCountOption" value="90"> 90 meetings</label><label><input type="radio" name="attendanceCountOption" value="180"> 180 meetings</label><label><input type="radio" name="attendanceCountOption" value="all"> All meetings</label></div><input type="hidden" id="attendanceCount" value="10"></div><div class="attendance-found" id="attendanceFound">No meetings found</div><div class="row" style="margin-top:12px"><button class="secondary" id="attendanceCancel" type="button">Cancel</button><button class="primary" id="attendancePrintBtn" type="button">Print Attendance Sheet</button></div></div></div>
+<div id="attendanceModal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="attendanceModalTitle"><div class="attendance-sheet"><div class="row between"><div><h3 id="attendanceModalTitle">🖨️ Print Meeting Attendance Sheet</h3><p class="muted" style="margin-top:5px">Choose which meetings to include on the attendance sheet.</p></div><button class="secondary" id="attendanceModalClose" type="button">✕</button></div><div class="attendance-toggle"><label><input type="radio" name="attendanceMode" value="date"> Date Range</label><label><input type="radio" name="attendanceMode" value="count" checked> Number of Meetings</label></div><div id="attendanceDateFields" class="hidden"><label>Start Date</label><input type="date" id="attendanceFrom"><label>End Date</label><input type="date" id="attendanceTo"><p class="muted" style="margin-top:7px">Choose both dates to select meetings. The current day does not limit this report.</p></div><div id="attendanceCountFields"><label>Number of Meetings</label><div class="attendance-option-list"><label><input type="radio" name="attendanceCountOption" value="10" checked> 10 meetings</label><label><input type="radio" name="attendanceCountOption" value="25"> 25 meetings</label><label><input type="radio" name="attendanceCountOption" value="50"> 50 meetings</label><label><input type="radio" name="attendanceCountOption" value="90"> 90 meetings</label><label><input type="radio" name="attendanceCountOption" value="180"> 180 meetings</label><label><input type="radio" name="attendanceCountOption" value="all"> All meetings</label></div><input type="hidden" id="attendanceCount" value="10"></div><div class="attendance-found" id="attendanceFound">No meetings found</div><div class="row" style="margin-top:12px"><button class="secondary" id="attendanceCancel" type="button">Cancel</button><button class="primary" id="attendancePrintBtn" type="button">Print Attendance Sheet</button></div></div></div>
 <div id="meetingModal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="meetingModalTitle">
 <div class="meeting-sheet">
 <div class="row between"><div><h3 id="meetingModalTitle">🤝 Add Meeting</h3><p class="muted" style="margin-top:5px">Enter the meeting details. You can use this same form from Today or Meetings.</p></div><button class="secondary" id="closeMeetingModal" type="button">✕</button></div>
@@ -389,21 +389,74 @@ function buildAllReports(){
   $("printReportArea").innerHTML=out;
   return true;
 }
-function buildMeetingAttendance(){
-  let from=$("from").value, to=$("to").value;
-  if(!from) from=iso(selected); if(!to) to=from;
-  if(to<from){let t=from;from=to;to=t}
-  let meetings=db.meetings.filter(m=>m.date>=from&&m.date<=to).sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
-  if(!meetings.length){alert("There are no meetings in the selected date range.");return false}
-  let title=from===to?new Date(from+"T12:00:00").toLocaleDateString(undefined,{month:"long",day:"numeric",year:"numeric"}):`${new Date(from+"T12:00:00").toLocaleDateString()} – ${new Date(to+"T12:00:00").toLocaleDateString()}`;
-  let includeInitials=!!db.includeInitialsOnAttendance;
-  let initialsHead=includeInitials?'<th class="initials">Chairperson initials</th>':'';
-  let out=`<div class="print-report"><h1>Recovery Journal — Meeting Attendance</h1><div class="meta">${escHtml(title)} • ${meetings.length} meeting${meetings.length===1?"":"s"}</div><table class="attendance-sheet"><thead><tr><th>Date</th><th>Time</th><th>Meeting</th><th>Place</th><th>Table Topic</th>${initialsHead}</tr></thead><tbody>`;
-  meetings.forEach(m=>{let date=new Date(m.date+"T12:00:00").toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});let initials=includeInitials?(m.chairInitials?`<img class="initials-print" src="${m.chairInitials}" alt="Chairperson initials">`:'<span style="display:inline-block;min-width:82px;height:30px;border-bottom:1px solid #777"></span>'):'';out+=`<tr><td class="date">${escHtml(date)}</td><td>${escHtml(m.time)||"—"}</td><td>${escHtml(m.name)}</td><td>${escHtml(m.place)||"—"}</td><td>${escHtml(m.topic)||"—"}</td>${includeInitials?`<td class="initials">${initials}</td>`:''}</tr>`});
-  out+=`</tbody></table><div class="meta" style="margin-top:12px">Meeting notes are intentionally omitted.${includeInitials?' Saved chairperson initials are included when available.':''}</div></div>`;
-  $("printReportArea").innerHTML=out; return true;
+function attendanceMeetingsForSelection(){
+  const mode=document.querySelector('input[name="attendanceMode"]:checked')?.value||"count";
+  let meetings=[];
+  let title="";
+  if(mode==="count"){
+    const choice=document.querySelector('input[name="attendanceCountOption"]:checked')?.value||"10";
+    meetings=[...db.meetings].sort((a,b)=>(b.date+b.time).localeCompare(a.date+a.time));
+    if(choice!=="all") meetings=meetings.slice(0,Number(choice));
+    meetings.sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
+    if(meetings.length){
+      const first=new Date(meetings[0].date+"T12:00:00").toLocaleDateString(undefined,{month:"long",day:"numeric",year:"numeric"});
+      const last=new Date(meetings[meetings.length-1].date+"T12:00:00").toLocaleDateString(undefined,{month:"long",day:"numeric",year:"numeric"});
+      title=first===last?first:`${first} – ${last}`;
+    }else title="No saved meetings";
+  }else{
+    const from=$("attendanceFrom").value;
+    const to=$("attendanceTo").value;
+    if(!from||!to) return {meetings:[],title:"Choose a start and end date",needsDates:true};
+    let a=from,b=to;if(b<a){const t=a;a=b;b=t}
+    meetings=db.meetings.filter(m=>m.date>=a&&m.date<=b).sort((x,y)=>(x.date+x.time).localeCompare(y.date+y.time));
+    const aLabel=new Date(a+"T12:00:00").toLocaleDateString(undefined,{month:"long",day:"numeric",year:"numeric"});
+    const bLabel=new Date(b+"T12:00:00").toLocaleDateString(undefined,{month:"long",day:"numeric",year:"numeric"});
+    title=a===b?aLabel:`${aLabel} – ${bLabel}`;
+  }
+  return {meetings,title,needsDates:false};
 }
-function printMeetingAttendance(){if(buildMeetingAttendance())window.print()}
+function updateAttendanceOptions(){
+  const mode=document.querySelector('input[name="attendanceMode"]:checked')?.value||"count";
+  $("attendanceDateFields").classList.toggle("hidden",mode!=="date");
+  $("attendanceCountFields").classList.toggle("hidden",mode!=="count");
+  const sel=attendanceMeetingsForSelection();
+  const n=sel.meetings.length;
+  if(sel.needsDates){
+    $("attendanceFound").textContent="Choose a start and end date.";
+    $("attendancePrintBtn").disabled=true;
+    return;
+  }
+  $("attendanceFound").textContent=n?`${n} meeting${n===1?"":"s"} selected${sel.title?` • ${sel.title}`:""}`:"No saved meetings match this selection.";
+  $("attendancePrintBtn").disabled=!n;
+}
+function openAttendanceModal(){
+  $("attendanceModal").classList.remove("hidden");
+  const count=document.querySelector('input[name="attendanceMode"][value="count"]');
+  if(count) count.checked=true;
+  const first=document.querySelector('input[name="attendanceCountOption"][value="10"]');
+  if(first) first.checked=true;
+  $("attendanceFrom").value="";$("attendanceTo").value="";
+  updateAttendanceOptions();
+}
+function closeAttendanceModal(){$("attendanceModal").classList.add("hidden")}
+function buildMeetingAttendanceFromSelection(){
+  const sel=attendanceMeetingsForSelection();
+  if(!sel.meetings.length) return false;
+  const meetings=sel.meetings;
+  const includeInitials=!!db.includeInitialsOnAttendance;
+  const initialsHead=includeInitials?'<th class="initials">Chairperson initials</th>':'';
+  let out=`<div class="print-report"><h1>Recovery Journal — Meeting Attendance</h1><div class="meta">${escHtml(sel.title)} • ${meetings.length} meeting${meetings.length===1?"":"s"}</div><table class="attendance-sheet"><thead><tr><th>Date</th><th>Time</th><th>Meeting</th><th>Place</th><th>Table Topic</th>${initialsHead}</tr></thead><tbody>`;
+  meetings.forEach(m=>{let date=new Date(m.date+"T12:00:00").toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});let initials=includeInitials?(m.chairInitials?`<img class="initials-print" src="${m.chairInitials}" alt="Chairperson initials">`:'<span style="display:inline-block;min-width:82px;height:30px;border-bottom:1px solid #777"></span>'):'';out+=`<tr><td class="date">${escHtml(date)}</td><td>${escHtml(m.time)||"—"}</td><td>${escHtml(m.name)}</td><td>${escHtml(m.place)||"—"}</td><td>${escHtml(m.topic)||"—"}</td>${includeInitials?`<td class="initials">${initials}</td>`:""}</tr>`});
+  out+=`</tbody></table><div class="meta" style="margin-top:12px">Meeting notes are intentionally omitted.${includeInitials?' Saved chairperson initials are included when available.':''}</div></div>`;
+  $("printReportArea").innerHTML=out;
+  return true;
+}
+function printSelectedMeetingAttendance(){
+  if(!buildMeetingAttendanceFromSelection()) return;
+  closeAttendanceModal();
+  window.print();
+}
+
 function printAllReports(){if(buildAllReports())window.print()}
 function printReport(){if(buildPrintReport())window.print()}
 
@@ -415,6 +468,7 @@ function renderMeetingsTab(){
   $("meetingsTodayHeading").textContent=new Date(today+"T12:00:00").toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"})+" — Meetings";
   const card=(m,showDate)=>`<div class="meeting"><div class="row between"><strong>${esc(m.name)}</strong><span class="row meeting-actions"><button class="secondary" data-mtab-edit="${m.id}">Edit</button><button class="danger" data-mtab-del="${m.id}">Delete</button></span></div><div class="muted">${showDate?esc(new Date(m.date+"T12:00:00").toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"}))+" • ":""}${esc(m.time)||"—"} • ${esc(m.place)||"—"}</div><div class="topic">Topic: ${esc(m.topic)||"—"}</div>${m.notes?`<div style="margin-top:6px">${esc(m.notes)}</div>`:""}${m.chairInitials?`<div style="margin-top:8px"><span class="initials-badge">✍️ Chairperson initials captured</span></div>`:""}</div>`;
   $("meetingsTodayList").innerHTML=todayArr.length?todayArr.map(m=>card(m,false)).join(""):"<p class='muted'>No meetings recorded for this day.</p>";
+  $("recentMeetingsCount").textContent=recent.length;
   $("recentMeetingsList").innerHTML=recent.length?recent.map(m=>card(m,true)).join(""):"<p class='muted'>No meetings recorded yet.</p>";
   $("meetingsQuickList").innerHTML=db.templates.length?db.templates.map((x,i)=>`<button class="secondary" style="width:100%;margin-top:7px;text-align:left" data-quick-mtab="${i}">${esc(x.name)}<br><span class="muted">${esc(x.place)} • ${esc(x.time)}</span></button>`).join(""):"<p class='muted'>Your saved meetings will appear here after you enter them.</p>";
   document.querySelectorAll("[data-mtab-edit]").forEach(b=>b.onclick=()=>{show("today");editMeeting(b.dataset.mtabEdit)});
@@ -423,11 +477,11 @@ function renderMeetingsTab(){
 }
 function show(tab){["today","calendar","meetings","search","settings"].forEach(x=>$(x+"View").classList.toggle("hidden",x!==tab));if(tab==="search"){$("from").value=iso(selected);$("to").value=iso(selected)}document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));if(tab==="calendar")renderCalendar();if(tab==="meetings")renderMeetingsTab();if(tab==="settings"){$("userName").value=db.name||"";$('cleanDate').value=db.cleanDate;renderTemplates();renderFriends();$("friendRemindersEnabled").checked=db.friendRemindersEnabled;document.querySelectorAll(".milestoneToggle").forEach(x=>x.checked=!!db.milestones[x.value]);applyMeetingSettings()}}
 function renderTemplates(){$("templates").innerHTML=db.templates.length?db.templates.map(x=>`<div class="meeting"><strong>${esc(x.name)}</strong><div class="muted">${esc(x.place)} • ${esc(x.time)}</div></div>`).join(""):"<p class='muted'>Templates appear automatically as you enter meetings.</p>"}
-document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>show(b.dataset.tab));
-$("meetingsAddBtn").onclick=()=>{show("today");openMeetingForm()};$("meetingsTodayBtn").onclick=()=>{selected=new Date();selected.setHours(12,0,0,0);loadDay();show("meetings")};$("meetingsAttendanceBtn").onclick=printMeetingAttendance;
+document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>show(b.dataset.tab));$("recentMeetingsToggle").onclick=()=>{const p=$("recentMeetingsPanel"),open=p.classList.toggle("hidden")===false;$("recentMeetingsToggle").dataset.open=open?"true":"false";$("recentMeetingsToggle").setAttribute("aria-expanded",open?"true":"false");$("recentMeetingsChevron").textContent=open?"−":"＋"};
+$("meetingsAddBtn").onclick=()=>{show("today");openMeetingForm()};$("meetingsTodayBtn").onclick=()=>{selected=new Date();selected.setHours(12,0,0,0);loadDay();show("meetings")};$("meetingsAttendanceBtn").onclick=openAttendanceModal;
 $("addFriend").onclick=saveFriend;$("friendRemindersEnabled").onchange=saveMilestoneSettings;document.querySelectorAll(".milestoneToggle").forEach(x=>x.onchange=saveMilestoneSettings);
-$("printAllReports").onclick=printAllReports;$("printMeetingAttendance").onclick=printMeetingAttendance;$('chairInitialsPrompt').onchange=saveMeetingSettings;$('includeInitialsOnAttendance').onchange=saveMeetingSettings;$('rememberNewMeetings').onchange=saveMeetingSettings;
-$("exportBackup").onclick=exportBackup;
+$("printAllReports").onclick=printAllReports;$("printMeetingAttendance").onclick=openAttendanceModal;$('chairInitialsPrompt').onchange=saveMeetingSettings;$('includeInitialsOnAttendance').onchange=saveMeetingSettings;$('rememberNewMeetings').onchange=saveMeetingSettings;
+$("attendanceModalClose").onclick=closeAttendanceModal;$("attendanceCancel").onclick=closeAttendanceModal;document.querySelectorAll('input[name="attendanceMode"]').forEach(x=>x.onchange=updateAttendanceOptions);document.querySelectorAll('input[name="attendanceCountOption"]').forEach(x=>x.onchange=()=>{$("attendanceCount").value=x.value;updateAttendanceOptions()});$("attendanceFrom").onchange=updateAttendanceOptions;$("attendanceTo").onchange=updateAttendanceOptions;$("attendancePrintBtn").onclick=printSelectedMeetingAttendance;$("exportBackup").onclick=exportBackup;
 $("importBackup").onclick=()=>$("backupFile").click();
 $("backupFile").onchange=e=>{importBackupFile(e.target.files[0]);e.target.value=""};$("todayBtn").onclick=()=>{selected=new Date();selected.setHours(12,0,0,0);loadDay()};$("prevDay").onclick=()=>{selected.setDate(selected.getDate()-1);loadDay()};$("nextDay").onclick=()=>{selected.setDate(selected.getDate()+1);loadDay()};$("saveDay").onclick=saveDay;$("rerollReflection").onclick=rerollReflection;$("addMeeting").onclick=openMeetingForm;$("meetingTemplate").onchange=fillTemplate;$("closeMeetingModal").onclick=closeMeetingForm;$("saveMeeting").onclick=saveMeeting;$("cancelMeeting").onclick=closeMeetingForm;$("prevMonth").onclick=()=>{month.setMonth(month.getMonth()-1);renderCalendar()};$("nextMonth").onclick=()=>{month.setMonth(month.getMonth()+1);renderCalendar()};$("runSearch").onclick=runSearch;$("printReport").onclick=printReport;$("setWholeDay").onclick=()=>document.querySelectorAll(".reportField").forEach(x=>x.checked=true);$("clearFields").onclick=()=>document.querySelectorAll(".reportField").forEach(x=>x.checked=false);$("settingsBtn").onclick=()=>show("settings");$("saveRecoverySettings").onclick=saveRecoverySettings;loadDay();initGrowingFields();cleanCounter();setInterval(cleanCounter,60000);
 if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js");
