@@ -1,4 +1,4 @@
-/* Recovery Journal v39.1 package: app.js preserved from the verified v38 baseline. */
+/* Recovery Journal v39.2 release bundle. Runtime is contained in index.html for this build. */
 
 function growTextArea(el){if(!el)return;el.style.height="auto";el.style.height=Math.max(el.scrollHeight,52)+"px";}
 function initGrowingFields(){document.querySelectorAll(".entrybox,.focusbox,#journal,#mNotes").forEach(el=>{growTextArea(el);if(!el.dataset.growBound){el.addEventListener("input",()=>growTextArea(el));el.dataset.growBound="1";}});}
