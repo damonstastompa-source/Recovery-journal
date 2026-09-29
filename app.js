@@ -1,4 +1,4 @@
-/* Recovery Journal v39.2 release bundle. Runtime is contained in index.html for this build. */
+/* Recovery Journal v39.3 release bundle. Runtime is contained in index.html for this build. */
 
 function growTextArea(el){if(!el)return;el.style.height="auto";el.style.height=Math.max(el.scrollHeight,52)+"px";}
 function initGrowingFields(){document.querySelectorAll(".entrybox,.focusbox,#journal,#mNotes").forEach(el=>{growTextArea(el);if(!el.dataset.growBound){el.addEventListener("input",()=>growTextArea(el));el.dataset.growBound="1";}});}
