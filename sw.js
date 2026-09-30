@@ -1,4 +1,4 @@
-const CACHE = "recovery-journal-v39.3.3";
+const CACHE = "recovery-journal-v39.3.4";
 self.addEventListener("install", event => { self.skipWaiting(); });
 self.addEventListener("activate", event => {
   event.waitUntil(
