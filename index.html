@@ -17,7 +17,7 @@
 header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
 /* v41 Sidebar + Goals */
 .menu-top-btn{width:44px;height:44px;padding:0;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 5px 16px #00000010;cursor:pointer;flex:0 0 auto}.menu-top-btn svg{width:25px;height:25px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round}.menu-top-btn:hover{transform:translateY(-1px)}
-.sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,.42);z-index:26000;opacity:0;pointer-events:none;transition:opacity .22s ease}.sidebar-overlay.open{opacity:1;pointer-events:auto}.sidebar{position:fixed;top:0;bottom:0;left:0;width:min(320px,88vw);z-index:26001;background:var(--cream);color:var(--ink);box-shadow:18px 0 50px #0005;transform:translateX(-102%);transition:transform .24s cubic-bezier(.22,.75,.18,1);padding:calc(env(safe-area-inset-top) + 12px) 12px calc(env(safe-area-inset-bottom) + 14px);overflow-y:auto;-webkit-overflow-scrolling:touch}.sidebar.open{transform:translateX(0)}.sidebar-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:4px 4px 14px}.sidebar-brand{font-weight:900;letter-spacing:.02em}.sidebar-close{min-width:42px!important;padding:9px!important;border-radius:13px!important}.sidebar-section-label{font-size:10px;font-weight:900;letter-spacing:.13em;color:var(--muted);padding:13px 10px 6px;text-transform:uppercase}.sidebar-divider{height:1px;background:var(--line);margin:8px 6px}.sidebar-item{width:100%;display:flex;align-items:center;gap:11px;padding:12px 12px;margin:3px 0;border:1px solid transparent;border-radius:14px;background:transparent;color:var(--ink);font:inherit;font-weight:750;text-align:left;cursor:pointer}.sidebar-item:hover,.sidebar-item:active{background:var(--sage);border-color:var(--line)}.sidebar-item.active{background:var(--sage);border-color:var(--line)}.sidebar-item .side-icon{width:25px;text-align:center;font-size:20px;flex:0 0 25px}.sidebar-sub{padding-left:16px}.sidebar-sub .sidebar-item{font-size:14px}.sidebar-caret{margin-left:auto;color:var(--muted);font-size:15px}.sidebar-note{padding:12px 10px;color:var(--muted);font-size:11px;line-height:1.45}.goals-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.goals-tabs{display:flex;gap:7px;overflow-x:auto;padding:12px 2px 4px;scrollbar-width:none}.goals-tabs::-webkit-scrollbar{display:none}.goal-tab{white-space:nowrap;padding:10px 14px;border-radius:999px;background:var(--sage);color:var(--ink);border:1px solid var(--line);font-weight:800;font-size:13px}.goal-tab.active{background:var(--forest);color:#fff;border-color:var(--forest)}.goal-tab span{font-size:11px;opacity:.78;margin-left:3px}.goal-list{display:grid;gap:11px;margin-top:10px}.goal-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px;box-shadow:0 5px 18px #34473B12;cursor:pointer}.goal-card:active{transform:scale(.995)}.goal-card-head{display:flex;gap:10px;align-items:flex-start}.goal-check{width:23px;height:23px;border-radius:50%;border:2px solid var(--line);background:var(--card);flex:0 0 23px;margin-top:1px}.goal-title{font-weight:900;font-size:17px;line-height:1.25}.goal-meta{margin-top:5px;display:flex;gap:7px;flex-wrap:wrap}.goal-status,.goal-type-pill{display:inline-flex;align-items:center;padding:5px 8px;border-radius:999px;font-size:10px;font-weight:850;background:var(--sage);color:var(--ink)}.goal-status.complete{background:#BFE4C8;color:#174C29}.goal-status.paused{background:#E8DCC2}.goal-target{font-size:11px;color:var(--muted);margin-top:7px}.goal-reason{margin-top:10px;color:var(--muted);line-height:1.45;font-size:13px}.goal-progress{margin-top:11px}.goal-progress-track{height:7px;border-radius:999px;background:var(--sage);overflow:hidden}.goal-progress-fill{height:100%;background:var(--forest);border-radius:999px}.goal-progress-label{font-size:10px;color:var(--muted);margin-top:5px}.goal-empty{padding:24px;text-align:center;border:1px dashed var(--line);border-radius:18px;color:var(--muted);background:var(--card)}.goal-guide{margin-top:12px;border:1px solid var(--line);border-radius:14px;background:var(--mist);overflow:hidden}.goal-guide summary{padding:11px 12px;font-size:13px;font-weight:800}.goal-guide-body{padding:0 12px 12px;color:var(--muted);font-size:13px;line-height:1.5}.goal-milestones{display:grid;gap:8px;margin-top:10px}.goal-milestone-row{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card);min-width:0;overflow:hidden;box-sizing:border-box}.goal-milestone-row input[type="checkbox"]{width:22px!important;min-width:22px!important;max-width:22px!important;height:22px;margin:1px 0 0;flex:0 0 22px}.goal-milestone-row span{display:block;min-width:0;flex:1;overflow-wrap:anywhere;word-break:break-word;line-height:1.35}.goal-detail-meta{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0}.goal-reflection{padding:11px 12px;border-radius:13px;background:var(--sage);color:var(--muted);line-height:1.45;margin-top:10px}.goal-modal{position:fixed;inset:0;background:rgba(5,7,14,.78);display:flex;align-items:center;justify-content:center;z-index:28000;padding:14px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}.goal-modal.hidden{display:none!important}.goal-sheet{width:min(680px,100%);max-height:94dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;background:var(--cream);color:var(--ink);border-radius:24px;padding:18px;box-shadow:0 18px 60px #0009}.goal-sheet textarea{min-height:84px}.goal-actions{display:flex;gap:8px;margin-top:14px}.goal-actions button{flex:1}.goal-danger{border-color:#C97870!important;color:#A63E36!important}.sidebar-goal-badge{margin-left:auto;font-size:10px;padding:4px 7px;border-radius:999px;background:var(--sage);color:var(--muted)}
+.sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,.18);z-index:26000;opacity:0;pointer-events:none;transition:opacity .22s ease}.sidebar-overlay.open{opacity:1;pointer-events:auto}.sidebar{position:fixed;top:0;bottom:0;left:0;width:min(320px,88vw);z-index:26001;background:color-mix(in srgb,var(--cream) 84%,transparent);color:var(--ink);border-right:1px solid color-mix(in srgb,var(--line) 72%,transparent);box-shadow:18px 0 50px #0005;backdrop-filter:blur(24px) saturate(135%);-webkit-backdrop-filter:blur(24px) saturate(135%);transform:translateX(-102%);transition:transform .24s cubic-bezier(.22,.75,.18,1);padding:calc(env(safe-area-inset-top) + 12px) 12px calc(env(safe-area-inset-bottom) + 14px);overflow-y:auto;-webkit-overflow-scrolling:touch}.sidebar.open{transform:translateX(0)}.sidebar-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:4px 4px 14px}.sidebar-brand{font-weight:900;letter-spacing:.02em}.sidebar-close{min-width:42px!important;padding:9px!important;border-radius:13px!important}.sidebar-section-label{font-size:10px;font-weight:900;letter-spacing:.13em;color:var(--muted);padding:13px 10px 6px;text-transform:uppercase}.sidebar-divider{height:1px;background:var(--line);margin:8px 6px}.sidebar-item{width:100%;display:flex;align-items:center;gap:11px;padding:12px 12px;margin:3px 0;border:1px solid transparent;border-radius:14px;background:transparent;color:var(--ink);font:inherit;font-weight:750;text-align:left;cursor:pointer}.sidebar-item:hover,.sidebar-item:active{background:var(--sage);border-color:var(--line)}.sidebar-item.active{background:var(--sage);border-color:var(--line)}.sidebar-item .side-icon{width:25px;text-align:center;font-size:20px;flex:0 0 25px}.sidebar-sub{padding-left:16px}.sidebar-sub .sidebar-item{font-size:14px}.sidebar-caret{margin-left:auto;color:var(--muted);font-size:15px}.sidebar-note{padding:12px 10px;color:var(--muted);font-size:11px;line-height:1.45}.goals-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.goals-tabs{display:flex;gap:7px;overflow-x:auto;padding:12px 2px 4px;scrollbar-width:none}.goals-tabs::-webkit-scrollbar{display:none}.goal-tab{white-space:nowrap;padding:10px 14px;border-radius:999px;background:var(--sage);color:var(--ink);border:1px solid var(--line);font-weight:800;font-size:13px}.goal-tab.active{background:var(--forest);color:#fff;border-color:var(--forest)}.goal-tab span{font-size:11px;opacity:.78;margin-left:3px}.goal-list{display:grid;gap:11px;margin-top:10px}.goal-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px;box-shadow:0 5px 18px #34473B12;cursor:pointer}.goal-card:active{transform:scale(.995)}.goal-card-head{display:flex;gap:10px;align-items:flex-start}.goal-check{width:23px;height:23px;border-radius:50%;border:2px solid var(--line);background:var(--card);flex:0 0 23px;margin-top:1px}.goal-title{font-weight:900;font-size:17px;line-height:1.25}.goal-meta{margin-top:5px;display:flex;gap:7px;flex-wrap:wrap}.goal-status,.goal-type-pill{display:inline-flex;align-items:center;padding:5px 8px;border-radius:999px;font-size:10px;font-weight:850;background:var(--sage);color:var(--ink)}.goal-status.complete{background:#BFE4C8;color:#174C29}.goal-status.paused{background:#E8DCC2}.goal-target{font-size:11px;color:var(--muted);margin-top:7px}.goal-reason{margin-top:10px;color:var(--muted);line-height:1.45;font-size:13px}.goal-progress{margin-top:11px}.goal-progress-track{height:7px;border-radius:999px;background:var(--sage);overflow:hidden}.goal-progress-fill{height:100%;background:var(--forest);border-radius:999px}.goal-progress-label{font-size:10px;color:var(--muted);margin-top:5px}.goal-empty{padding:24px;text-align:center;border:1px dashed var(--line);border-radius:18px;color:var(--muted);background:var(--card)}.goal-guide{margin-top:12px;border:1px solid var(--line);border-radius:14px;background:var(--mist);overflow:hidden}.goal-guide summary{padding:11px 12px;font-size:13px;font-weight:800}.goal-guide-body{padding:0 12px 12px;color:var(--muted);font-size:13px;line-height:1.5}.goal-milestones{display:grid;gap:8px;margin-top:10px}.goal-milestone-row{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card);min-width:0;overflow:hidden;box-sizing:border-box}.goal-milestone-row input[type="checkbox"]{width:22px!important;min-width:22px!important;max-width:22px!important;height:22px;margin:1px 0 0;flex:0 0 22px}.goal-milestone-row span{display:block;min-width:0;flex:1;overflow-wrap:anywhere;word-break:break-word;line-height:1.35}.goal-detail-meta{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0}.goal-reflection{padding:11px 12px;border-radius:13px;background:var(--sage);color:var(--muted);line-height:1.45;margin-top:10px}.goal-modal{position:fixed;inset:0;background:rgba(5,7,14,.78);display:flex;align-items:center;justify-content:center;z-index:28000;padding:14px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}.goal-modal.hidden{display:none!important}.goal-sheet{width:min(680px,100%);max-height:94dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;background:var(--cream);color:var(--ink);border-radius:24px;padding:18px;box-shadow:0 18px 60px #0009}.goal-sheet textarea{min-height:84px}.goal-actions{display:flex;gap:8px;margin-top:14px}.goal-actions button{flex:1}.goal-danger{border-color:#C97870!important;color:#A63E36!important}.sidebar-goal-badge{margin-left:auto;font-size:10px;padding:4px 7px;border-radius:999px;background:var(--sage);color:var(--muted)}
 @media(max-width:520px){.journal-header-brand{gap:6px}.journal-top-btn,.menu-top-btn,.message-top-btn{width:42px;height:42px}.journal-header-brand>div{min-width:0}.eyebrow{font-size:10px}.sidebar{width:min(310px,90vw)}}
 @media(prefers-reduced-motion:reduce){.sidebar,.sidebar-overlay{transition:none!important}.goal-card,.sidebar-item{transition:none!important}}
 @media print{
@@ -313,6 +313,40 @@ header.v41-fixed-header .journal-top-icon{color:var(--ink)!important;stroke:curr
 [data-theme="midnightforest"] body{background:linear-gradient(180deg,#0D120F 0%,#142019 58%,#0F1511 100%);color:var(--ink)}[data-theme="midnightforest"] html{background:#0D120F}[data-theme="midnightforest"] .card,[data-theme="midnightforest"] .meeting,[data-theme="midnightforest"] input,[data-theme="midnightforest"] textarea,[data-theme="midnightforest"] select,[data-theme="midnightforest"] .day,[data-theme="midnightforest"] .attendance-option-list label{background:#17221B;color:var(--ink);border-color:#34473B}[data-theme="midnightforest"] .nav,[data-theme="midnightforest"] header.v41-fixed-header{background:rgba(16,21,18,.98);border-color:#34473B}[data-theme="midnightforest"] button.primary{background:#7FA88A;color:#0D1711}[data-theme="midnightforest"] button.secondary{background:#26382E;color:#E7EEE9;border-color:#405346}[data-theme="midnightforest"] .counter{background:linear-gradient(135deg,#10221A,#254232)}[data-theme="midnightforest"] .emotion-card,[data-theme="midnightforest"] .program-card{background:linear-gradient(135deg,#1A2920,#202C24);border-color:#405346}
 :root[data-theme="burgundy"]{color-scheme:dark;--ink:#F1E9E9;--forest:#C47C89;--sage:#3A2329;--mist:#2B1B20;--cream:#130C0F;--bg:#10090C;--card:#211317;--sand:#40272E;--line:#5A3942;--muted:#B9A9AD;--rose:#E0A0AA}
 [data-theme="burgundy"] body{background:linear-gradient(180deg,#10090C 0%,#1D1015 58%,#120B0E 100%);color:var(--ink)}[data-theme="burgundy"] html{background:#10090C}[data-theme="burgundy"] .card,[data-theme="burgundy"] .meeting,[data-theme="burgundy"] input,[data-theme="burgundy"] textarea,[data-theme="burgundy"] select,[data-theme="burgundy"] .day,[data-theme="burgundy"] .attendance-option-list label{background:#211317;color:var(--ink);border-color:#51343C}[data-theme="burgundy"] .nav,[data-theme="burgundy"] header.v41-fixed-header{background:rgba(19,12,15,.98);border-color:#51343C}[data-theme="burgundy"] button.primary{background:#B86F7C;color:#180C10}[data-theme="burgundy"] button.secondary{background:#3A2329;color:#F1E9E9;border-color:#63414A}[data-theme="burgundy"] .counter{background:linear-gradient(135deg,#2A1119,#552532)}[data-theme="burgundy"] .emotion-card,[data-theme="burgundy"] .program-card{background:linear-gradient(135deg,#2A181E,#321B23);border-color:#63414A}
+
+/* v50.9.3.8: smoother theme-tinted glass; reduce gray haze without changing opacity control */
+#sidebar.sidebar{background:rgba(20,12,18,var(--sidebar-opacity,.70))!important;color:#F4F5F4!important;border-right:1px solid rgba(255,255,255,.16)!important;backdrop-filter:blur(18px) saturate(220%) contrast(1.06)!important;-webkit-backdrop-filter:blur(18px) saturate(220%) contrast(1.06)!important;box-shadow:12px 0 34px rgba(0,0,0,.32)!important}
+:root[data-theme="midnightforest"] #sidebar.sidebar{background:rgba(13,25,18,var(--sidebar-opacity,.70))!important}
+:root[data-theme="burgundy"] #sidebar.sidebar{background:rgba(35,12,20,var(--sidebar-opacity,.70))!important}
+:root[data-theme="neon"] #sidebar.sidebar{background:rgba(10,12,25,var(--sidebar-opacity,.70))!important}
+:root[data-theme="cosmic"] #sidebar.sidebar{background:rgba(27,14,49,var(--sidebar-opacity,.70))!important}
+:root[data-theme="ocean"] #sidebar.sidebar{background:rgba(9,34,52,var(--sidebar-opacity,.70))!important}
+#sidebar.sidebar .sidebar-item,#sidebar.sidebar .sidebar-brand{color:#F4F5F4!important}
+#sidebar.sidebar .sidebar-section-label,#sidebar.sidebar .sidebar-note{color:rgba(244,245,244,.72)!important}
+#sidebar.sidebar .sidebar-item:hover,#sidebar.sidebar .sidebar-item:active,#sidebar.sidebar .sidebar-item.active{background:rgba(255,255,255,.13)!important;border-color:rgba(255,255,255,.18)!important}
+.sidebar-overlay.open{background:rgba(0,0,0,.48)!important;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+
+/* v50.9.3.12 — centered manager and explicit template-entry dialog */
+#templateModal{z-index:10060}
+.template-manager-modal{position:fixed;inset:0;z-index:10050;background:rgba(4,3,10,.76);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;align-items:flex-end;justify-content:center;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+.template-manager-modal.hidden{display:none!important}
+.template-manager-sheet{width:min(760px,100%);max-height:92dvh;overflow-y:auto;overscroll-behavior:contain;background:var(--surface, #130f20);color:var(--ink,#f4efff);border:1px solid var(--line,rgba(190,160,255,.28));border-radius:24px 24px 0 0;padding:20px 16px calc(22px + env(safe-area-inset-bottom));box-shadow:0 -12px 44px rgba(0,0,0,.35)}
+.template-manager-sheet .template-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:9px;padding:12px;border:1px solid var(--line,rgba(190,160,255,.25));border-radius:16px}
+.template-manager-sheet .template-row>div:first-child{flex:1;min-width:130px}
+.template-manager-sheet .template-row button{min-height:44px}
+#meetingsQuickToggle{min-height:48px;padding:8px 10px}
+#manageTemplatesBtn{min-height:44px;white-space:nowrap}
+@media(min-width:700px){.template-manager-modal{align-items:center;padding:24px}.template-manager-sheet{border-radius:24px;max-height:88dvh}}
+/* v50.9.3.12: keep the manager below the iPhone status/safe area and center it naturally */
+.template-manager-modal{align-items:center!important;padding:calc(env(safe-area-inset-top) + 14px) 12px calc(env(safe-area-inset-bottom) + 14px)!important}
+.template-manager-sheet{width:min(760px,100%);max-height:calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 28px)!important;border-radius:24px!important;padding:20px 16px calc(20px + env(safe-area-inset-bottom))!important;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+/* Add/edit template opens as a real, centered form dialog—not a focused field at the bottom */
+#templateModal:not(.hidden){position:fixed!important;inset:0!important;z-index:10060!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:calc(env(safe-area-inset-top) + 16px) 14px calc(env(safe-area-inset-bottom) + 16px)!important;background:rgba(4,3,10,.72)!important;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+#templateModal.hidden{display:none!important}
+#templateModal .meeting-sheet{width:min(560px,100%)!important;max-height:calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 32px)!important;overflow-y:auto!important;border-radius:24px!important;background:var(--surface,#130f20)!important;color:var(--ink,#f4efff)!important;border:1px solid var(--line,rgba(190,160,255,.28))!important;box-shadow:0 20px 60px rgba(0,0,0,.45)!important;padding:20px!important}
+#templateModal .meeting-sheet input{width:100%;min-height:48px;margin:6px 0 12px}
+#templateModal .meeting-sheet .row{gap:10px;flex-wrap:wrap}
+#templateModal .meeting-sheet .row button{flex:1;min-height:48px}
 </style>
 <style>
 /* v50.1 interaction/layout repair — preserved in v50.2 */
@@ -407,6 +441,461 @@ body:not(.screen-today) [class*="greeting"]{display:none!important}
 })();
 </script>
 
+
+<style id="affirmations-wall-v1-css">
+.aw-intro{display:flex;gap:13px;align-items:center;padding:18px 18px 17px}
+.aw-intro-icon{width:48px;height:48px;border-radius:15px;background:var(--sage);display:flex;align-items:center;justify-content:center;font-size:27px;flex:0 0 auto}
+.aw-intro h2{margin:0;font-size:25px}.aw-intro p{margin:4px 0 0;line-height:1.35}
+.aw-toolbar{padding:14px 16px}
+.aw-search-row{display:grid;grid-template-columns:1fr auto;gap:9px;align-items:center}
+.aw-search-row input{min-width:0}.aw-search-row button{white-space:nowrap}
+.aw-filters{display:flex;gap:7px;overflow-x:auto;padding:10px 0 1px;scrollbar-width:none}
+.aw-filters::-webkit-scrollbar{display:none}.aw-filters button{white-space:nowrap;min-height:38px}
+.aw-wall{position:relative;min-height:520px;border-radius:22px;padding:20px 10px 26px;overflow:hidden;
+  background:linear-gradient(135deg,rgba(38,42,40,.98),rgba(26,31,29,.98));
+  border:1px solid var(--line);box-shadow:inset 0 0 0 1px #ffffff08,0 8px 25px #00000012}
+.aw-wall:before{content:"";position:absolute;inset:0;opacity:.12;pointer-events:none;
+  background-image:radial-gradient(#fff 0.7px,transparent .7px);background-size:17px 17px}
+.aw-note{position:relative;display:inline-flex;vertical-align:top;flex-direction:column;justify-content:center;
+  width:43%;min-height:116px;margin:9px 2.7%;padding:18px 15px 14px;
+  background:var(--note);color:#25302d;border:0;border-radius:2px;
+  box-shadow:2px 5px 13px #0000003b;cursor:pointer;transform:rotate(var(--rot));
+  transition:transform .15s ease,box-shadow .15s ease;overflow:hidden}
+.aw-note:nth-child(3n){margin-top:23px}.aw-note:nth-child(4n){margin-top:-2px}
+.aw-note:hover{transform:rotate(0deg) translateY(-2px);box-shadow:4px 9px 17px #0000004a}
+.aw-note:before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:56px;height:13px;
+  background:#ffffff62;border-left:1px solid #ffffff35;border-right:1px solid #ffffff35}
+.aw-note-text{font-family:"Bradley Hand","Segoe Print","Comic Sans MS",cursive;font-size:21px;font-weight:700;line-height:1.12;word-break:break-word}
+.aw-note-date{font-family:inherit;font-size:10px;font-weight:700;opacity:.62;margin-top:9px}
+.aw-note-doodle{position:absolute;right:7px;bottom:6px;width:44px;height:44px;object-fit:contain;opacity:.85}
+.aw-note-heart{position:absolute;right:8px;top:7px;font-size:18px}
+.aw-empty{min-height:470px;display:flex;align-items:center;justify-content:center;text-align:center;color:#d6ddd8;padding:35px}
+.aw-empty-inner{max-width:280px}.aw-empty-inner .big{font-size:48px;margin-bottom:10px}
+.aw-empty-inner h3{margin:0 0 7px;font-size:22px}.aw-empty-inner p{margin:0 0 18px;line-height:1.45;color:#aeb9b3}
+.aw-add-btn{width:100%;margin:13px 0 20px;padding:15px 18px;border-radius:16px;background:var(--forest);color:#fff;font-size:16px;box-shadow:0 6px 15px #23433B24}
+.aw-modal{position:fixed;inset:0;background:rgba(12,17,15,.62);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
+  display:flex;align-items:flex-end;justify-content:center;padding:12px;z-index:10050}
+.aw-modal.hidden{display:none!important}.aw-sheet{width:min(720px,100%);max-height:94dvh;overflow:auto;background:var(--cream);
+  color:var(--ink);border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:0 20px 55px #00000045;-webkit-overflow-scrolling:touch}
+.aw-option-label{font-size:13px;font-weight:800;margin:15px 0 7px}.aw-color-row{display:flex;gap:7px;flex-wrap:wrap}
+.aw-color-row button{background:var(--aw-note);color:#25302d;border:1px solid #00000018;padding:9px 12px}
+.aw-doodle-tools{display:flex;gap:7px;flex-wrap:wrap}.aw-doodle-tools button{padding:8px 10px}
+.aw-canvas-wrap{position:relative;margin-top:10px;border:1px solid var(--line);border-radius:15px;background:#fffdf8;overflow:hidden}
+#awCanvas{display:block;width:100%;height:210px;touch-action:none;cursor:crosshair}
+.aw-canvas-hint{position:absolute;bottom:6px;left:9px;right:9px;font-size:10px;text-align:center;color:#718078;pointer-events:none}
+.aw-editor-actions{display:flex;gap:8px;margin-top:13px}.aw-editor-actions button{flex:1}
+.aw-detail-sheet{max-width:520px}.aw-detail-note{position:relative;min-height:220px;border-radius:3px;padding:35px 28px 24px;
+  background:var(--detail-note,#F4C2D0);color:#25302d;box-shadow:3px 8px 18px #0000002c;transform:rotate(-1deg);overflow:hidden}
+.aw-detail-note:before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:75px;height:15px;background:#ffffff62}
+.aw-detail-note .detail-text{font-family:"Bradley Hand","Segoe Print","Comic Sans MS",cursive;font-size:30px;font-weight:700;line-height:1.15}
+.aw-detail-note img{display:block;max-width:150px;max-height:95px;margin:14px auto 0}.aw-detail-actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-top:15px}
+@media(max-width:520px){.aw-search-row{grid-template-columns:1fr}.aw-note{width:44%;margin-left:2%;margin-right:2%;min-height:105px;padding:16px 11px}.aw-note-text{font-size:18px}.aw-detail-actions{grid-template-columns:1fr}.aw-wall{min-height:470px}}
+</style>
+
+<style>.aw-hide-hero{display:none!important}.aw-color-row button.active{outline:3px solid var(--forest);outline-offset:1px}</style>
+<style id="affirmations-wall-v1-1-css">
+.aw-doodle-panel{border:1px solid var(--line);border-radius:17px;padding:13px;background:rgba(255,255,255,.28)}
+.aw-control-title{font-size:12px;font-weight:800;letter-spacing:.03em;margin:0 0 8px;color:var(--ink)}
+.aw-doodle-colors{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:13px}
+.aw-dot{width:31px!important;height:31px!important;min-width:31px!important;padding:0!important;border-radius:50%!important;background:var(--dot)!important;border:2px solid rgba(37,48,45,.18)!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}
+.aw-dot.active{outline:3px solid var(--forest);outline-offset:3px}
+.aw-thicknesses{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:12px}
+.aw-thicknesses button{display:flex;align-items:center;justify-content:center;gap:8px;padding:9px 6px}
+.aw-line{display:inline-block;width:30px;background:currentColor;border-radius:99px}
+.aw-line.thin{height:2px}.aw-line.medium{height:5px}.aw-line.thick{height:9px}
+.aw-drawing-row{display:grid;grid-template-columns:1fr 68px;gap:8px;align-items:stretch}
+.aw-drawing-actions{display:grid;grid-template-rows:1fr 1fr;gap:8px}
+.aw-drawing-actions button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:5px;font-size:20px}
+.aw-drawing-actions button span{font-size:10px;font-weight:800}
+.aw-stamp-title{margin-top:12px}
+.aw-doodle-tools{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none}
+.aw-doodle-tools::-webkit-scrollbar{display:none}
+.aw-doodle-tools button{min-width:48px;min-height:42px;font-size:21px;padding:5px 10px}
+@media(max-width:520px){.aw-thicknesses button{font-size:13px}.aw-drawing-row{grid-template-columns:1fr 58px}}
+</style>
+
+
+<style id="aw-polish-v50-7-3">
+.aw-wall-surface{position:relative;min-height:540px;padding:18px 8px 42px;border-radius:24px;overflow:hidden;background:radial-gradient(circle,rgba(255,255,255,.07) 1px,transparent 1.5px) 0 0/25px 25px,rgba(22,28,25,.94)}
+.aw-wall-note{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;box-sizing:border-box;width:44%;min-height:112px;margin:0 0 28px 2%;padding:28px 13px 14px;border:0;border-radius:2px;color:#26302d;font-family:"Bradley Hand","Segoe Print","Comic Sans MS",cursive;font-size:20px;font-weight:700;line-height:1.15;box-shadow:0 8px 17px #0004;cursor:pointer;transition:.18s;z-index:1}
+.aw-wall-note:nth-child(even){margin-left:53%;margin-top:-55px}
+.aw-wall-note:nth-child(3n){margin-top:8px}
+.aw-wall-note:nth-child(4n){margin-top:-25px}
+.aw-wall-note:hover{transform:rotate(0deg) scale(1.025)!important;z-index:5;box-shadow:0 14px 24px #0005}
+.aw-wall-note:before{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%) rotate(-1deg);width:62px;height:16px;background:#fff7}
+.aw-wall-note.aw-yellow{background:#f4dc70}.aw-wall-note.aw-pink{background:#e8a2b4}.aw-wall-note.aw-blue{background:#9fd5e7}.aw-wall-note.aw-sage{background:#b8d3b7}.aw-wall-note.aw-lavender{background:#c9b8df}.aw-wall-note.aw-cream{background:#f1e4c2}
+.aw-wall-note.aw-small{min-height:92px;font-size:18px}.aw-wall-note.aw-large{min-height:145px;font-size:22px}
+.aw-wall-note .aw-favorite{position:absolute;right:7px;top:4px;font-family:system-ui;font-size:14px;opacity:.6}
+.aw-wall-note .aw-doodle-preview{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none;opacity:.9}
+.aw-wall-note .aw-note-text{position:relative;z-index:2;word-break:break-word}
+</style>
+
+<style id="gratitude-pond-v50-8-css">
+/* v50.8.4 — Gratitude Pond: immersive pond + storage-safe reflection view */
+body.gp-mode .personal-greeting,body.gp-mode .counter,body.gp-mode #friendReminders{display:none!important}
+.gp-head{margin:0 0 10px;background:linear-gradient(145deg,var(--card),var(--mist));padding:14px 15px;border-radius:18px}
+.gp-title-row{display:flex;align-items:center;gap:10px}.gp-icon{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:14px;background:var(--sage);font-size:23px;flex:0 0 42px}.gp-title-row h2{margin:0;font-size:22px;letter-spacing:-.02em}.gp-title-row p{margin:3px 0 0;line-height:1.35;font-size:13px}.gp-head-actions{display:grid;grid-template-columns:1fr auto;gap:7px;margin-top:11px}.gp-head-actions button{min-height:43px}.gp-tools{margin:0 0 10px;padding:11px 13px;border-radius:17px}.gp-search input{width:100%;box-sizing:border-box}.gp-meta-row{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:7px;font-size:11px;color:var(--muted)}
+.gp-pond{position:relative;min-height:610px;overflow:hidden;border-radius:28px;border:1px solid rgba(170,205,196,.22);padding:22px 7px 48px;box-sizing:border-box;background:radial-gradient(circle at 50% 18%,rgba(141,202,190,.14),transparent 28%),radial-gradient(circle at 20% 76%,rgba(91,150,136,.14),transparent 25%),radial-gradient(circle at 82% 56%,rgba(160,121,170,.12),transparent 24%),linear-gradient(160deg,#081719 0%,#0B2527 45%,#101E27 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 15px 35px #0003}
+.gp-pond:before{content:"";position:absolute;inset:-15%;background:repeating-radial-gradient(ellipse at 52% 48%,transparent 0 48px,rgba(210,239,233,.045) 50px 52px,transparent 54px 100px);opacity:.65;pointer-events:none;animation:gpRipple 11s ease-in-out infinite}@keyframes gpRipple{0%,100%{transform:scale(.96);opacity:.45}50%{transform:scale(1.03);opacity:.72}}
+.gp-pond:after{content:"";position:absolute;left:5%;right:5%;bottom:12px;height:24px;border-radius:50%;background:radial-gradient(ellipse,rgba(4,10,12,.72),transparent 68%);filter:blur(5px);pointer-events:none}
+.gp-bank{position:absolute;width:88px;height:44px;border-radius:50%;background:linear-gradient(145deg,#53655F,#293E3A);box-shadow:0 7px 11px #0007;opacity:.8}.gp-bank.b1{left:-15px;top:24px;transform:rotate(14deg)}.gp-bank.b2{right:-18px;top:148px;transform:rotate(-18deg)}.gp-bank.b3{left:-20px;bottom:88px;transform:rotate(-8deg)}.gp-bank.b4{right:-22px;bottom:34px;transform:rotate(17deg)}
+.gp-lily{position:absolute;width:52px;height:28px;border-radius:70% 30% 65% 35%;background:#496F5D99;box-shadow:inset -8px -3px 0 #173C3299}.gp-lily:after{content:"";position:absolute;right:1px;top:0;border-left:13px solid transparent;border-bottom:13px solid #102526;transform:rotate(18deg)}.gp-lily.l1{left:11%;top:18%}.gp-lily.l2{right:12%;top:42%;transform:scale(.72) rotate(22deg)}.gp-lily.l3{left:18%;bottom:16%;transform:scale(.8) rotate(-12deg)}
+.gp-layout{position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-around;gap:20px 2px;padding-top:4px}.gp-stone{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;width:clamp(122px,34vw,176px);min-height:90px;padding:22px 14px 17px;box-sizing:border-box;border-radius:48% 52% 44% 56% / 55% 46% 54% 45%;border:1px solid rgba(255,255,255,.14);background:linear-gradient(145deg,#A5A39A,#5D6762);color:#15201E;box-shadow:inset -8px -7px 13px rgba(0,0,0,.22),inset 7px 7px 10px rgba(255,255,255,.16),0 10px 15px #0007;cursor:pointer;z-index:2;transition:transform .2s ease,filter .2s ease}.gp-stone:active{filter:brightness(1.08)}.gp-stone:nth-of-type(2n){background:linear-gradient(145deg,#B1AAA0,#6E706A)}.gp-stone:nth-of-type(3n){background:linear-gradient(145deg,#879B96,#536B67)}.gp-stone:nth-of-type(4n){background:linear-gradient(145deg,#B49B9E,#75656A)}.gp-stone:nth-of-type(5n){background:linear-gradient(145deg,#A89C87,#6D6659)}
+.gp-stone-text{font-family:"Bradley Hand","Segoe Print","Comic Sans MS",cursive;font-size:17px;font-weight:700;line-height:1.12;max-width:145px;word-break:break-word}.gp-stone-date{position:absolute;bottom:7px;left:0;right:0;text-align:center;font-family:inherit;font-size:9px;font-weight:800;opacity:.62}.gp-stone-mark{position:absolute;right:9px;top:6px;font-size:15px;opacity:.58}
+.gp-empty{min-height:520px;display:flex;align-items:center;justify-content:center;text-align:center;color:#DCE6E3;padding:35px;box-sizing:border-box;position:relative;z-index:2}.gp-empty-inner{max-width:290px}.gp-empty-icon{font-size:50px;margin-bottom:10px}.gp-empty h3{margin:0 0 7px;font-size:21px}.gp-empty p{margin:0;line-height:1.5;color:#B7C8C2}.gp-empty button{margin-top:17px}
+.gp-modal{position:fixed;inset:0;background:rgba(4,10,12,.72);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);display:flex;align-items:flex-end;justify-content:center;padding:12px;z-index:10060}.gp-modal.hidden{display:none!important}.gp-sheet{width:min(620px,100%);max-height:91dvh;overflow:auto;background:var(--cream);color:var(--ink);border:1px solid var(--line);border-radius:25px;padding:18px;box-sizing:border-box;box-shadow:0 22px 60px #0008;-webkit-overflow-scrolling:touch}.gp-detail-stone{width:min(78vw,330px);min-height:165px;margin:17px auto 10px;display:flex;align-items:center;justify-content:center;text-align:center;padding:28px;box-sizing:border-box;border-radius:50% 46% 53% 44% / 52% 48% 45% 55%;background:linear-gradient(145deg,#A9A79B,#5F6762);color:#15201E;box-shadow:inset -12px -10px 20px #0003,inset 10px 10px 16px #fff2,0 16px 28px #0005}.gp-detail-stone .big{font-family:"Bradley Hand","Segoe Print","Comic Sans MS",cursive;font-size:28px;font-weight:700;line-height:1.14}.gp-detail-date{text-align:center;color:var(--muted);font-size:12px}.gp-ripple-divider{display:flex;align-items:center;justify-content:center;gap:9px;margin:17px 0 11px;color:var(--forest)}.gp-ripple-divider span{height:1px;background:var(--line);flex:1}.gp-ripple-divider i{font-style:normal;font-size:24px;line-height:1}.gp-detail-text{font-size:17px;line-height:1.58;text-align:center;margin:0 auto;max-width:500px}.gp-detail-note{margin-top:16px;padding:12px;border-radius:14px;background:var(--mist);color:var(--muted);font-size:12px;text-align:center;line-height:1.45}.gp-pager{margin-top:12px;width:49%}.gp-pager + .gp-pager{float:right}
+[data-theme="midnightforest"] .gp-pond{background:radial-gradient(circle at 50% 15%,rgba(255,255,255,.07),transparent 30%),linear-gradient(160deg,#081713,#0C2820 52%,#0D1D20)}[data-theme="burgundy"] .gp-pond{background:radial-gradient(circle at 50% 15%,rgba(255,255,255,.08),transparent 30%),linear-gradient(160deg,#1A0D15,#32141E 55%,#181018)}[data-theme="cosmic"] .gp-pond{background:radial-gradient(circle at 65% 20%,rgba(183,140,255,.15),transparent 25%),linear-gradient(160deg,#09091B,#17102B 55%,#0C0A18)}[data-theme="blacklight"] .gp-pond{background:linear-gradient(160deg,#050707,#0B1110 55%,#040606)}[data-theme="contrast"] .gp-pond{border-color:#fff;background:#000}
+@media(max-width:520px){.gp-head-actions{grid-template-columns:1fr auto}.gp-title-row h2{font-size:21px}.gp-pond{min-height:650px;padding-left:4px;padding-right:4px}.gp-stone{width:43vw;min-height:84px}.gp-stone-text{font-size:16px;max-width:38vw}.gp-stone-date{font-size:8px}.gp-layout{gap:15px 0}.gp-pager{font-size:13px}}
+</style>
+
+
+<style id="gratitude-pond-v50-8-5-polish">
+/* v50.9.0 — Gratitude Pond visual polish */
+body.gp-mode{--gp-ink:#eef3f1;--gp-soft:#b8c8c3}
+body.gp-mode #mainContent{padding-top:4px}
+.gp-head{background:linear-gradient(145deg,rgba(34,18,27,.92),rgba(57,27,37,.72));border-color:rgba(208,148,164,.18);box-shadow:0 10px 28px rgba(0,0,0,.16)}
+.gp-icon{background:linear-gradient(145deg,#5b3845,#2e2028);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.gp-title-row h2{letter-spacing:-.025em}.gp-title-row p{color:#bcaeb3}
+.gp-head-actions button{border-radius:14px}.gp-head-actions .primary{background:linear-gradient(135deg,#c77789,#a85c70);box-shadow:0 8px 18px rgba(177,92,112,.2)}
+.gp-tools{background:rgba(30,18,24,.72);border-color:rgba(208,148,164,.16);box-shadow:0 8px 22px rgba(0,0,0,.12)}
+.gp-tools input{background:rgba(8,13,14,.38)!important;border-color:rgba(190,211,205,.16)!important;color:#eef3f1!important}
+.gp-meta-row{color:#9faeaa}
+.gp-pond{min-height:650px;border-radius:30px;border-color:rgba(177,207,198,.18);padding:20px 8px 55px;background:
+ radial-gradient(ellipse at 50% 18%,rgba(112,184,171,.20),transparent 25%),
+ radial-gradient(ellipse at 20% 78%,rgba(91,143,137,.12),transparent 23%),
+ radial-gradient(ellipse at 84% 62%,rgba(160,113,149,.10),transparent 25%),
+ linear-gradient(180deg,#081a1d 0%,#0a2528 42%,#0c1d24 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),inset 0 -28px 60px rgba(0,0,0,.25),0 18px 38px rgba(0,0,0,.24)}
+.gp-pond:before{background:
+ radial-gradient(ellipse at 50% 50%,transparent 0 105px,rgba(208,237,231,.055) 107px 109px,transparent 111px 180px),
+ radial-gradient(ellipse at 50% 50%,transparent 0 205px,rgba(208,237,231,.035) 207px 209px,transparent 211px 290px),
+ repeating-radial-gradient(ellipse at 50% 54%,transparent 0 55px,rgba(208,237,231,.022) 57px 58px,transparent 60px 110px);opacity:.85;animation:gpRipple 14s ease-in-out infinite}
+.gp-pond:after{left:3%;right:3%;bottom:9px;height:34px;background:radial-gradient(ellipse,rgba(2,8,10,.78),transparent 68%)}
+.gp-water-glow{position:absolute;left:8%;right:8%;top:7%;height:110px;border-radius:50%;background:radial-gradient(ellipse,rgba(189,230,220,.10),transparent 68%);filter:blur(10px);pointer-events:none}
+.gp-water-line{position:absolute;left:7%;right:7%;height:1px;background:linear-gradient(90deg,transparent,rgba(211,237,231,.13),transparent);opacity:.7;pointer-events:none}.gp-water-line.w1{top:29%}.gp-water-line.w2{top:51%}.gp-water-line.w3{top:73%}
+.gp-bank{filter:saturate(.75);opacity:.72}.gp-lily{opacity:.68;filter:drop-shadow(0 5px 5px rgba(0,0,0,.3))}
+.gp-flower{position:absolute;font-size:25px;opacity:.7;filter:drop-shadow(0 4px 5px rgba(0,0,0,.4));pointer-events:none}.gp-flower.f1{left:8%;top:34%}.gp-flower.f2{right:7%;top:69%;font-size:19px}.gp-flower.f3{left:22%;bottom:7%;font-size:17px}
+.gp-layout{gap:0;padding:4px 8px 0;min-height:575px;align-content:flex-start}
+.gp-stone{width:clamp(120px,32vw,175px);min-height:92px;margin:8px 4px;transition:transform .28s ease,filter .2s ease,box-shadow .28s ease;}
+.gp-stone:hover{filter:brightness(1.06);box-shadow:inset -8px -7px 13px rgba(0,0,0,.22),inset 7px 7px 10px rgba(255,255,255,.16),0 13px 22px rgba(0,0,0,.48)}
+.gp-stone:focus-visible{outline:2px solid rgba(222,238,232,.8);outline-offset:3px}
+.gp-stone.is-rippling{animation:gpStoneRipple .65s ease-out}@keyframes gpStoneRipple{0%{transform:scale(1) rotate(var(--rot,0deg));filter:brightness(1)}45%{transform:scale(1.045) rotate(var(--rot,0deg));filter:brightness(1.13)}100%{transform:scale(1) rotate(var(--rot,0deg));filter:brightness(1)}}
+.gp-stone:after{content:"";position:absolute;left:10%;right:10%;bottom:-10px;height:12px;border-radius:50%;background:rgba(1,8,9,.34);filter:blur(5px);z-index:-1}
+.gp-stone-mark{font-size:14px}.gp-stone-text{font-size:16px;text-shadow:0 1px rgba(255,255,255,.15)}
+.gp-empty{min-height:560px}.gp-empty-inner{background:rgba(5,17,19,.24);border:1px solid rgba(216,236,231,.10);padding:24px 20px;border-radius:24px;backdrop-filter:blur(3px)}
+.gp-empty-icon{font-size:46px}
+.gp-modal{background:rgba(2,7,9,.78)}.gp-sheet{background:linear-gradient(160deg,#12191b,#1a1218 100%);color:#eef3f1;border-color:rgba(216,236,231,.14);box-shadow:0 24px 70px rgba(0,0,0,.65)}
+.gp-sheet .muted,.gp-detail-date{color:#aebdb9}.gp-detail-stone{background:linear-gradient(145deg,#a9a79b,#596662);box-shadow:inset -12px -10px 20px #0004,inset 10px 10px 16px #fff2,0 16px 30px #0007}.gp-detail-text{color:#e8efed}.gp-detail-note{background:rgba(203,222,216,.07);border:1px solid rgba(203,222,216,.09);color:#aebdb9}.gp-ripple-divider{color:#c9899a}.gp-ripple-divider span{background:rgba(203,222,216,.14)}
+.gp-sheet .secondary{background:rgba(255,255,255,.04);border-color:rgba(203,222,216,.15);color:#e8efed}.gp-sheet .secondary:disabled{opacity:.35}
+@media(max-width:520px){.gp-pond{min-height:690px}.gp-layout{gap:2px 0;padding-left:2px;padding-right:2px}.gp-stone{width:44vw;min-height:88px;margin:8px 2px}.gp-stone-text{font-size:15px;max-width:39vw}.gp-water-line{left:4%;right:4%}}
+</style>
+
+
+<style id="time-picker-styles">.time-picker-modal{position:fixed;inset:0;z-index:10080;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(5,8,20,.68);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}.time-picker-modal.hidden{display:none!important}.time-picker-sheet{width:min(440px,100%);max-height:min(88dvh,680px);overflow:auto;padding:20px;border-radius:22px;border:1px solid var(--border,rgba(255,255,255,.18));background:var(--card,#17192a);color:var(--text,#f7f7ff);box-shadow:0 24px 80px rgba(0,0,0,.48)}.time-picker-sheet h2{font-size:1.25rem;margin:0}.time-picker-wheels{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) minmax(0,1.1fr);gap:7px;align-items:center;margin:20px 0 8px}.time-wheel-column{min-width:0;display:flex;flex-direction:column;align-items:stretch}.time-wheel-arrow{border:0;background:transparent;color:var(--accent,#a99aff);font-size:17px;font-weight:800;min-height:30px;cursor:pointer;touch-action:manipulation}.time-wheel{height:156px;overflow-y:auto;overscroll-behavior:contain;scroll-snap-type:y mandatory;scrollbar-width:none;position:relative;border-radius:13px;touch-action:pan-y;-webkit-overflow-scrolling:touch;background:rgba(120,120,150,.08)}.time-wheel::-webkit-scrollbar{display:none}.time-wheel::before,.time-wheel::after{content:"";display:block;height:52px;pointer-events:none}.time-wheel-option{height:52px;display:flex;align-items:center;justify-content:center;scroll-snap-align:center;flex-shrink:0;font-size:1.1rem;color:var(--muted,#9ca3b8);font-variant-numeric:tabular-nums;cursor:pointer;user-select:none}.time-wheel-option.selected{background:rgba(139,119,255,.20);color:var(--text,#fff);font-size:1.32rem;font-weight:800;border-top:1px solid rgba(169,154,255,.42);border-bottom:1px solid rgba(169,154,255,.42)}.time-wheel-colon{font-size:1.5rem;font-weight:800;align-self:center;margin-top:-10px}.time-wheel-label{text-align:center;font-size:.65rem;letter-spacing:.1em;color:var(--muted,#9ca3b8);margin-top:6px}.time-picker-preview{text-align:center;font-size:1.45rem;font-weight:800;letter-spacing:.02em;margin:12px 0 18px}.time-picker-actions{gap:10px}.time-picker-actions button{flex:1;min-height:44px}#mTime,#templateTime{cursor:pointer}@media(max-width:380px){.time-picker-sheet{padding:15px}.time-picker-wheels{gap:4px}.time-wheel-option{font-size:1rem}.time-wheel-option.selected{font-size:1.2rem}}</style>
+<style id="v509317-manager-navigation-fix">
+/* v50.9.3.17 — manager respects fixed app header and dismisses on navigation */
+.template-manager-modal{align-items:flex-start!important;padding:calc(env(safe-area-inset-top) + 128px) 12px calc(env(safe-area-inset-bottom) + 18px)!important}
+.template-manager-sheet{max-height:calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 150px)!important;overflow-y:auto!important;border-radius:22px!important;padding-top:18px!important}
+#templateManagerClose{position:sticky;top:0;z-index:5;flex-shrink:0}
+@media(max-width:420px){.template-manager-modal{padding-top:calc(env(safe-area-inset-top) + 126px)!important}.template-manager-sheet{max-height:calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 145px)!important}}
+</style>
+
+<style id="v50-9-3-19-light-theme-contrast">
+/* v50.9.3.23: Ocean and Sunrise light-theme control contrast polish */
+:root[data-theme="ocean"],:root[data-theme="sunrise"]{color-scheme:light}
+[data-theme="ocean"] button:not(.primary):not(.danger):not(.nav-toggle),
+[data-theme="sunrise"] button:not(.primary):not(.danger):not(.nav-toggle){color:var(--ink);}
+[data-theme="ocean"] button.secondary,[data-theme="sunrise"] button.secondary,
+[data-theme="ocean"] .secondary,[data-theme="sunrise"] .secondary{background:var(--sage);color:var(--ink);border:1px solid var(--line);}
+[data-theme="ocean"] button.primary,[data-theme="ocean"] .primary{background:#0D6072;color:#FFFFFF;border:1px solid #084957;}
+[data-theme="sunrise"] button.primary,[data-theme="sunrise"] .primary{background:#984936;color:#FFFFFF;border:1px solid #783526;}
+[data-theme="ocean"] input:not([type="checkbox"]):not([type="radio"]),[data-theme="ocean"] textarea,[data-theme="ocean"] select,
+[data-theme="sunrise"] input:not([type="checkbox"]):not([type="radio"]),[data-theme="sunrise"] textarea,[data-theme="sunrise"] select{background:#FFFFFF;color:var(--ink);border:1px solid var(--line);}
+[data-theme="ocean"] input::placeholder,[data-theme="ocean"] textarea::placeholder{color:#526A71;opacity:1}
+[data-theme="sunrise"] input::placeholder,[data-theme="sunrise"] textarea::placeholder{color:#756158;opacity:1}
+[data-theme="ocean"] button:disabled,[data-theme="sunrise"] button:disabled{color:#555D60;background:#E2E6E6;opacity:1}
+[data-theme="ocean"] .nav button,[data-theme="sunrise"] .nav button{color:var(--ink)}
+[data-theme="ocean"] .nav button.active{background:#0D6072;color:#FFFFFF}
+[data-theme="sunrise"] .nav button.active{background:#984936;color:#FFFFFF}
+[data-theme="ocean"] .menu-drawer button,[data-theme="sunrise"] .menu-drawer button{color:var(--ink)}
+[data-theme="ocean"] .menu-drawer .active,[data-theme="sunrise"] .menu-drawer .active{color:#FFFFFF}
+[data-theme="ocean"] input[type="range"],[data-theme="sunrise"] input[type="range"]{accent-color:var(--forest)}
+[data-theme="ocean"] .card button:not(.primary):not(.danger),[data-theme="sunrise"] .card button:not(.primary):not(.danger){text-shadow:none}
+</style>
+
+
+<style id="v509321-specific-settings-contrast">
+/* v50.9.3.23: fix the exact Settings transparency panel and controls */
+:root[data-theme="ocean"] .menu-opacity-setting,
+:root[data-theme="sunrise"] .menu-opacity-setting {
+  background: #FFFDF8 !important;
+  color: #24343A !important;
+  border: 1px solid #9FBCC1 !important;
+  opacity: 1 !important;
+}
+:root[data-theme="ocean"] .menu-opacity-setting strong,
+:root[data-theme="sunrise"] .menu-opacity-setting strong,
+:root[data-theme="ocean"] .menu-opacity-setting p,
+:root[data-theme="sunrise"] .menu-opacity-setting p,
+:root[data-theme="ocean"] .menu-opacity-setting span,
+:root[data-theme="sunrise"] .menu-opacity-setting span {
+  color: #24343A !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #24343A !important;
+}
+:root[data-theme="sunrise"] .menu-opacity-setting { border-color:#CBA48F !important; }
+:root[data-theme="sunrise"] .menu-opacity-setting strong,
+:root[data-theme="sunrise"] .menu-opacity-setting p,
+:root[data-theme="sunrise"] .menu-opacity-setting span { color:#442E25 !important; -webkit-text-fill-color:#442E25 !important; }
+:root[data-theme="ocean"] #menuOpacitySlider,
+:root[data-theme="sunrise"] #menuOpacitySlider { background:transparent !important; accent-color:#07566A !important; }
+:root[data-theme="sunrise"] #menuOpacitySlider { accent-color:#8B3D2D !important; }
+</style>
+
+
+<style id="v509322-ocean-sunrise-checkin-contrast">
+/* v50.9.3.23: explicitly correct the remaining dark Daily Check-In surface */
+:root[data-theme="sunrise"] .daily-checkin-card,
+:root[data-theme="ocean"] .daily-checkin-card {
+  background: #FFFDF8 !important;
+  background-image: none !important;
+  color: #302A27 !important;
+  border: 1px solid #CDB9AA !important;
+  box-shadow: 0 5px 18px rgba(45,30,25,.10) !important;
+}
+:root[data-theme="sunrise"] .daily-checkin-card *,
+:root[data-theme="ocean"] .daily-checkin-card * {
+  text-shadow: none !important;
+}
+:root[data-theme="sunrise"] .daily-checkin-card h3,
+:root[data-theme="sunrise"] .daily-checkin-card strong,
+:root[data-theme="sunrise"] .daily-checkin-card label,
+:root[data-theme="sunrise"] .daily-checkin-card p,
+:root[data-theme="sunrise"] .daily-checkin-card .muted,
+:root[data-theme="sunrise"] .daily-checkin-card .daily-checkin-badge,
+:root[data-theme="ocean"] .daily-checkin-card h3,
+:root[data-theme="ocean"] .daily-checkin-card strong,
+:root[data-theme="ocean"] .daily-checkin-card label,
+:root[data-theme="ocean"] .daily-checkin-card p,
+:root[data-theme="ocean"] .daily-checkin-card .muted,
+:root[data-theme="ocean"] .daily-checkin-card .daily-checkin-badge {
+  color: #302A27 !important;
+  -webkit-text-fill-color: #302A27 !important;
+  opacity: 1 !important;
+}
+:root[data-theme="sunrise"] .daily-checkin-card .daily-checkin-badge,
+:root[data-theme="ocean"] .daily-checkin-card .daily-checkin-badge {
+  background: #F1D8C7 !important;
+  border: 1px solid #D8B8A2 !important;
+}
+:root[data-theme="sunrise"] .daily-checkin-card .checkin-moods button,
+:root[data-theme="ocean"] .daily-checkin-card .checkin-moods button {
+  background: #FFFFFF !important;
+  color: #302A27 !important;
+  border: 1px solid #D6BDAE !important;
+  opacity: 1 !important;
+}
+:root[data-theme="sunrise"] .daily-checkin-card .checkin-moods button span,
+:root[data-theme="ocean"] .daily-checkin-card .checkin-moods button span {
+  color: #62544D !important;
+  -webkit-text-fill-color: #62544D !important;
+  opacity: 1 !important;
+}
+:root[data-theme="sunrise"] .daily-checkin-card .checkin-reflection-toggle,
+:root[data-theme="ocean"] .daily-checkin-card .checkin-reflection-toggle,
+:root[data-theme="sunrise"] .daily-checkin-card .checkin-expand,
+:root[data-theme="ocean"] .daily-checkin-card .checkin-expand {
+  background: #F3DDCE !important;
+  color: #302A27 !important;
+  border-color: #D6BDAE !important;
+}
+</style>
+
+
+<style id="v509323-ocean-sunrise-header-button-contrast">
+/* v50.9.3.23: fixed-header icon buttons need explicit light-theme surfaces and icon strokes */
+:root[data-theme="ocean"] header.v41-fixed-header .menu-top-btn,
+:root[data-theme="ocean"] header.v41-fixed-header .journal-top-btn,
+:root[data-theme="ocean"] header.v41-fixed-header .message-top-btn,
+:root[data-theme="sunrise"] header.v41-fixed-header .menu-top-btn,
+:root[data-theme="sunrise"] header.v41-fixed-header .journal-top-btn,
+:root[data-theme="sunrise"] header.v41-fixed-header .message-top-btn {
+  background: #FFFFFF !important;
+  background-image: none !important;
+  color: #18343B !important;
+  border: 1.5px solid #9BB8BE !important;
+  box-shadow: 0 3px 12px rgba(25,45,50,.12) !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+:root[data-theme="sunrise"] header.v41-fixed-header .menu-top-btn,
+:root[data-theme="sunrise"] header.v41-fixed-header .journal-top-btn,
+:root[data-theme="sunrise"] header.v41-fixed-header .message-top-btn {
+  background: #FFFFFF !important;
+  color: #492D25 !important;
+  border-color: #C9A28E !important;
+  box-shadow: 0 3px 12px rgba(60,35,25,.12) !important;
+}
+:root[data-theme="ocean"] header.v41-fixed-header .menu-top-btn svg,
+:root[data-theme="ocean"] header.v41-fixed-header .journal-top-btn svg,
+:root[data-theme="ocean"] header.v41-fixed-header .message-top-btn svg,
+:root[data-theme="sunrise"] header.v41-fixed-header .menu-top-btn svg,
+:root[data-theme="sunrise"] header.v41-fixed-header .journal-top-btn svg,
+:root[data-theme="sunrise"] header.v41-fixed-header .message-top-btn svg {
+  stroke: currentColor !important;
+  color: inherit !important;
+  opacity: 1 !important;
+}
+:root[data-theme="ocean"] header.v41-fixed-header .menu-top-btn *,
+:root[data-theme="ocean"] header.v41-fixed-header .journal-top-btn *,
+:root[data-theme="ocean"] header.v41-fixed-header .message-top-btn *,
+:root[data-theme="sunrise"] header.v41-fixed-header .menu-top-btn *,
+:root[data-theme="sunrise"] header.v41-fixed-header .journal-top-btn *,
+:root[data-theme="sunrise"] header.v41-fixed-header .message-top-btn * {
+  color: inherit !important;
+  opacity: 1 !important;
+}
+</style>
+
+
+<style id="v509325-ocean-sunrise-journal-hard-override">
+/* v50.9.3.25: final hard override for Journal history cards in Ocean/Sunrise.
+   These two themes are light themes; their Journal cards must not inherit the
+   dark --card values used by the original theme definitions. */
+:root[data-theme="ocean"] .journal-list .journal-entry-card,
+:root[data-theme="sunrise"] .journal-list .journal-entry-card {
+  background: #FFFDF8 !important;
+  background-image: none !important;
+  color: #24343A !important;
+  border: 1px solid #BFD4D7 !important;
+  box-shadow: 0 5px 18px rgba(30,55,60,.10) !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+:root[data-theme="sunrise"] .journal-list .journal-entry-card {
+  background: #FFF9F3 !important;
+  color: #3C302B !important;
+  border-color: #DEC8B8 !important;
+  box-shadow: 0 5px 18px rgba(70,40,30,.10) !important;
+}
+:root[data-theme="ocean"] .journal-list .journal-entry-card .journal-entry-date,
+:root[data-theme="ocean"] .journal-list .journal-entry-card .journal-entry-preview,
+:root[data-theme="ocean"] .journal-list .journal-entry-card .journal-entry-meta,
+:root[data-theme="sunrise"] .journal-list .journal-entry-card .journal-entry-date,
+:root[data-theme="sunrise"] .journal-list .journal-entry-card .journal-entry-preview,
+:root[data-theme="sunrise"] .journal-list .journal-entry-card .journal-entry-meta {
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+:root[data-theme="ocean"] .journal-list .journal-entry-card .journal-entry-date { color:#16313B !important; -webkit-text-fill-color:#16313B !important; }
+:root[data-theme="ocean"] .journal-list .journal-entry-card .journal-entry-preview,
+:root[data-theme="ocean"] .journal-list .journal-entry-card .journal-entry-meta { color:#60777D !important; -webkit-text-fill-color:#60777D !important; }
+:root[data-theme="sunrise"] .journal-list .journal-entry-card .journal-entry-date { color:#3C302B !important; -webkit-text-fill-color:#3C302B !important; }
+:root[data-theme="sunrise"] .journal-list .journal-entry-card .journal-entry-preview,
+:root[data-theme="sunrise"] .journal-list .journal-entry-card .journal-entry-meta { color:#7D6C62 !important; -webkit-text-fill-color:#7D6C62 !important; }
+:root[data-theme="ocean"] .journal-list .journal-entry-card .journal-entry-meta,
+:root[data-theme="sunrise"] .journal-list .journal-entry-card .journal-entry-meta {
+  border-top-color: currentColor !important;
+  border-top-color: #C4D9DC !important;
+}
+:root[data-theme="sunrise"] .journal-list .journal-entry-card .journal-entry-meta { border-top-color:#E3CBB9 !important; }
+:root[data-theme="ocean"] .journal-list .journal-entry-card .journal-entry-today {
+  background:#0D6072 !important; color:#FFF !important;
+}
+:root[data-theme="sunrise"] .journal-list .journal-entry-card .journal-entry-today {
+  background:#A95442 !important; color:#FFF !important;
+}
+</style>
+
+
+<style id="v509326-ocean-sunrise-reader-contrast">
+/* v50.9.3.26 — Ocean/Sunrise are light themes. Give the Journal Reader its own
+   light-theme palette so the individual-day view never inherits dark card/ink values. */
+:root[data-theme="ocean"] {
+  color-scheme: light;
+  --ink:#12343B; --forest:#0B7180; --sage:#D6EEF1; --mist:#EDF7F8;
+  --cream:#FCFEFD; --sand:#DDEEEF; --line:#B7CDD1; --muted:#5D747A;
+  --rose:#B9685A; --bg:#F3FAFB; --card:#FCFEFD;
+}
+:root[data-theme="sunrise"] {
+  color-scheme: light;
+  --ink:#3D2B27; --forest:#A9533F; --sage:#F2D8C8; --mist:#FBEEE7;
+  --cream:#FFFCF8; --sand:#EEDCCF; --line:#DCC6B8; --muted:#7B675F;
+  --rose:#A9533F; --bg:#FFF7F1; --card:#FFFCF8;
+}
+:root[data-theme="ocean"] .journal-reader-modal,
+:root[data-theme="sunrise"] .journal-reader-modal {
+  background:var(--bg) !important; color:var(--ink) !important;
+}
+:root[data-theme="ocean"] .journal-reader-head,
+:root[data-theme="sunrise"] .journal-reader-head,
+:root[data-theme="ocean"] .journal-reader-nav,
+:root[data-theme="sunrise"] .journal-reader-nav {
+  background:var(--cream) !important; color:var(--ink) !important;
+  border-color:var(--line) !important;
+}
+:root[data-theme="ocean"] .journal-reader-paper,
+:root[data-theme="sunrise"] .journal-reader-paper {
+  background:var(--card) !important; color:var(--ink) !important;
+  border-color:var(--line) !important; box-shadow:0 12px 35px rgba(40,60,65,.12) !important;
+}
+:root[data-theme="ocean"] .journal-reader-paper *,
+:root[data-theme="sunrise"] .journal-reader-paper * {
+  text-shadow:none !important; opacity:1 !important;
+}
+:root[data-theme="ocean"] .journal-reader-date,
+:root[data-theme="ocean"] .journal-reader-section h3,
+:root[data-theme="ocean"] .journal-reader-item,
+:root[data-theme="ocean"] .journal-reader-journal,
+:root[data-theme="ocean"] .journal-reader-meeting strong,
+:root[data-theme="sunrise"] .journal-reader-date,
+:root[data-theme="sunrise"] .journal-reader-section h3,
+:root[data-theme="sunrise"] .journal-reader-item,
+:root[data-theme="sunrise"] .journal-reader-journal,
+:root[data-theme="sunrise"] .journal-reader-meeting strong {
+  color:var(--ink) !important;
+}
+:root[data-theme="ocean"] .journal-reader-title span,
+:root[data-theme="sunrise"] .journal-reader-title span { color:var(--ink) !important; }
+:root[data-theme="ocean"] .journal-reader-title strong,
+:root[data-theme="ocean"] .journal-reader-count,
+:root[data-theme="ocean"] .journal-reader-foot,
+:root[data-theme="ocean"] .journal-reader-swipe-hint,
+:root[data-theme="ocean"] .journal-reader-muted,
+:root[data-theme="sunrise"] .journal-reader-title strong,
+:root[data-theme="sunrise"] .journal-reader-count,
+:root[data-theme="sunrise"] .journal-reader-foot,
+:root[data-theme="sunrise"] .journal-reader-swipe-hint,
+:root[data-theme="sunrise"] .journal-reader-muted {
+  color:var(--muted) !important;
+}
+:root[data-theme="ocean"] .journal-reader-section,
+:root[data-theme="sunrise"] .journal-reader-section,
+:root[data-theme="ocean"] .journal-reader-meeting,
+:root[data-theme="sunrise"] .journal-reader-meeting {
+  border-color:var(--line) !important;
+}
+:root[data-theme="ocean"] .journal-reader-reflection-prompt,
+:root[data-theme="sunrise"] .journal-reader-reflection-prompt {
+  background:var(--sage) !important; color:var(--ink) !important;
+  border:1px solid var(--line) !important;
+}
+:root[data-theme="ocean"] .journal-reader-head button,
+:root[data-theme="sunrise"] .journal-reader-head button,
+:root[data-theme="ocean"] .journal-reader-nav button,
+:root[data-theme="sunrise"] .journal-reader-nav button {
+  color:var(--ink) !important; border-color:var(--line) !important;
+  background:var(--sage) !important;
+}
+:root[data-theme="ocean"] .journal-reader-today-btn,
+:root[data-theme="sunrise"] .journal-reader-today-btn {
+  background:var(--cream) !important; color:var(--ink) !important; border-color:var(--line) !important;
+}
+:root[data-theme="ocean"] .journal-reader-today,
+:root[data-theme="sunrise"] .journal-reader-today {
+  background:var(--forest) !important; color:#fff !important;
+}
+</style>
+
 </head>
 <body>
 <!-- v41 navigation sidebar -->
@@ -428,6 +917,8 @@ body:not(.screen-today) [class*="greeting"]{display:none!important}
   <div class="sidebar-divider"></div>
   <div class="sidebar-section-label">Tools</div>
   <button class="sidebar-item" data-side-tab="journal" type="button"><span class="side-icon">📖</span><span>My Journal</span></button>
+<button class="sidebar-item" id="sidebarAffirmationsWallBtn" type="button"><span class="side-icon">✨</span><span>Affirmations Wall</span></button>
+  <button class="sidebar-item" id="sidebarGratitudePondBtn" type="button" aria-label="Open Gratitude Pond"><span class="side-icon">🪷</span><span>Gratitude Pond</span></button>
   <button class="sidebar-item" data-side-tab="helped" type="button"><span class="side-icon">🔎</span><span>What Helped Me Before?</span></button>
   <button class="sidebar-item" id="sidebarEmotionBtn" type="button"><span class="side-icon">🧠</span><span>Emotion Log</span></button>
   <button class="sidebar-item" id="sidebarReportsBtn" data-side-tab="search" type="button"><span class="side-icon">📊</span><span>Reports</span></button>
@@ -443,17 +934,167 @@ body:not(.screen-today) [class*="greeting"]{display:none!important}
 <div class="counter"><div class="eyebrow" style="color:#c7cbd1" id="counterName">Your Recovery</div><div class="big" id="counter">Set your clean date</div><small id="daysClean"></small></div>
 <div id="friendReminders"></div>
 
+
+<section id="affirmationsWallView" class="hidden">
+  <div class="aw-intro card">
+    <div class="aw-intro-icon">💛</div>
+    <div>
+      <h2>✨ Affirmations Wall</h2>
+      <p class="muted">A collection of the things you've chosen to believe about yourself.</p>
+    </div>
+  </div>
+
+  <div class="aw-toolbar card">
+    <div class="aw-search-row">
+      <input id="awQuery" type="search" placeholder="🔎 Search affirmations..." autocomplete="off">
+      <button id="awShuffleBtn" class="primary" type="button">⤨ Shuffle Wall</button>
+    </div>
+    <div class="aw-filters" id="awFilters">
+      <button type="button" class="secondary active" data-aw-filter="all">All</button>
+      <button type="button" class="secondary" data-aw-filter="recent">Recent</button>
+      <button type="button" class="secondary" data-aw-filter="month">This Month</button>
+      <button type="button" class="secondary" data-aw-filter="doodle">With Doodles</button>
+    </div>
+  </div>
+
+  <div id="awWall" class="aw-wall" aria-live="polite"></div>
+
+  <button id="awAddBtn" class="aw-add-btn" type="button">＋ Add a New Affirmation</button>
+</section>
+
+<div id="awEditor" class="aw-modal hidden" role="dialog" aria-modal="true" aria-labelledby="awEditorTitle">
+  <div class="aw-sheet">
+    <div class="row between">
+      <div>
+        <div class="eyebrow">AFFIRMATIONS WALL</div>
+        <h2 id="awEditorTitle">Add an Affirmation</h2>
+      </div>
+      <button id="awEditorClose" class="secondary" type="button">✕</button>
+    </div>
+
+    <label for="awText">What do you want to remind yourself?</label>
+    <textarea id="awText" rows="3" maxlength="180" placeholder="I am sunshine."></textarea>
+
+    <div class="aw-option-label">Choose your note</div>
+    <div id="awColors" class="aw-color-row">
+      <button type="button" data-aw-color="#F4C2D0" style="--aw-note:#F4C2D0">Rose</button>
+      <button type="button" data-aw-color="#F4D98B" style="--aw-note:#F4D98B">Sun</button>
+      <button type="button" data-aw-color="#A9D7E8" style="--aw-note:#A9D7E8">Sky</button>
+      <button type="button" data-aw-color="#B8DDAF" style="--aw-note:#B8DDAF">Sage</button>
+      <button type="button" data-aw-color="#D9B7E8" style="--aw-note:#D9B7E8">Lavender</button>
+    </div>
+
+    <div class="aw-option-label">Add a little something <span class="muted">(optional)</span></div>
+    <div class="aw-doodle-panel">
+      <div class="aw-control-title">Doodle Color</div>
+      <div class="aw-doodle-colors" id="awDoodleColors">
+        <button type="button" class="aw-dot active" data-doodle-color="#25302d" style="--dot:#25302d" aria-label="Charcoal"></button>
+        <button type="button" class="aw-dot" data-doodle-color="#E5484D" style="--dot:#E5484D" aria-label="Red"></button>
+        <button type="button" class="aw-dot" data-doodle-color="#F4C430" style="--dot:#F4C430" aria-label="Yellow"></button>
+        <button type="button" class="aw-dot" data-doodle-color="#3B82F6" style="--dot:#3B82F6" aria-label="Blue"></button>
+        <button type="button" class="aw-dot" data-doodle-color="#3E9B52" style="--dot:#3E9B52" aria-label="Green"></button>
+        <button type="button" class="aw-dot" data-doodle-color="#8B5CF6" style="--dot:#8B5CF6" aria-label="Purple"></button>
+        <button type="button" class="aw-dot" data-doodle-color="#E86AA8" style="--dot:#E86AA8" aria-label="Pink"></button>
+        <button type="button" class="aw-dot" data-doodle-color="#FFFFFF" style="--dot:#FFFFFF" aria-label="White"></button>
+      </div>
+      <div class="aw-control-title">Line Thickness</div>
+      <div class="aw-thicknesses" id="awThicknesses">
+        <button type="button" class="secondary" data-doodle-width="3"><span class="aw-line thin"></span>Thin</button>
+        <button type="button" class="secondary active" data-doodle-width="7"><span class="aw-line medium"></span>Medium</button>
+        <button type="button" class="secondary" data-doodle-width="13"><span class="aw-line thick"></span>Thick</button>
+      </div>
+      <div class="aw-drawing-row">
+        <div class="aw-canvas-wrap">
+          <canvas id="awCanvas" width="720" height="260" aria-label="Draw a doodle"></canvas>
+          <div class="aw-canvas-hint">Draw a sun, a heart, a little reminder — make it yours.</div>
+        </div>
+        <div class="aw-drawing-actions">
+          <button type="button" class="secondary" id="awUndoDrawing">↶<span>Undo</span></button>
+          <button type="button" class="secondary" id="awClearDrawing">⌫<span>Clear</span></button>
+        </div>
+      </div>
+      <div class="aw-control-title aw-stamp-title">Doodles</div>
+      <div class="aw-doodle-tools">
+        <button type="button" class="secondary" data-aw-stamp="sun">☀️</button>
+        <button type="button" class="secondary" data-aw-stamp="heart">♡</button>
+        <button type="button" class="secondary" data-aw-stamp="star">✦</button>
+        <button type="button" class="secondary" data-aw-stamp="flower">✿</button>
+      </div>
+    </div>
+
+    <div class="aw-editor-actions">
+      <button id="awCancelBtn" class="secondary" type="button">Cancel</button>
+      <button id="awSaveBtn" class="primary" type="button">Save to My Wall</button>
+    </div>
+  </div>
+</div>
+
+<div id="awDetail" class="aw-modal hidden" role="dialog" aria-modal="true">
+  <div class="aw-sheet aw-detail-sheet">
+    <div class="row between">
+      <h2 id="awDetailTitle">Affirmation</h2>
+      <button id="awDetailClose" class="secondary" type="button">✕</button>
+    </div>
+    <div id="awDetailNote" class="aw-detail-note"></div>
+    <div id="awDetailMeta" class="muted" style="margin-top:10px"></div>
+    <div class="aw-detail-actions">
+      <button id="awDetailEdit" class="primary" type="button">✎ Edit</button>
+      <button id="awDetailFavorite" class="secondary" type="button">♡ Favorite</button>
+      <button id="awDetailDelete" class="danger" type="button">Delete</button>
+    </div>
+  </div>
+</div>
+
+
+<section id="gratitudePondView" class="hidden">
+  <div class="gp-head card">
+    <div class="gp-title-row">
+      <div class="gp-icon">🪷</div>
+      <div>
+        <h2>Gratitude Pond</h2>
+        <p class="muted">A quiet place to revisit the things you've noticed and appreciated.</p>
+      </div>
+    </div>
+    <div class="gp-head-actions">
+      <button id="gpTodayBtn" class="primary" type="button">Today's Gratitude</button>
+      <button id="gpShuffleBtn" class="secondary" type="button">⤨ Wander</button>
+    </div>
+  </div>
+  <div class="gp-tools card">
+    <div class="gp-search"><input id="gpQuery" type="search" placeholder="🔎 Search your reflections..." autocomplete="off"></div>
+    <div class="gp-meta-row"><span id="gpCount">0 reflections</span><span>Tap a stone to pause with it.</span></div>
+  </div>
+  <div id="gpPond" class="gp-pond" aria-live="polite"></div>
+</section>
+
+<div id="gpDetail" class="gp-modal hidden" role="dialog" aria-modal="true" aria-labelledby="gpDetailTitle">
+  <div class="gp-sheet">
+    <div class="row between">
+      <div><div class="eyebrow">GRATITUDE REFLECTION</div><h2 id="gpDetailTitle">A reflection</h2></div>
+      <button id="gpDetailClose" class="secondary" type="button" aria-label="Close">✕</button>
+    </div>
+    <div id="gpDetailStone" class="gp-detail-stone"></div>
+    <div id="gpDetailDate" class="gp-detail-date"></div>
+    <div class="gp-ripple-divider"><span></span><i>⌁</i><span></span></div>
+    <p id="gpDetailText" class="gp-detail-text"></p>
+    <div class="gp-detail-note">Take a moment. You don't have to do anything with this reflection.</div>
+    <button id="gpDetailPrev" class="secondary gp-pager" type="button">‹ Previous</button>
+    <button id="gpDetailNext" class="secondary gp-pager" type="button">Next ›</button>
+  </div>
+</div>
+
 <section id="aboutView" class="hidden">
 <div class="card about-page-card">
 <h2>ⓘ About Recovery Journal</h2>
 <p class="muted" style="margin-top:5px">Learn what Recovery Journal does and how its features fit together.</p>
 <div class="about-content" style="margin-top:16px">
-<p><strong>Recovery Journal v50.6.4.2</strong></p>
+<p><strong>Recovery Journal v50.9.3.26 Ocean & Sunrise Journal Reader Contrast Fix Test</strong></p>
 <h4>What is Recovery Journal?</h4>
 <p>A private, device-based journal built to help you pause each day, reflect on your recovery, keep track of meetings, and notice patterns in your thoughts and emotions.</p>
 <h4>Your Daily Entry</h4>
 <ul><li><strong>Affirmations</strong> — three positive statements for today.</li><li><strong>Gratitude</strong> — three things you're grateful for.</li><li><strong>Today's Focus</strong> — one thing you want to practice, remember, or carry with you today.</li><li><strong>Living the Program</strong> — an optional daily reflection with an original prompt. Tap <strong>Another</strong> for a different reflection.</li><li><strong>My Emotions</strong> — a dedicated screen for browsing, searching, filtering, editing, and reviewing your emotion history.</li><li><strong>Emotion Log</strong> — slow down and record what you're feeling, how intense it was, what happened, how you responded, and what you need now.</li><li><strong>Emotion Wheel</strong> — use the wheel when you know something is going on but need help finding the words.</li><li><strong>Journal</strong> — write whatever you need to get out.</li><li><strong>Meetings</strong> — record meetings, topics, notes, time, and place. If enabled in Settings, you can collect drawn chairperson initials for attendance records.</li></ul>
-<h4>Daily Check-In</h4><p>A quick daily snapshot of how you are doing. Choose a mood, then optionally expand <strong>Want to reflect a little more?</strong> to record what you need and one recovery action. Your check-in becomes part of that day’s journal.</p><h4>Journal View</h4><p>Open <strong>My Journal</strong> from the navigation menu to browse your recovery story chronologically. Search your entries, filter by date or category, and open any day in the Journal Reader. The Journal Reader includes Daily Check-In information when it was recorded, with subtle <strong>Today</strong> navigation for older days.</p>
+<h4>⭐ Favorite Meetings — Quick Enter</h4><p><strong>Star your go-to meetings from Meetings → Quick Enter Meetings → Manage.</strong> Favorited meeting templates automatically move to the top of the Quick Enter meeting dropdown, so the meetings you attend most often are fastest to select. Tap the star again to remove a favorite; your favorites stay saved on this device. Manage templates directly from the Meetings screen.</p>
+<h4>Affirmations Wall</h4><p>Turn affirmations from your journal into a personal sticky-note wall. Add your own notes, colors, doodles, and freehand drawings, then shuffle or search the wall.</p><h4>Gratitude Pond</h4><p>A visual place to revisit the gratitude reflections already in your journal. Each saved gratitude becomes a stone in the pond. Wander through them, search when you want to find something specific, or tap a stone to slow down and reflect. The pond is a viewing space, not a second place to enter your daily gratitude.</p><h4>Daily Check-In</h4><p>A quick daily snapshot of how you are doing. Choose a mood, then optionally expand <strong>Want to reflect a little more?</strong> to record what you need and one recovery action. Your check-in becomes part of that day’s journal.</p><h4>Journal View</h4><p>Open <strong>My Journal</strong> from the navigation menu to browse your recovery story chronologically. Search your entries, filter by date or category, and open any day in the Journal Reader. The Journal Reader includes Daily Check-In information when it was recorded, with subtle <strong>Today</strong> navigation for older days.</p>
 <h4>What Helped Me Before?</h4><p>Use <strong>☰ → What Helped Me Before?</strong> to search your own recovery history. Find past journal entries, gratitudes, affirmations, meetings, emotions, goals, and Messages to Myself by keyword or category.</p><h4>My Goals</h4><p>Track short-term and long-term goals, optional milestones, status, target dates, and personal reflections. Completed goals remain available from the Completed goals view.</p>
 <h4>Messages to Myself</h4><p>Keep one or more personal letters for your future self. The letter icon at the top opens a clean, scrollable reading view. Create, edit, add, or delete messages from <strong>Settings → My Recovery → Messages to Myself</strong>. The optional Writing Guide is there if it helps.</p>
 <h4>Your Recovery</h4><p>Your clean date powers your personal clean-time counter. You can change it from <strong>My Recovery → Clean Time</strong>.</p>
@@ -553,7 +1194,7 @@ body:not(.screen-today) [class*="greeting"]{display:none!important}
 <div class="card"><div class="row between"><div><h2>🤝 Meetings</h2><p class="muted" style="margin-top:5px">Keep your meeting history organized and easy to review.</p></div><button class="primary" id="meetingsAddBtn">+ Add Meeting</button></div></div>
 <div class="card"><div class="row between"><h3 id="meetingsTodayHeading">Today’s Meetings</h3><button class="secondary" id="meetingsTodayBtn">Today</button></div><div id="meetingsTodayList" style="margin-top:10px"></div></div>
 <div class="card"><button id="recentMeetingsToggle" class="secondary" style="width:100%;text-align:left;display:flex;justify-content:space-between;align-items:center" data-open="false" aria-expanded="false"><span><strong>Recent Meetings</strong> <span class="setting-count" id="recentMeetingsCount">0</span></span><span id="recentMeetingsChevron">＋</span></button><div id="recentMeetingsPanel" class="hidden"><div class="muted" style="margin-top:10px">Newest first</div><div id="recentMeetingsList" style="margin-top:4px"></div></div></div>
-<div class="card quick-enter-card"><details><summary><strong>⚡ Quick Enter Meetings</strong> <span class="setting-count" id="meetingsQuickCount">0</span></summary><div class="quick-enter-body"><p class="muted" style="margin-top:5px">Saved meeting templates stay available when you add a meeting.</p><div id="meetingsQuickList" style="margin-top:10px"></div></div></details></div>
+<div class="card quick-enter-card"><div class="row between" style="gap:10px;align-items:center"><button id="meetingsQuickToggle" class="secondary" type="button" style="flex:1;text-align:left;display:flex;align-items:center;gap:8px"><span id="meetingsQuickChevron">▾</span><strong>⚡ Quick Enter Meetings</strong><span class="setting-count" id="meetingsQuickCount">0</span></button><button id="manageTemplatesBtn" class="secondary" type="button">Manage</button></div><div id="meetingsQuickPanel" class="quick-enter-body"><p class="muted" style="margin-top:8px">Saved meeting templates stay available when you add a meeting. Favorites appear first.</p><div id="meetingsQuickList" style="margin-top:10px"></div></div></div>
 <div class="card"><button class="secondary" style="width:100%" id="meetingsAttendanceBtn">Print meeting attendance sheet</button><p class="muted" style="margin-top:8px">Print meetings chronologically without notes. Chairperson initials can be included when enabled in Meeting Settings.</p></div>
 </section>
 
@@ -590,7 +1231,8 @@ body:not(.screen-today) [class*="greeting"]{display:none!important}
 <p class="muted">Add recovery dates for friends and celebrate their milestones. Everything stays local on this device.</p>
 <label>Friend name</label><input id="friendName" placeholder="Name">
 <label>Clean date</label><input type="date" id="friendDate">
-<div class="row" style="margin-top:10px"><button class="primary" style="flex:1" id="addFriend">Add friend</button><button class="secondary hidden" id="cancelFriendEdit" type="button">Cancel edit</button></div>
+<div class="row" style="margin-top:10px"><button type="button" class="primary" style="flex:1" id="addFriend">Add friend</button><button class="secondary hidden" id="cancelFriendEdit" type="button">Cancel edit</button></div>
+<p id="friendSaveStatus" class="muted" role="status" aria-live="polite" style="margin-top:8px;min-height:1.2em"></p>
 <div id="friendsList" style="margin-top:12px"></div>
 </div>
 </details>
@@ -611,7 +1253,7 @@ body:not(.screen-today) [class*="greeting"]{display:none!important}
 <details open>
 <summary>🌿 My Recovery</summary>
 <div class="about-content">
-<p><strong>Recovery Journal v50.6.4.2</strong></p>
+<p><strong>Recovery Journal v50.9.3.26 Ocean & Sunrise Journal Reader Contrast Fix Test</strong></p>
 <div class="message-settings-card">
 <details id="messagesSettingsDetails">
 <summary><span><svg class="message-inline-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 13.5c0-2.2 1.8-4 4-4h20c2.2 0 4 1.8 4 4v17c0 2.2-1.8 4-4 4H23l-8.5 6v-6H14c-2.2 0-4-1.8-4-4z"/><path d="M16 18h16M16 23h11"/><path class="heart" d="M25.8 22.6c1.8-2.7 6.3-1.5 6.3 1.8 0 3.2-3.1 5.1-6.3 7.3-3.2-2.2-6.3-4.1-6.3-7.3 0-3.3 4.5-4.5 6.3-1.8z"/><path class="arrow" d="M8 20.5a16 16 0 0 0 3.8 16.1"/><path class="arrow" d="M7.8 30.8 7 38l6.7-1.7"/></svg><strong>Messages to Myself</strong></span><span class="setting-count" id="messageCount">0</span></summary>
@@ -648,14 +1290,14 @@ body:not(.screen-today) [class*="greeting"]{display:none!important}
 </div>
 </details>
 </div>
-<div class="card about-card"><details><summary>⚡ Quick Enter Meetings <span class="setting-count" id="templateCount">0</span></summary><div class="about-content"><p class="muted">Manage the saved meeting templates that appear in Quick Enter.</p><button class="primary" style="width:100%;margin-top:10px" id="addTemplateBtn">+ Add Quick Enter Meeting</button><div id="templates" style="margin-top:12px"></div></div></details></div>
+
 <div class="card about-card"><details><summary>🧠 Emotion List</summary><div class="about-content"><p class="muted">Manage custom emotions you've added to the Emotion Log. Built-in emotions remain available.</p><div id="customEmotionList" class="emotion-list"></div></div></details></div>
-<div class="card about-card"><details><summary>🎨 Appearance</summary><div class="about-content"><p class="muted">Choose a look for Recovery Journal. Your choice stays on this device.</p><div class="theme-choice-grid" id="themeChoices"><label class="theme-choice"><input type="radio" name="themeChoice" value="serene"><span class="theme-dot" style="background:#23433B"></span><span class="theme-copy"><strong>🌿 Serene</strong><small>Calm • grounded • natural</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="dark"><span class="theme-dot" style="background:#111715"></span><span class="theme-copy"><strong>🌙 Dark</strong><small>Low light • focused • quiet</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="moonlight"><span class="theme-dot" style="background:linear-gradient(135deg,#1A2A40,#AFC4E8)"></span><span class="theme-copy"><strong>🌌 Moonlight</strong><small>Deep blue • soft • reflective</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="neon"><span class="theme-dot" style="background:linear-gradient(135deg,#35F2D0,#FF4FD8)"></span><span class="theme-copy"><strong>⚡ Neon</strong><small>Bold • energetic • expressive</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="ocean"><span class="theme-dot" style="background:linear-gradient(135deg,#123D61,#2BD4C7)"></span><span class="theme-copy"><strong>🌊 Ocean</strong><small>Cool • peaceful • reflective</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="sunrise"><span class="theme-dot" style="background:linear-gradient(135deg,#F2B84B,#E86F61)"></span><span class="theme-copy"><strong>☀️ Sunrise</strong><small>Warm • hopeful • uplifting</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="blacklight"><span class="theme-dot" style="background:linear-gradient(135deg,#B7FF3C,#FF4FD8)"></span><span class="theme-copy"><strong>🟢 Black Light</strong><small>Electric • dark • vivid</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="cosmic"><span class="theme-dot" style="background:linear-gradient(135deg,#24114D,#B78CFF,#FF75C8)"></span><span class="theme-copy"><strong>🌌 Cosmic</strong><small>Deep space • violet • immersive</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="contrast"><span class="theme-dot" style="background:linear-gradient(135deg,#000 0 50%,#FFE600 50%)"></span><span class="theme-copy"><strong>◐ High Contrast</strong><small>Maximum clarity • bold edges</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="midnightforest"><span class="theme-dot" style="background:linear-gradient(135deg,#101512,#7FA88A)"></span><span class="theme-copy"><strong>🌲 Midnight Forest</strong><small>Grounded • quiet • earthy</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="burgundy"><span class="theme-dot" style="background:linear-gradient(135deg,#130B0E,#8E4A56)"></span><span class="theme-copy"><strong>🍷 Dark Burgundy</strong><small>Deep • warm • mature</small></span></label></div><input id="darkModeToggle" type="checkbox" hidden aria-hidden="true"></div></details></div>
+<div class="card about-card"><details><summary>🎨 Appearance</summary><div class="about-content"><p class="muted">Choose a look for Recovery Journal. Your choice stays on this device.</p><div class="theme-choice-grid" id="themeChoices"><label class="theme-choice"><input type="radio" name="themeChoice" value="serene"><span class="theme-dot" style="background:#23433B"></span><span class="theme-copy"><strong>🌿 Serene</strong><small>Calm • grounded • natural</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="dark"><span class="theme-dot" style="background:#111715"></span><span class="theme-copy"><strong>🌙 Dark</strong><small>Low light • focused • quiet</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="moonlight"><span class="theme-dot" style="background:linear-gradient(135deg,#1A2A40,#AFC4E8)"></span><span class="theme-copy"><strong>🌌 Moonlight</strong><small>Deep blue • soft • reflective</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="neon"><span class="theme-dot" style="background:linear-gradient(135deg,#35F2D0,#FF4FD8)"></span><span class="theme-copy"><strong>⚡ Neon</strong><small>Bold • energetic • expressive</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="ocean"><span class="theme-dot" style="background:linear-gradient(135deg,#123D61,#2BD4C7)"></span><span class="theme-copy"><strong>🌊 Ocean</strong><small>Cool • peaceful • reflective</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="sunrise"><span class="theme-dot" style="background:linear-gradient(135deg,#F2B84B,#E86F61)"></span><span class="theme-copy"><strong>☀️ Sunrise</strong><small>Warm • hopeful • uplifting</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="blacklight"><span class="theme-dot" style="background:linear-gradient(135deg,#B7FF3C,#FF4FD8)"></span><span class="theme-copy"><strong>🟢 Black Light</strong><small>Electric • dark • vivid</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="cosmic"><span class="theme-dot" style="background:linear-gradient(135deg,#24114D,#B78CFF,#FF75C8)"></span><span class="theme-copy"><strong>🌌 Cosmic</strong><small>Deep space • violet • immersive</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="contrast"><span class="theme-dot" style="background:linear-gradient(135deg,#000 0 50%,#FFE600 50%)"></span><span class="theme-copy"><strong>◐ High Contrast</strong><small>Maximum clarity • bold edges</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="midnightforest"><span class="theme-dot" style="background:linear-gradient(135deg,#101512,#7FA88A)"></span><span class="theme-copy"><strong>🌲 Midnight Forest</strong><small>Grounded • quiet • earthy</small></span></label><label class="theme-choice"><input type="radio" name="themeChoice" value="burgundy"><span class="theme-dot" style="background:linear-gradient(135deg,#130B0E,#8E4A56)"></span><span class="theme-copy"><strong>🍷 Dark Burgundy</strong><small>Deep • warm • mature</small></span></label></div><div class="menu-opacity-setting" style="margin-top:18px;padding:14px;border:1px solid var(--line);border-radius:16px;background:var(--card)"><div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><strong>Menu drawer transparency</strong><strong><span id="menuOpacityValue">70</span>%</strong></div><p class="muted" style="margin:6px 0 12px">Adjust how much of the screen shows through the navigation menu.</p><input id="menuOpacitySlider" type="range" min="35" max="95" step="5" value="70" style="width:100%;accent-color:var(--forest)"><div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted)"><span>More transparent</span><span>More solid</span></div></div><input id="darkModeToggle" type="checkbox" hidden aria-hidden="true"></div></details></div>
 <div class="card about-card">
 <details>
 <summary>ℹ️ About Recovery Journal</summary>
 <div class="about-content">
-<p><strong>Recovery Journal v50.6.4.2</strong></p>
+<p><strong>Recovery Journal v50.9.3.26 Ocean & Sunrise Journal Reader Contrast Fix Test</strong></p>
 <h4>What is Recovery Journal?</h4>
 <p>A private, device-based journal built to help you pause each day, reflect on your recovery, keep track of meetings, notice emotional patterns, and look back on your own progress.</p>
 <h4>Daily Check-In</h4>
@@ -674,6 +1316,9 @@ body:not(.screen-today) [class*="greeting"]{display:none!important}
 <p>Record meeting time, place, name, topic, and notes. Optional chairperson initials can be collected for attendance records. Print attendance sheets and journal reports, including emotion information when appropriate.</p>
 <h4>Appearance</h4>
 <p>Choose from <strong>11 themes</strong>: Serene, Dark, Moonlight, Neon, Ocean, Sunrise, Black Light, Cosmic, High Contrast, Midnight Forest, and Dark Burgundy. Theme choices stay on this device.</p>
+<h4>Theme Readability (v50.9.3.26)</h4><p>Improved Ocean and Sunrise readability across the Journal history and individual-day Journal Reader, including paper surfaces, headings, body text, dividers, navigation buttons, and header controls.</p>
+<h4>Backup & Restore (v50.9.3.26)</h4>
+<p>Choose <strong>Export backup</strong> and save or share the dated JSON file somewhere outside this browser, such as the iPhone Files app. The backup includes all data stored in this installation, including journal days, meetings and favorites, Quick Enter templates, emotions, goals, messages, friends, appearance, and settings. Before restoring, Recovery Journal validates the file and shows a summary. Restore replaces the current local data only after confirmation. Keep the backup file until you have checked that your entries are present.</p>
 <h4>Privacy & Data</h4>
 <p>Your journal is designed to stay on your device. No account is required and journal data is not uploaded to a Recovery Journal server. Use <strong>Backup & Transfer</strong> before moving to another device or installation.</p>
 <div class="help"><strong>Note:</strong><p style="margin:6px 0 0">Recovery Journal is a tool for reflection. Use it in whatever way supports your recovery.</p></div>
@@ -700,13 +1345,14 @@ body:not(.screen-today) [class*="greeting"]{display:none!important}
 <button class="primary" style="width:100%;margin-top:10px" id="exportBackup">Export backup</button>
 <button style="width:100%;margin-top:10px" id="importBackup">Import backup</button>
 <input type="file" id="backupFile" accept="application/json,.json" hidden>
-<p class="muted" style="margin-top:8px">Importing replaces the data currently stored in this app with the backup you choose.</p>
-<div class="help"><strong>How to update or transfer your save data</strong><ol><li><strong>Before updating:</strong> open the old app that contains your journal and go to Settings → Backup & Transfer → <strong>Export backup</strong>.</li><li>Save or share the JSON backup somewhere you can find it again, such as Files or Messages to yourself.</li><li>Install/open the updated Recovery Journal version.</li><li>Go to Settings → Backup & Transfer → <strong>Import backup</strong>, then choose your saved JSON file.</li><li>Confirm the import. Your journal entries, meetings, templates, topics, name, and clean date will be restored.</li></ol></div>
+<p id="backupStatus" class="muted" role="status" aria-live="polite" style="margin-top:8px">No backup action performed in this session.</p>
+<p class="muted" style="margin-top:8px">Restore checks the file and shows its contents before confirmation. A successful restore replaces current data; a failed restore attempts to keep the existing data intact.</p>
+<div class="help"><strong>How to update or transfer your save data</strong><ol><li><strong>Before updating:</strong> open the old app that contains your journal and go to Settings → Backup & Transfer → <strong>Export backup</strong>.</li><li>Save or share the JSON backup somewhere you can find it again, such as Files or Messages to yourself.</li><li>Install/open the updated Recovery Journal version.</li><li>Go to Settings → Backup & Transfer → <strong>Import backup</strong>, then choose your saved JSON file.</li><li>Confirm the import. Your journal entries, Daily Check-In, affirmations, gratitudes, meetings, Quick Enter templates and favorites, topics, emotions, goals, Messages to Myself, friends, themes, settings, name, and clean date will be restored.</li></ol></div>
 <div class="backup-note"><strong>Important:</strong> Do not delete the old app or clear its website data until you have successfully exported and verified your backup.</div>
 </div>
 </details>
 </div>
-<div style="text-align:center;margin:18px 0 4px"><span class="muted" style="font-size:11px;letter-spacing:.04em;opacity:.75">Recovery Journal v50.6.4.2</span></div>
+<div style="text-align:center;margin:18px 0 4px"><span class="muted" style="font-size:11px;letter-spacing:.04em;opacity:.75">Recovery Journal v50.9.3.26 Ocean & Sunrise Journal Reader Contrast Fix Test</span></div>
 </section>
 </div>
 <!-- v41 Goals -->
@@ -803,7 +1449,8 @@ body:not(.screen-today) [class*="greeting"]{display:none!important}
     </div>
   </div>
 </div>
-<div id="templateModal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="templateModalTitle"><div class="meeting-sheet"><div class="row between"><div><h3 id="templateModalTitle">⚡ Quick Enter Meeting</h3><p class="muted" style="margin-top:5px">Save a reusable meeting shortcut.</p></div><button class="secondary" id="templateModalClose" type="button">✕</button></div><div style="margin-top:14px"><label>Meeting name</label><input id="templateName" placeholder="Meeting name"><label>Time</label><input id="templateTime" placeholder="7:00 PM"><label>Place</label><input id="templatePlace" placeholder="Place"><div class="row" style="margin-top:12px"><button class="secondary" id="templateCancel" type="button">Cancel</button><button class="primary" id="templateSave" type="button">Save template</button></div></div></div></div>
+<div id="templateManagerModal" class="template-manager-modal hidden" role="dialog" aria-modal="true" aria-labelledby="templateManagerTitle"><div class="template-manager-sheet"><div class="row between" style="align-items:flex-start;gap:12px"><div><h2 id="templateManagerTitle">Manage Quick Enter Meetings</h2><p class="muted" style="margin-top:6px">Add, edit, delete, and favorite the reusable meeting templates that appear in Quick Enter.</p></div><button class="secondary" id="templateManagerClose" type="button" aria-label="Close manager">✕</button></div><button class="primary" id="managerAddTemplateBtn" type="button" style="width:100%;margin-top:16px">+ Add Quick Enter Meeting</button><div id="managerTemplates" style="margin-top:14px"></div></div></div>
+<div id="templateModal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="templateModalTitle"><div class="meeting-sheet"><div class="row between"><div><h3 id="templateModalTitle">⚡ Quick Enter Meeting</h3><p class="muted" style="margin-top:5px">Save a reusable meeting shortcut.</p></div><button class="secondary" id="templateModalClose" type="button">✕</button></div><div style="margin-top:14px"><label>Meeting name</label><input id="templateName" placeholder="Meeting name"><label>Time</label><input id="templateTime" placeholder="Select time" readonly inputmode="none" aria-haspopup="dialog" aria-label="Meeting time, tap to select"><label>Place</label><input id="templatePlace" placeholder="Place"><div class="row" style="margin-top:12px"><button class="secondary" id="templateCancel" type="button">Cancel</button><button class="primary" id="templateSave" type="button">Save template</button></div></div></div></div>
 <div id="emotionModal" class="emotion-modal hidden" role="dialog" aria-modal="true" aria-labelledby="emotionModalTitle"><div class="emotion-sheet"><div class="row between"><div><h3 id="emotionModalTitle">🧠 Log an Emotion</h3><p class="muted" style="margin-top:5px">Slow down, notice what happened, and reflect on your response.</p></div><button class="secondary" id="emotionModalClose" type="button">✕</button></div><div style="margin-top:14px"><label>Choose an emotion</label><select id="emotionType"></select><button class="secondary" style="width:100%;margin-top:8px;text-align:left" id="emotionWheelOpen" type="button">🧭 Help me identify this emotion</button><div id="customEmotionWrap" class="hidden"><label>New emotion</label><input id="customEmotionName" placeholder="Name the emotion"><button class="secondary" style="width:100%;margin-top:8px" id="addCustomEmotion" type="button">Add emotion</button></div><div class="emotion-scale"><label>How intense was the emotion?</label><input id="emotionIntensity" type="range" min="0" max="10" step="0.5" value="5"><div class="emotion-score-box"><span id="emotionIntensityValue">5.0</span> / 10</div></div><div class="emotion-question"><label id="emotionWhereLabel">Where and when did this happen?</label><textarea id="emotionWhere" rows="2"></textarea></div><div class="emotion-question"><label>Who was around you?</label><textarea id="emotionWho" rows="2"></textarea></div><div class="emotion-question"><label id="emotionEventLabel">What happened?</label><textarea id="emotionEvent" rows="3"></textarea></div><div id="emotionSpecificWrap" class="emotion-specific"><div class="emotion-question"><label id="emotionSpecific1Label"></label><textarea id="emotionSpecific1" rows="3"></textarea></div><div class="emotion-question"><label id="emotionSpecific2Label"></label><textarea id="emotionSpecific2" rows="3"></textarea></div></div><div class="emotion-question"><label id="emotionDurationLabel">How long did you feel this way?</label><textarea id="emotionDuration" rows="2"></textarea></div><div class="emotion-question"><label>What physical sensations did you notice?</label><textarea id="emotionPhysical" rows="3" placeholder="Racing heart, tense muscles, nausea, feeling frozen..."></textarea></div><div class="emotion-question"><label id="emotionOtherLabel">What other emotions did you feel?</label><textarea id="emotionOther" rows="2"></textarea></div><div class="emotion-question"><label id="emotionResponseLabel">How did you respond?</label><textarea id="emotionResponse" rows="3"></textarea></div><div class="emotion-question"><label id="emotionWellLabel">Do you feel you responded well?</label><select id="emotionWell"><option value="yes">Yes</option><option value="somewhat">Somewhat</option><option value="no">No</option></select></div><div class="emotion-question"><label id="emotionImproveLabel">How could you improve your response?</label><textarea id="emotionImprove" rows="3"></textarea></div><div class="emotion-question"><label>What do you need now?</label><textarea id="emotionNeed" rows="3"></textarea></div><div class="emotion-actions"><button class="secondary" id="emotionCancel" type="button">Cancel</button><button class="primary" id="emotionSave" type="button">Save Emotion Log</button></div></div></div></div>
 <div id="emotionWheelModal" class="emotion-wheel-modal hidden" role="dialog" aria-modal="true" aria-labelledby="emotionWheelTitle"><div class="emotion-wheel-sheet"><div class="emotion-wheel-head"><div><div id="emotionWheelTitle" class="emotion-wheel-title">🧭 Emotion Wheel</div><div id="emotionWheelSub" class="emotion-wheel-sub">Start broad, then get more specific.</div></div><button class="secondary" id="emotionWheelClose" type="button">✕</button></div><div id="emotionWheelBody"></div></div></div>
 <div id="attendanceModal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="attendanceModalTitle"><div class="attendance-sheet"><div class="row between"><div><h3 id="attendanceModalTitle">🖨️ Print Meeting Attendance Sheet</h3><p class="muted" style="margin-top:5px">Choose which meetings to include on the attendance sheet.</p></div><button class="secondary" id="attendanceModalClose" type="button">✕</button></div><div class="attendance-toggle"><label><input type="radio" name="attendanceMode" value="date"> Date Range</label><label><input type="radio" name="attendanceMode" value="count" checked> Number of Meetings</label></div><div id="attendanceDateFields" class="hidden"><label>Start Date</label><input type="date" id="attendanceFrom"><label>End Date</label><input type="date" id="attendanceTo"><p class="muted" style="margin-top:7px">Choose both dates to select meetings. The current day does not limit this report.</p></div><div id="attendanceCountFields"><label>Number of Meetings</label><div class="attendance-option-list"><label><input type="radio" name="attendanceCountOption" value="10" checked> 10 meetings</label><label><input type="radio" name="attendanceCountOption" value="25"> 25 meetings</label><label><input type="radio" name="attendanceCountOption" value="50"> 50 meetings</label><label><input type="radio" name="attendanceCountOption" value="90"> 90 meetings</label><label><input type="radio" name="attendanceCountOption" value="180"> 180 meetings</label><label><input type="radio" name="attendanceCountOption" value="all"> All meetings</label></div><input type="hidden" id="attendanceCount" value="10"></div><div class="attendance-found" id="attendanceFound">No meetings found</div><div class="row" style="margin-top:12px"><button class="secondary" id="attendanceCancel" type="button">Cancel</button><button class="primary" id="attendancePrintBtn" type="button">Print Attendance Sheet</button></div></div></div>
@@ -812,7 +1459,7 @@ body:not(.screen-today) [class*="greeting"]{display:none!important}
 <div class="row between"><div><h3 id="meetingModalTitle">🤝 Add Meeting</h3><p class="muted" style="margin-top:5px">Enter the meeting details. You can use this same form from Today or Meetings.</p></div><button class="secondary" id="closeMeetingModal" type="button">✕</button></div>
 <div id="meetingForm" style="margin-top:14px">
 <label>Quick Enter</label><select id="meetingTemplate"><option value="">New meeting</option></select>
-<div class="grid2"><div><label>Meeting name</label><input id="mName" placeholder="Meeting name"></div><div><label>Time</label><input id="mTime" placeholder="7:00 PM"></div></div>
+<div class="grid2"><div><label>Meeting name</label><input id="mName" placeholder="Meeting name"></div><div><label>Time</label><input id="mTime" placeholder="Select time" readonly inputmode="none" aria-haspopup="dialog" aria-label="Meeting time, tap to select"></div></div>
 <label>Place</label><input id="mPlace" placeholder="Place">
 <label>Table topic</label><input id="mTopic" list="topicList" placeholder="Table topic"><datalist id="topicList"></datalist>
 <label>Notes</label><textarea id="mNotes" placeholder="Meeting notes"></textarea>
@@ -824,31 +1471,67 @@ body:not(.screen-today) [class*="greeting"]{display:none!important}
 <script>
 function growTextArea(el){if(!el)return;el.style.height="auto";el.style.height=Math.max(el.scrollHeight,52)+"px";}
 function initGrowingFields(){document.querySelectorAll(".entrybox,.focusbox,#journal,#mNotes").forEach(el=>{growTextArea(el);if(!el.dataset.growBound){el.addEventListener("input",()=>growTextArea(el));el.dataset.growBound="1";}});}
-const KEY="recoveryJournalV1"; let db=JSON.parse(localStorage.getItem(KEY)||'{"days":{},"meetings":[],"templates":[],"topics":[],"cleanDate":"","name":"","friends":[],"milestones":{"30":true,"60":true,"90":true,"6m":true,"9m":true,"1y":true,"18m":true,"yearly":true},"friendRemindersEnabled":true,"emotions":[],"emotionTypes":[],"darkMode":false,"appearance":"serene","messages":[],"goals":[]}'); db.name=typeof db.name==="string"?db.name:""; db.friends=db.friends||[]; db.emotions=Array.isArray(db.emotions)?db.emotions:[]; db.emotionTypes=Array.isArray(db.emotionTypes)?db.emotionTypes:[]; db.messages=Array.isArray(db.messages)?db.messages:[]; db.goals=Array.isArray(db.goals)?db.goals:[]; db.milestones=Object.assign({"30":true,"60":true,"90":true,"6m":true,"9m":true,"1y":true,"18m":true,"yearly":true},db.milestones||{}); if(typeof db.friendRemindersEnabled!=="boolean")db.friendRemindersEnabled=true; if(typeof db.chairInitialsPrompt!=="boolean")db.chairInitialsPrompt=false; if(typeof db.includeInitialsOnAttendance!=="boolean")db.includeInitialsOnAttendance=true; if(typeof db.rememberNewMeetings!=="boolean")db.rememberNewMeetings=true; if(typeof db.darkMode!=="boolean")db.darkMode=false; if(!["serene","dark","moonlight","neon","ocean","sunrise","blacklight","cosmic","contrast","midnightforest","burgundy"].includes(db.appearance))db.appearance=db.darkMode?"dark":"serene";
+const KEY="recoveryJournalV1"; let db=JSON.parse(localStorage.getItem(KEY)||'{"days":{},"meetings":[],"templates":[],"topics":[],"cleanDate":"","name":"","friends":[],"milestones":{"30":true,"60":true,"90":true,"6m":true,"9m":true,"1y":true,"18m":true,"yearly":true},"friendRemindersEnabled":true,"emotions":[],"emotionTypes":[],"darkMode":false,"appearance":"serene","menuOpacity":70,"messages":[],"goals":[]}'); db.name=typeof db.name==="string"?db.name:""; db.friends=db.friends||[]; db.emotions=Array.isArray(db.emotions)?db.emotions:[]; db.emotionTypes=Array.isArray(db.emotionTypes)?db.emotionTypes:[]; db.messages=Array.isArray(db.messages)?db.messages:[]; db.goals=Array.isArray(db.goals)?db.goals:[]; db.milestones=Object.assign({"30":true,"60":true,"90":true,"6m":true,"9m":true,"1y":true,"18m":true,"yearly":true},db.milestones||{}); if(typeof db.friendRemindersEnabled!=="boolean")db.friendRemindersEnabled=true; if(typeof db.chairInitialsPrompt!=="boolean")db.chairInitialsPrompt=false; if(typeof db.includeInitialsOnAttendance!=="boolean")db.includeInitialsOnAttendance=true; if(typeof db.rememberNewMeetings!=="boolean")db.rememberNewMeetings=true; if(typeof db.darkMode!=="boolean")db.darkMode=false; if(!["serene","dark","moonlight","neon","ocean","sunrise","blacklight","cosmic","contrast","midnightforest","burgundy"].includes(db.appearance))db.appearance=db.darkMode?"dark":"serene";
 let selected=new Date(); selected.setHours(12,0,0,0); let month=new Date(selected.getFullYear(),selected.getMonth(),1);
 const $=id=>document.getElementById(id), iso=d=>{const x=new Date(d);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0")};
 function persist(){localStorage.setItem(KEY,JSON.stringify(db))}
-function applyTheme(){const theme=["serene","dark","moonlight","neon","ocean","sunrise","blacklight","cosmic","contrast","midnightforest","burgundy"].includes(db.appearance)?db.appearance:(db.darkMode?"dark":"serene");db.appearance=theme;db.darkMode=theme==="dark";document.documentElement.dataset.theme=theme==="serene"?"light":theme;const t=$("darkModeToggle");if(t)t.checked=theme==="dark";document.querySelectorAll('input[name="themeChoice"]').forEach(x=>x.checked=x.value===theme);const meta=document.querySelector('meta[name="theme-color"]');if(meta){const colors={serene:"#23433B",dark:"#111715",moonlight:"#101827",neon:"#070910",ocean:"#0B1B2A",sunrise:"#F4E7D1",blacklight:"#090B0E",cosmic:"#0B0814",contrast:"#000000",midnightforest:"#101512",burgundy:"#130C0F"};meta.setAttribute("content",colors[theme]||colors.serene)}}
-function backupPayload(){return {format:"Recovery Journal Backup",version:1,exportedAt:new Date().toISOString(),data:db}}
+function applyMenuOpacity(){let pct=Number(db.menuOpacity);if(!Number.isFinite(pct))pct=70;pct=Math.max(35,Math.min(95,pct));db.menuOpacity=pct;document.documentElement.style.setProperty('--sidebar-opacity',(pct/100).toFixed(2));const slider=document.getElementById('menuOpacitySlider');const value=document.getElementById('menuOpacityValue');if(slider)slider.value=String(pct);if(value)value.textContent=String(pct)}
+function applyTheme(){applyMenuOpacity();const theme=["serene","dark","moonlight","neon","ocean","sunrise","blacklight","cosmic","contrast","midnightforest","burgundy"].includes(db.appearance)?db.appearance:(db.darkMode?"dark":"serene");db.appearance=theme;db.darkMode=theme==="dark";document.documentElement.dataset.theme=theme==="serene"?"light":theme;const t=$("darkModeToggle");if(t)t.checked=theme==="dark";document.querySelectorAll('input[name="themeChoice"]').forEach(x=>x.checked=x.value===theme);const meta=document.querySelector('meta[name="theme-color"]');if(meta){const colors={serene:"#23433B",dark:"#111715",moonlight:"#101827",neon:"#070910",ocean:"#0B1B2A",sunrise:"#F4E7D1",blacklight:"#090B0E",cosmic:"#0B0814",contrast:"#000000",midnightforest:"#101512",burgundy:"#130C0F"};meta.setAttribute("content",colors[theme]||colors.serene)}}
+function backupPayload(){return {format:"Recovery Journal Backup",version:2,appVersion:"v50.9.3.26",exportedAt:new Date().toISOString(),data:JSON.parse(JSON.stringify(db))}}
 async function exportBackup(){
-  const json=JSON.stringify(backupPayload(),null,2);
-  const file=new File([json],`recovery-journal-backup-${iso(new Date())}.json`,{type:"application/json"});
   try{
-    if(navigator.share && navigator.canShare && navigator.canShare({files:[file]})){await navigator.share({title:"Recovery Journal Backup",text:"Recovery Journal data backup",files:[file]});return}
-  }catch(e){if(e&&e.name==="AbortError")return}
-  const url=URL.createObjectURL(file),a=document.createElement("a");a.href=url;a.download=file.name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+    const payload=backupPayload(),json=JSON.stringify(payload,null,2);
+    const file=new File([json],`recovery-journal-backup-${iso(new Date())}-v50.9.3.26.json`,{type:"application/json"});
+    if(navigator.share && navigator.canShare && navigator.canShare({files:[file]})){
+      try{await navigator.share({title:"Recovery Journal Backup",text:`Complete local backup • ${new Date(payload.exportedAt).toLocaleString()}`,files:[file]});setBackupStatus(`Backup shared successfully • ${new Date(payload.exportedAt).toLocaleString()}`);return}
+      catch(e){if(e&&e.name==="AbortError"){setBackupStatus("Export cancelled. No backup was shared.");return}}
+    }
+    const url=URL.createObjectURL(file),a=document.createElement("a");a.href=url;a.download=file.name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);
+    setBackupStatus(`Backup export started • ${file.name}`);
+  }catch(e){setBackupStatus("Backup could not be created. Your existing data has not been changed.");}
+}
+function setBackupStatus(message){const el=$("backupStatus");if(el)el.textContent=message}
+function validateBackup(parsed){
+  if(!parsed||typeof parsed!=="object"||Array.isArray(parsed))throw new Error("The selected file is not a JSON object.");
+  if(parsed.format && parsed.format!=="Recovery Journal Backup")throw new Error("This file was not created by Recovery Journal.");
+  if(parsed.version && Number(parsed.version)>2)throw new Error("This backup was created by a newer backup format. Update Recovery Journal before restoring it.");
+  const incoming=parsed.data&&typeof parsed.data==="object"?parsed.data:parsed;
+  if(!incoming||typeof incoming!=="object"||!incoming.days||typeof incoming.days!=="object"||Array.isArray(incoming.days)||!Array.isArray(incoming.meetings)||!Array.isArray(incoming.templates)||!Array.isArray(incoming.topics))throw new Error("Required journal sections are missing.");
+  const arrays=["friends","emotions","emotionTypes","messages","goals"];
+  for(const key of arrays){if(incoming[key]!==undefined&&!Array.isArray(incoming[key]))throw new Error(`The ${key} section is damaged.`)}
+  for(const [date,day] of Object.entries(incoming.days)){if(!day||typeof day!=="object"||Array.isArray(day))throw new Error(`The journal entry for ${date} is not readable.`)}
+  for(const key of ["meetings","templates","topics"]){if(incoming[key].some(x=>!x||typeof x!=="object"||Array.isArray(x)))throw new Error(`The ${key} section contains unreadable records.`)}
+  return incoming;
+}
+function normalizeBackupData(incoming){
+  return {...incoming,days:incoming.days||{},meetings:incoming.meetings||[],templates:incoming.templates||[],topics:incoming.topics||[],cleanDate:incoming.cleanDate||"",name:typeof incoming.name==="string"?incoming.name:"",friends:Array.isArray(incoming.friends)?incoming.friends:[],milestones:Object.assign({"30":true,"60":true,"90":true,"6m":true,"9m":true,"1y":true,"18m":true,"yearly":true},incoming.milestones||{}),friendRemindersEnabled:typeof incoming.friendRemindersEnabled==="boolean"?incoming.friendRemindersEnabled:true,chairInitialsPrompt:typeof incoming.chairInitialsPrompt==="boolean"?incoming.chairInitialsPrompt:false,includeInitialsOnAttendance:typeof incoming.includeInitialsOnAttendance==="boolean"?incoming.includeInitialsOnAttendance:true,rememberNewMeetings:typeof incoming.rememberNewMeetings==="boolean"?incoming.rememberNewMeetings:true,emotions:Array.isArray(incoming.emotions)?incoming.emotions:[],emotionTypes:Array.isArray(incoming.emotionTypes)?incoming.emotionTypes:[],messages:Array.isArray(incoming.messages)?incoming.messages:[],goals:Array.isArray(incoming.goals)?incoming.goals:[],darkMode:typeof incoming.darkMode==="boolean"?incoming.darkMode:false,appearance:incoming.appearance||"serene",menuOpacity:incoming.menuOpacity??70};
 }
 function importBackupFile(file){
   if(!file)return;
   const reader=new FileReader();
+  reader.onerror=()=>{setBackupStatus("The selected file could not be read. Your current data is unchanged.")};
   reader.onload=()=>{
+    let incoming;
     try{
-      const parsed=JSON.parse(reader.result), incoming=parsed&&parsed.data?parsed.data:parsed;
-      if(!incoming||typeof incoming!=="object"||typeof incoming.days!=="object"||!Array.isArray(incoming.meetings)||!Array.isArray(incoming.templates)||!Array.isArray(incoming.topics))throw new Error("Invalid backup");
-      if(!confirm("Import this backup? This will replace the data currently stored in this app."))return;
-      db={days:incoming.days||{},meetings:incoming.meetings||[],templates:incoming.templates||[],topics:incoming.topics||[],cleanDate:incoming.cleanDate||"",name:typeof incoming.name==="string"?incoming.name:"",friends:incoming.friends||[],milestones:Object.assign({"30":true,"60":true,"90":true,"6m":true,"9m":true,"1y":true,"18m":true,"yearly":true},incoming.milestones||{}),friendRemindersEnabled:typeof incoming.friendRemindersEnabled==="boolean"?incoming.friendRemindersEnabled:true,chairInitialsPrompt:typeof incoming.chairInitialsPrompt==="boolean"?incoming.chairInitialsPrompt:false,includeInitialsOnAttendance:typeof incoming.includeInitialsOnAttendance==="boolean"?incoming.includeInitialsOnAttendance:true,rememberNewMeetings:typeof incoming.rememberNewMeetings==="boolean"?incoming.rememberNewMeetings:true,emotions:Array.isArray(incoming.emotions)?incoming.emotions:[],emotionTypes:Array.isArray(incoming.emotionTypes)?incoming.emotionTypes:[],messages:Array.isArray(incoming.messages)?incoming.messages:[],goals:Array.isArray(incoming.goals)?incoming.goals:[],darkMode:typeof incoming.darkMode==="boolean"?incoming.darkMode:false};
-      persist();applyTheme();loadDay();cleanCounter();renderTemplates();renderFriends();renderMeetingsTab();renderCustomEmotions();renderGoals();alert("Backup imported successfully.");
-    }catch(e){alert("That file is not a valid Recovery Journal backup.");}
+      const parsed=JSON.parse(reader.result);incoming=validateBackup(parsed);
+      const exported=parsed.exportedAt?new Date(parsed.exportedAt):null;
+      const validExported=exported&&Number.isFinite(exported.getTime());
+      const summary=`Backup details\n\nCreated: ${validExported?exported.toLocaleString():"Date not recorded"}\nApp version: ${parsed.appVersion||"Older backup"}\nJournal days: ${Object.keys(incoming.days).length}\nMeetings: ${incoming.meetings.length}\nQuick Enter templates: ${incoming.templates.length}\nEmotion logs: ${(incoming.emotions||[]).length}\nGoals: ${(incoming.goals||[]).length}\nMessages to myself: ${(incoming.messages||[]).length}\n\nRestoring will replace the data currently stored in this app.`;
+      if(!confirm(summary+"\n\nContinue with restore?")){setBackupStatus("Restore cancelled. Your current data was not changed.");return}
+    }catch(e){alert(`Backup could not be validated.\n\n${e.message||"The file is unreadable."}\n\nYour current data has not been changed.`);setBackupStatus("Restore stopped: invalid or incompatible backup.");return}
+    // Preserve the current state and storage string so a failed write can be rolled back.
+    const previousDb=db,previousStorage=localStorage.getItem(KEY);
+    try{
+      const replacement=normalizeBackupData(incoming);
+      localStorage.setItem(KEY,JSON.stringify(replacement));db=replacement;
+      applyTheme();loadDay();cleanCounter();renderTemplates();renderFriends();renderMeetingsTab();renderCustomEmotions();renderGoals();
+      const stamp=new Date().toLocaleString();setBackupStatus(`Last successful restore: ${stamp}`);alert("Backup restored successfully. Your recovered data is loaded.");
+    }catch(e){
+      db=previousDb;
+      try{if(previousStorage===null)localStorage.removeItem(KEY);else localStorage.setItem(KEY,previousStorage)}catch(rollbackError){}
+      try{applyTheme();loadDay();cleanCounter();renderTemplates();renderFriends();renderMeetingsTab();renderCustomEmotions();renderGoals()}catch(renderError){}
+      alert("Restore failed. Recovery Journal attempted to preserve your previous data. Please keep your backup file and try again when storage is available.");setBackupStatus("Restore failed; previous data was preserved where browser storage allowed.");
+    }
   };
   reader.readAsText(file);
 }
@@ -885,9 +1568,9 @@ function saveMeetingSettings(){db.chairInitialsPrompt=$("chairInitialsPrompt").c
 function openMeetingForm(){ editingMeetingId=null; $("saveMeeting").textContent="Save meeting"; $("meetingModalTitle").textContent="🤝 Add Meeting"; $("meetingModal").classList.remove("hidden"); renderMeetingTemplates(); $("mName").focus(); }
 function closeMeetingForm(){ editingMeetingId=null; $("saveMeeting").textContent="Save meeting"; $("meetingModal").classList.add("hidden"); ["mName","mTime","mPlace","mTopic","mNotes"].forEach(k=>$(k).value=""); $("meetingTemplate").value=""; }
 function editMeeting(id){let x=db.meetings.find(m=>m.id===id);if(!x)return;editingMeetingId=id;renderMeetingTemplates();$("mName").value=x.name||"";$("mTime").value=x.time||"";$("mPlace").value=x.place||"";$("mTopic").value=x.topic||"";$("mNotes").value=x.notes||"";$("meetingTemplate").value="";$("saveMeeting").textContent="Save changes";$("meetingModalTitle").textContent="🤝 Edit Meeting";$("meetingModal").classList.remove("hidden");$("mName").focus();}
-function renderMeetingTemplates(){let s=$("meetingTemplate");s.innerHTML='<option value="">New meeting</option>'+db.templates.map((x,i)=>`<option value="${i}">${esc(x.name)} — ${esc(x.place)} • ${esc(x.time)}</option>`).join("");let dl=$("topicList");dl.innerHTML=db.topics.map(x=>`<option value="${esc(x)}"></option>`).join("");}
+function renderMeetingTemplates(){let s=$("meetingTemplate");const ordered=db.templates.map((x,i)=>({x,i})).sort((a,b)=>Number(!!b.x.favorite)-Number(!!a.x.favorite)||a.x.name.localeCompare(b.x.name));s.innerHTML='<option value="">New meeting</option>'+ordered.map(({x,i})=>`<option value="${i}">${x.favorite?'★ ':''}${esc(x.name)} — ${esc(x.place)} • ${esc(x.time)}</option>`).join("");let dl=$("topicList");dl.innerHTML=db.topics.map(x=>`<option value="${esc(x)}"></option>`).join("");}
 function fillTemplate(){let x=db.templates[Number($("meetingTemplate").value)];if(!x)return; $("mName").value=x.name; $("mTime").value=x.time; $("mPlace").value=x.place;}
-function saveMeeting(){let name=$("mName").value.trim();if(!name){alert("Enter a meeting name.");return}let place=$("mPlace").value.trim(),time=$("mTime").value.trim(),topic=$("mTopic").value.trim(),notes=$("mNotes").value.trim(),needsInitials=false;let meeting=null;if(editingMeetingId){meeting=db.meetings.find(m=>m.id===editingMeetingId);if(meeting){meeting.name=name;meeting.place=place;meeting.time=time;meeting.topic=topic;meeting.notes=notes;needsInitials=db.chairInitialsPrompt&&!meeting.chairInitials;}}else{meeting={id:crypto.randomUUID(),date:iso(selected),name,place,time,topic,notes,chairInitials:""};db.meetings.push(meeting);needsInitials=db.chairInitialsPrompt;}if(db.rememberNewMeetings&&!db.templates.some(x=>x.name===name&&x.place===place&&x.time===time))db.templates.push({name,place,time});if(topic&&!db.topics.includes(topic))db.topics.push(topic);persist();renderMeetings();closeMeetingForm();if(needsInitials){pendingInitialsMeetingId=meeting.id;setTimeout(()=>openInitialsModal(),120);}}
+function saveMeeting(){let name=$("mName").value.trim();if(!name){alert("Enter a meeting name.");return}let place=$("mPlace").value.trim(),time=$("mTime").value.trim(),topic=$("mTopic").value.trim(),notes=$("mNotes").value.trim(),needsInitials=false;let meeting=null;if(editingMeetingId){meeting=db.meetings.find(m=>m.id===editingMeetingId);if(meeting){meeting.name=name;meeting.place=place;meeting.time=time;meeting.topic=topic;meeting.notes=notes;needsInitials=db.chairInitialsPrompt&&!meeting.chairInitials;}}else{meeting={id:crypto.randomUUID(),date:iso(selected),name,place,time,topic,notes,chairInitials:""};db.meetings.push(meeting);needsInitials=db.chairInitialsPrompt;}if(db.rememberNewMeetings&&!db.templates.some(x=>x.name===name&&x.place===place&&x.time===time))db.templates.push({name,place,time,favorite:false});if(topic&&!db.topics.includes(topic))db.topics.push(topic);persist();renderMeetings();closeMeetingForm();if(needsInitials){pendingInitialsMeetingId=meeting.id;setTimeout(()=>openInitialsModal(),120);}}
 let initialsDrawing=false,lastPoint=null,initialsScrollY=0;function lockInitialsScreen(){initialsScrollY=window.scrollY||window.pageYOffset||0;document.documentElement.classList.add("initials-lock");document.body.classList.add("initials-lock");document.body.style.top=`-${initialsScrollY}px`;document.body.style.width="100%";document.body.style.position="fixed";document.body.style.overflow="hidden";document.documentElement.style.overflow="hidden"}function unlockInitialsScreen(){document.documentElement.classList.remove("initials-lock");document.body.classList.remove("initials-lock");document.body.style.position="";document.body.style.top="";document.body.style.width="";document.body.style.overflow="";document.documentElement.style.overflow="";window.scrollTo(0,initialsScrollY)}function resizeInitialsCanvas(){let c=$("initialsCanvas");if(!c)return;let rect=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1;c.width=Math.max(1,Math.round(rect.width*dpr));c.height=Math.max(1,Math.round(rect.height*dpr));let ctx=c.getContext("2d");ctx.scale(dpr,dpr);ctx.lineCap="round";ctx.lineJoin="round";ctx.lineWidth=3;ctx.strokeStyle="#23433B";}function openInitialsModal(){let c=$("initialsCanvas");lockInitialsScreen();$("initialsModal").classList.remove("hidden");requestAnimationFrame(()=>{resizeInitialsCanvas();clearInitialsCanvas();});}function closeInitialsModal(){$("initialsModal").classList.add("hidden");pendingInitialsMeetingId=null;unlockInitialsScreen();}function clearInitialsCanvas(){let c=$("initialsCanvas"),ctx=c.getContext("2d");ctx.clearRect(0,0,c.width,c.height);initialsDrawing=false;lastPoint=null;}function pointOnCanvas(e){let c=$("initialsCanvas"),r=c.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}function startInitials(e){e.preventDefault();initialsDrawing=true;lastPoint=pointOnCanvas(e);$("initialsCanvas").setPointerCapture?.(e.pointerId)}function drawInitials(e){if(!initialsDrawing)return;e.preventDefault();let p=pointOnCanvas(e),ctx=$("initialsCanvas").getContext("2d");ctx.beginPath();ctx.moveTo(lastPoint.x,lastPoint.y);ctx.lineTo(p.x,p.y);ctx.stroke();lastPoint=p}function endInitials(){initialsDrawing=false;lastPoint=null}function saveInitials(){if(!pendingInitialsMeetingId)return;let c=$("initialsCanvas"),blank=document.createElement("canvas");blank.width=c.width;blank.height=c.height;let ctx=blank.getContext("2d");ctx.fillStyle="#FFFDF8";ctx.fillRect(0,0,blank.width,blank.height);ctx.drawImage(c,0,0);let data=blank.toDataURL("image/png");let m=db.meetings.find(x=>x.id===pendingInitialsMeetingId);if(m){m.chairInitials=data;persist();renderMeetings();}closeInitialsModal();}$("initialsCanvas").addEventListener("pointerdown",startInitials);$("initialsCanvas").addEventListener("pointermove",drawInitials);$("initialsCanvas").addEventListener("pointerup",endInitials);$("initialsCanvas").addEventListener("pointercancel",endInitials);$("initialsModal").addEventListener("touchmove",e=>e.preventDefault(),{passive:false});$("initialsModal").addEventListener("wheel",e=>e.preventDefault(),{passive:false});$("clearInitials").onclick=clearInitialsCanvas;$("saveInitials").onclick=saveInitials;$("closeInitials").onclick=closeInitialsModal;window.addEventListener("resize",()=>{if(!$('initialsModal').classList.contains('hidden')){let old=$('initialsCanvas').toDataURL();resizeInitialsCanvas();}});
 function parseLocalDate(v){return new Date(v+"T12:00:00");}
 function dateKeyLocal(d){return iso(new Date(d.getFullYear(),d.getMonth(),d.getDate(),12));}
@@ -897,7 +1580,22 @@ function friendMilestonesForDate(date){if(!db.friendRemindersEnabled)return [];l
 function renderFriendReminders(){let box=$("friendReminders");let items=friendMilestonesForDate(selected);if(!items.length){box.innerHTML="";return}box.innerHTML='<div class="friend-reminder"><div class="eyebrow">RECOVERY COMMUNITY</div>'+items.map(x=>{let label=x.type==="yearly"?`${x.years} year${x.years===1?"":"s"}`:milestoneLabel(x.type);return `<div style="margin-top:8px"><strong>🎉 ${esc(x.friend.name)} — ${esc(label)} clean today!</strong><div class="muted" style="margin-top:3px">Celebrate their recovery and progress.</div></div>`}).join("")+'</div>'}
 function renderFriends(){let list=$("friendsList"),count=$("friendsCount");if(count)count.textContent=db.friends.length;if(!db.friends.length){list.innerHTML="<p class='muted'>No friends added yet.</p>";return}list.innerHTML=db.friends.map(f=>`<div class="meeting friend-row"><div><strong>${esc(f.name)}</strong><div class="muted">Clean date: ${esc(f.date)}</div></div><div class="row"><button class="secondary" data-friend-edit="${esc(f.id)}">Edit</button><button class="danger" data-friend-del="${esc(f.id)}">Delete</button></div></div>`).join("");list.querySelectorAll("[data-friend-edit]").forEach(b=>b.onclick=()=>startFriendEdit(b.dataset.friendEdit));list.querySelectorAll("[data-friend-del]").forEach(b=>b.onclick=()=>{if(confirm("Delete this friend's clean date?")){db.friends=db.friends.filter(f=>f.id!==b.dataset.friendDel);persist();renderFriends();renderFriendReminders();renderCalendar()}})}
 let editingFriendId=null;function startFriendEdit(id){const f=db.friends.find(x=>x.id===id);if(!f)return;editingFriendId=id;$("friendName").value=f.name;$("friendDate").value=f.date;$("addFriend").textContent="Save changes";$("cancelFriendEdit").classList.remove("hidden");$("friendName").focus()}function cancelFriendEdit(){$("friendName").value="";$('friendDate').value="";editingFriendId=null;$('addFriend').textContent="Add friend";$('cancelFriendEdit').classList.add("hidden")}
-function saveFriend(){let name=$("friendName").value.trim(),date=$("friendDate").value;if(!name||!date){alert("Enter a friend name and clean date.");return}if(parseLocalDate(date)>new Date()){alert("Clean date cannot be in the future.");return}if(editingFriendId){const f=db.friends.find(x=>x.id===editingFriendId);if(f){if(f.date!==date&&!confirm(`Change ${f.name}'s clean date? This will recalculate their milestones.`))return;f.name=name;f.date=date}}else{db.friends.push({id:crypto.randomUUID(),name,date})}persist();cancelFriendEdit();renderFriends();renderFriendReminders();renderCalendar()}
+function friendId(){try{if(window.crypto&&typeof window.crypto.randomUUID==="function")return window.crypto.randomUUID()}catch(e){}return "friend-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,10)}
+function saveFriend(){
+  const name=$("friendName")?.value?.trim()||"", date=$("friendDate")?.value||"", status=$("friendSaveStatus");
+  const say=(msg,isError=false)=>{if(status){status.textContent=msg;status.style.color=isError?"var(--danger, #c44)":"var(--muted, inherit)"}};
+  if(!name||!date){say("Enter a friend name and clean date.",true);return}
+  const chosen=parseLocalDate(date),today=new Date();today.setHours(23,59,59,999);
+  if(Number.isNaN(chosen.getTime())){say("Choose a valid clean date.",true);return}
+  if(chosen>today){say("Clean date cannot be in the future.",true);return}
+  const previous=JSON.stringify(db.friends||[]);
+  if(editingFriendId){const f=(db.friends||[]).find(x=>x.id===editingFriendId);if(!f){say("That friend could not be found. Please try again.",true);return}if(f.date!==date&&!confirm(`Change ${f.name}'s clean date? This will recalculate their milestones.`))return;f.name=name;f.date=date}
+  else{db.friends=Array.isArray(db.friends)?db.friends:[];db.friends.push({id:friendId(),name,date})}
+  try{persist()}catch(err){try{db.friends=JSON.parse(previous)}catch(e){};say("Couldn't save to this device. Your existing friends were preserved; check device storage and try again.",true);renderFriends();return}
+  try{cancelFriendEdit();renderFriends();renderFriendReminders();renderCalendar();say("Friend saved.");}
+  catch(err){say("Friend was saved, but the screen couldn't refresh. Reopen Friends to verify.",true);try{renderFriends()}catch(e){}}
+}
+
 function saveRecoverySettings(){let name=$("userName").value.trim(),v=$("cleanDate").value;if(v&&new Date(v+"T12:00:00")>new Date()){alert("Clean date cannot be in the future.");return}if(db.cleanDate&&v!==db.cleanDate&&!confirm("Change your recovery date?"))return;db.name=name;db.cleanDate=v;persist();cleanCounter();alert("Recovery settings saved locally.")}
 function saveMilestoneSettings(){db.friendRemindersEnabled=$("friendRemindersEnabled").checked;document.querySelectorAll(".milestoneToggle").forEach(x=>db.milestones[x.value]=x.checked);persist();renderFriendReminders();renderCalendar()}
 function renderCalendar(){let y=month.getFullYear(),m=month.getMonth();$("monthLabel").textContent=month.toLocaleDateString(undefined,{month:"long",year:"numeric"});let c=$("calendar");c.innerHTML=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].map(x=>`<div class="dow">${x}</div>`).join("");let first=new Date(y,m,1).getDay(),last=new Date(y,m+1,0).getDate();for(let i=0;i<first;i++)c.insertAdjacentHTML("beforeend","<div></div>");for(let d=1;d<=last;d++){let dt=new Date(y,m,d),key=iso(dt),has=!!db.days[key]||db.meetings.some(x=>x.date===key)||db.emotions.some(x=>x.date===key)||friendMilestonesForDate(dt).length,sel=key===iso(selected);c.insertAdjacentHTML("beforeend",`<button class="day ${has?"has":""} ${friendMilestonesForDate(dt).length?"friend-day":""} ${sel?"sel":""}" data-date="${key}">${d}</button>`)}c.querySelectorAll("[data-date]").forEach(b=>b.onclick=()=>{selected=new Date(b.dataset.date+"T12:00:00");loadDay();show("today");renderCalendar()})}
@@ -925,7 +1623,7 @@ function buildPrintReport(){
   let out=`<div class="print-report"><h1>Recovery Journal</h1><div class="meta">${escHtml(title)}</div>`;
   keys.forEach(date=>{
     let d=db.days[date]||{}, meetings=db.meetings.filter(x=>x.date===date);
-    let has = (fields.includes("affirmations")&&(d.a1||d.a2||d.a3)) || (fields.includes("gratitude")&&(d.g1||d.g2||d.g3)) || (fields.includes("reflection")&&(d.reflectionResponse||Number.isInteger(d.reflectionIndex))) || (fields.includes("journal")&&d.journal) || (fields.includes("meetings")&&meetings.length) || (fields.includes("emotions")&&db.emotions.some(e=>e.date===date));
+    let has = (fields.includes("affirmations")&&(d.a1||d.a2||d.a3)) || (fields.includes("gratitude")&&(d.g1||d.g2||d.g3)) || (fields.includes("reflection")&&(d.reflectionResponse||Number.isInteger(d.reflectionIndex))) || (fields.includes("journal")&&d.journal) || (fields.includes("journal")&&(d.checkinMood||d.checkinNeed||d.checkinAction)) || (fields.includes("meetings")&&meetings.length) || (fields.includes("emotions")&&db.emotions.some(e=>e.date===date));
     if(!has) return;
     let nice=new Date(date+"T12:00:00").toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric",year:"numeric"});
     out+=`<div class="dayblock"><h2>${escHtml(nice)}</h2>`;
@@ -934,6 +1632,7 @@ function buildPrintReport(){
     if(fields.includes("focus") && d.focus) out+=`<div><h2>Today's Focus</h2><div class="item">${escHtml(d.focus).replace(/\n/g,"<br>")}</div></div>`;
     if(fields.includes("reflection") && (d.reflectionResponse||Number.isInteger(d.reflectionIndex))){let rr=REFLECTIONS[d.reflectionIndex]||null;out+=`<div><h2>Living the Program</h2>`;if(rr)out+=`<div class="meta"><strong>${escHtml(rr.principle)}</strong> — ${escHtml(rr.prompt)}</div>`;out+=d.reflectionResponse?`<div class="item">${escHtml(d.reflectionResponse).replace(/\n/g,"<br>")}</div>`:`<div class="meta">No reflection recorded.</div>`;out+=`</div>`;}
     if(fields.includes("journal")) out+=`<div><h2>Journal</h2><div class="item">${escHtml(d.journal).replace(/\n/g,"<br>")||'<span class="meta">No journal entry.</span>'}</div></div>`;
+    if(fields.includes("journal")&&(d.checkinMood||d.checkinNeed||d.checkinAction)){const moods={struggling:"😞 Struggling",okay:"😐 Okay",good:"🙂 Good",great:"😃 Great"};out+=`<div><h2>☀️ Daily Check-In</h2>${d.checkinMood?`<div class="item"><span class="label">How I was doing:</span> ${escHtml(moods[d.checkinMood]||d.checkinMood)}</div>`:""}${d.checkinNeed?`<div class="item"><span class="label">What I needed:</span> ${escHtml(d.checkinNeed).replace(/\n/g,"<br>")}</div>`:""}${d.checkinAction?`<div class="item"><span class="label">Recovery action:</span> ${escHtml(d.checkinAction).replace(/\n/g,"<br>")}</div>`:""}</div>`;}
     if(fields.includes("meetings")) out+=`<div><h2>Meetings</h2>${meetings.map(m=>`<div class="meeting"><div><span class="label">${escHtml(m.name)}</span></div><div class="meta">${escHtml(m.time)} • ${escHtml(m.place)}</div><div><span class="label">Table topic:</span> ${escHtml(m.topic)||"—"}</div><div><span class="label">Notes:</span> ${escHtml(m.notes)||"—"}</div></div>`).join("")||'<div class="meta">No meetings recorded.</div>'}</div>`;
     if(fields.includes("emotions")){let es=db.emotions.filter(e=>e.date===date);out+=`<div><h2>Emotion Logs</h2>${es.map(e=>emotionPrintHtml(e)).join("")||'<div class="meta">No emotion logs recorded.</div>'}</div>`;}
     out+="</div>";
@@ -958,6 +1657,7 @@ function buildAllReports(){
     if(d.focus) out+=`<div><h2>Today's Focus</h2><div class="item">${escHtml(d.focus).replace(/\n/g,"<br>")}</div></div>`;
     if(d.reflectionResponse||Number.isInteger(d.reflectionIndex)){let rr=REFLECTIONS[d.reflectionIndex]||null;out+=`<div><h2>Living the Program</h2>${rr?`<div class="meta"><strong>${escHtml(rr.principle)}</strong> — ${escHtml(rr.prompt)}</div>`:""}${d.reflectionResponse?`<div class="item">${escHtml(d.reflectionResponse).replace(/\n/g,"<br>")}</div>`:""}</div>`;}
     if(d.journal) out+=`<div><h2>Journal</h2><div class="item">${escHtml(d.journal).replace(/\n/g,"<br>")}</div></div>`;
+    if(d.checkinMood||d.checkinNeed||d.checkinAction){const moods={struggling:"😞 Struggling",okay:"😐 Okay",good:"🙂 Good",great:"😃 Great"};out+=`<div><h2>☀️ Daily Check-In</h2>${d.checkinMood?`<div class="item"><span class="label">How I was doing:</span> ${escHtml(moods[d.checkinMood]||d.checkinMood)}</div>`:""}${d.checkinNeed?`<div class="item"><span class="label">What I needed:</span> ${escHtml(d.checkinNeed).replace(/\n/g,"<br>")}</div>`:""}${d.checkinAction?`<div class="item"><span class="label">Recovery action:</span> ${escHtml(d.checkinAction).replace(/\n/g,"<br>")}</div>`:""}</div>`;}
     if(meetings.length) out+=`<div><h2>Meetings</h2>${meetings.map(m=>`<div class="meeting"><div><span class="label">${escHtml(m.name)}</span></div><div class="meta">${escHtml(m.time)} • ${escHtml(m.place)}</div><div><span class="label">Table topic:</span> ${escHtml(m.topic)||"—"}</div><div><span class="label">Notes:</span> ${escHtml(m.notes)||"—"}</div></div>`).join("")}</div>`;
     let dayEmotions=db.emotions.filter(e=>e.date===date); if(dayEmotions.length) out+=`<div><h2>Emotion Logs</h2>${dayEmotions.map(e=>emotionPrintHtml(e)).join("")}</div>`;
     out+="</div>";
@@ -1047,12 +1747,15 @@ function renderMeetingsTab(){
   $("meetingsTodayList").innerHTML=todayArr.length?todayArr.map(m=>card(m,false)).join(""):"<p class='muted'>No meetings recorded for this day.</p>";
   $("recentMeetingsCount").textContent=recent.length;
   $("recentMeetingsList").innerHTML=recent.length?recent.map(m=>card(m,true)).join(""):"<p class='muted'>No meetings recorded yet.</p>";
-  $("meetingsQuickList").innerHTML=db.templates.length?db.templates.map((x,i)=>`<button class="secondary" style="width:100%;margin-top:7px;text-align:left" data-quick-mtab="${i}">${esc(x.name)}<br><span class="muted">${esc(x.place)} • ${esc(x.time)}</span></button>`).join(""):"<p class='muted'>Your saved meetings will appear here after you enter them.</p>";
+  const quickTemplates=db.templates.map((x,i)=>({x,i})).sort((a,b)=>Number(!!b.x.favorite)-Number(!!a.x.favorite)||a.x.name.localeCompare(b.x.name));
+  updateQuickEnterCount();
+  $("meetingsQuickList").innerHTML=db.templates.length?quickTemplates.map(({x,i})=>`<div class="quick-template-row" style="display:flex;gap:8px;align-items:stretch;margin-top:7px"><button class="secondary" type="button" style="flex:1;min-width:0;text-align:left" data-quick-mtab="${i}">${esc(x.name)}<br><span class="muted">${esc(x.place)} • ${esc(x.time)}</span></button><button class="secondary quick-favorite-toggle" type="button" style="min-width:48px;font-size:1.2em;color:${x.favorite?'#e6bd55':'var(--muted)'}" title="${x.favorite?'Remove favorite':'Add favorite'}" aria-label="${x.favorite?'Remove favorite':'Add favorite'}" aria-pressed="${!!x.favorite}" data-quick-fav="${i}">${x.favorite?"★":"☆"}</button></div>`).join(""):"<p class='muted'>Your saved meetings will appear here after you enter them.</p>";
   document.querySelectorAll("[data-mtab-edit]").forEach(b=>b.onclick=()=>{show("today");editMeeting(b.dataset.mtabEdit)});
   document.querySelectorAll("[data-mtab-del]").forEach(b=>b.onclick=()=>{if(confirm("Delete this meeting?")){db.meetings=db.meetings.filter(x=>x.id!==b.dataset.mtabDel);persist();renderMeetings();renderMeetingsTab()}});
   document.querySelectorAll("[data-quick-mtab]").forEach(b=>b.onclick=()=>{show("today");openMeetingForm();setTimeout(()=>{$("meetingTemplate").value=b.dataset.quickMtab;fillTemplate()},0)});
+  document.querySelectorAll("[data-quick-fav]").forEach(b=>b.onclick=e=>{e.preventDefault();e.stopPropagation();toggleTemplateFavorite(Number(b.dataset.quickFav))});
 }
-let editingTemplateIndex=null;function openTemplateEditor(index=null){editingTemplateIndex=index;const t=index===null?{name:"",time:"",place:""}:db.templates[index];$("templateName").value=t?.name||"";$("templateTime").value=t?.time||"";$("templatePlace").value=t?.place||"";$("templateSave").textContent=index===null?"Save template":"Save changes";$("templateModal").classList.remove("hidden");$("templateName").focus()}function closeTemplateEditor(){$("templateModal").classList.add("hidden");editingTemplateIndex=null}function saveTemplate(){const name=$("templateName").value.trim(),time=$("templateTime").value.trim(),place=$("templatePlace").value.trim();if(!name){alert("Enter a meeting name.");return}const t={name,time,place};if(editingTemplateIndex===null)db.templates.push(t);else db.templates[editingTemplateIndex]=t;persist();renderTemplates();renderMeetingsTab();closeTemplateEditor()}
+let editingTemplateIndex=null;function toggleTemplateFavorite(index){if(!db.templates[index])return;db.templates[index].favorite=!db.templates[index].favorite;persist();renderTemplates();renderMeetingsTab();renderMeetingTemplates()}function openTemplateEditor(index=null){editingTemplateIndex=index;const t=index===null?{name:"",time:"",place:""}:db.templates[index];$("templateName").value=t?.name||"";$("templateTime").value=t?.time||"";$("templatePlace").value=t?.place||"";$("templateSave").textContent=index===null?"Save template":"Save changes";$("templateModal").classList.remove("hidden");document.activeElement?.blur?.()}function closeTemplateEditor(){$("templateModal").classList.add("hidden");editingTemplateIndex=null}function closeTemplateManager(){const m=$("templateManagerModal");if(m)m.classList.add("hidden")}function saveTemplate(){const name=$("templateName").value.trim(),time=$("templateTime").value.trim(),place=$("templatePlace").value.trim();if(!name){alert("Enter a meeting name.");return}const old=editingTemplateIndex===null?null:db.templates[editingTemplateIndex];const t={name,time,place,favorite:!!old?.favorite};if(editingTemplateIndex===null)db.templates.push(t);else db.templates[editingTemplateIndex]=t;persist();renderTemplates();renderMeetingsTab();renderMeetingTemplates();closeTemplateEditor()}
 let journalFilter="all",journalDateFilter="";
 function journalDayHasContent(date,d){return !!(d&&(d.journal||d.a1||d.a2||d.a3||d.g1||d.g2||d.g3||d.focus||d.reflectionResponse||d.checkinMood||d.checkinNeed||d.checkinAction))||db.meetings.some(m=>m.date===date)||db.emotions.some(e=>e.date===date)}
 function journalPreview(d,date){if(d&&d.journal&&d.journal.trim())return d.journal.trim();if(d&&d.focus&&d.focus.trim())return "Focus: "+d.focus.trim();if(d&&d.reflectionResponse&&d.reflectionResponse.trim())return d.reflectionResponse.trim();if(db.emotions.some(e=>e.date===date))return "Emotion entries recorded for this day.";if(db.meetings.some(m=>m.date===date))return "Meeting activity recorded for this day.";return "No journal text saved for this day yet."}
@@ -1073,8 +1776,8 @@ function openJournalReader(date,dates){journalReaderDates=Array.isArray(dates)&&
 function closeJournalReader(){$("journalReaderModal").classList.add("hidden");document.body.classList.remove("modal-open")}
 let journalReaderAnimating=false;function moveJournalReader(direction){const next=journalReaderIndex+direction;if(journalReaderAnimating||next<0||next>=journalReaderDates.length)return;const paper=$("journalReaderPaper");const page=$("journalReaderPage");journalReaderAnimating=true;const exitX=direction<0?-42:42;const enterX=-exitX;paper.style.transition="transform .28s cubic-bezier(.22,.75,.18,1)";paper.style.transform=`translate3d(${exitX}px,0,0)`;setTimeout(()=>{paper.style.transition="none";paper.style.transform=`translate3d(${enterX}px,0,0)`;journalReaderIndex=next;renderJournalReader();page.scrollTo({top:0,behavior:"auto"});void paper.offsetWidth;requestAnimationFrame(()=>{paper.style.transition="transform .28s cubic-bezier(.22,.75,.18,1)";paper.style.transform="translate3d(0,0,0)"});setTimeout(()=>{paper.style.transition="";paper.style.transform="translate3d(0,0,0)";journalReaderAnimating=false},300)},280)}
 
-function show(tab){["today","journal","calendar","meetings","search","settings","goals","about"].forEach(x=>$(x+"View").classList.toggle("hidden",x!==tab));if(tab==="search"){$("from").value=iso(selected);$("to").value=iso(selected)}const titles={today:"Today",journal:"My Journal",calendar:"Calendar",meetings:"Meetings",search:"Search",settings:"Settings",goals:"My Goals",about:"About"};$("title").textContent=titles[tab]||"Today";document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));if(tab==="calendar")renderCalendar();if(tab==="meetings")renderMeetingsTab();if(tab==="journal")renderJournalView();if(tab==="goals")renderGoals();if(tab==="settings"){$("userName").value=db.name||"";$('cleanDate').value=db.cleanDate;renderMessageList();renderTemplates();renderFriends();renderCustomEmotions();$("friendRemindersEnabled").checked=db.friendRemindersEnabled;document.querySelectorAll(".milestoneToggle").forEach(x=>x.checked=!!db.milestones[x.value]);applyMeetingSettings();applyTheme()}}
-function renderTemplates(){const count=$("templateCount");updateQuickEnterCount();if(count)count.textContent=db.templates.length;$("templates").innerHTML=db.templates.length?db.templates.map((x,i)=>`<div class="meeting template-row"><div><strong>${esc(x.name)}</strong><div class="muted">${esc(x.place)} • ${esc(x.time)}</div></div><button class="secondary" data-template-edit="${i}">Edit</button><button class="danger" data-template-del="${i}">Delete</button></div>`).join(""):"<p class='muted'>No Quick Enter meetings saved yet.</p>";document.querySelectorAll("[data-template-edit]").forEach(b=>b.onclick=()=>openTemplateEditor(Number(b.dataset.templateEdit)));document.querySelectorAll("[data-template-del]").forEach(b=>b.onclick=()=>{const i=Number(b.dataset.templateDel);if(confirm("Delete this Quick Enter meeting?")){db.templates.splice(i,1);persist();renderTemplates();renderMeetingsTab()}})}
+function show(tab){["today","journal","calendar","meetings","search","settings","goals","about"].forEach(x=>$(x+"View").classList.toggle("hidden",x!==tab));if(tab==="search"){$("from").value=iso(selected);$("to").value=iso(selected)}const titles={today:"Today",journal:"My Journal",calendar:"Calendar",meetings:"Meetings",search:"Search",settings:"Settings",goals:"My Goals",about:"About"};$("title").textContent=titles[tab]||"Today";document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));if(tab==="calendar")renderCalendar();if(tab==="meetings")renderMeetingsTab();if(tab==="journal")renderJournalView();if(tab==="goals")renderGoals();if(tab==="settings"){$("userName").value=db.name||"";$('cleanDate').value=db.cleanDate;renderMessageList();renderFriends();renderCustomEmotions();$("friendRemindersEnabled").checked=db.friendRemindersEnabled;document.querySelectorAll(".milestoneToggle").forEach(x=>x.checked=!!db.milestones[x.value]);applyMeetingSettings();applyTheme()}}
+function renderTemplates(){updateQuickEnterCount();const count=$("templateCount");if(count)count.textContent=db.templates.length;const host=$("managerTemplates");if(!host)return;const ordered=db.templates.map((x,i)=>({x,i})).sort((a,b)=>Number(!!b.x.favorite)-Number(!!a.x.favorite)||a.x.name.localeCompare(b.x.name));host.innerHTML=db.templates.length?ordered.map(({x,i})=>`<div class="meeting template-row"><div><strong>${x.favorite?'★ ':''}${esc(x.name)}</strong><div class="muted">${esc(x.place)} • ${esc(x.time)}</div></div><button class="secondary" type="button" title="${x.favorite?'Remove favorite':'Add to favorites'}" aria-label="${x.favorite?'Remove favorite':'Add to favorites'}" aria-pressed="${!!x.favorite}" data-template-fav="${i}">${x.favorite?'★':'☆'}</button><button class="secondary" type="button" data-template-edit="${i}">Edit</button><button class="danger" type="button" data-template-del="${i}">Delete</button></div>`).join(""):"<p class='muted'>No Quick Enter meetings saved yet. Add your first reusable meeting above.</p>";host.querySelectorAll("[data-template-fav]").forEach(b=>b.onclick=()=>toggleTemplateFavorite(Number(b.dataset.templateFav)));host.querySelectorAll("[data-template-edit]").forEach(b=>b.onclick=()=>openTemplateEditor(Number(b.dataset.templateEdit)));host.querySelectorAll("[data-template-del]").forEach(b=>b.onclick=()=>{const i=Number(b.dataset.templateDel);if(confirm("Delete this Quick Enter meeting?")){db.templates.splice(i,1);persist();renderTemplates();renderMeetingsTab();renderMeetingTemplates()}})}
 document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>{if(confirmLeaveDay())show(b.dataset.tab)});$("recentMeetingsToggle").onclick=()=>{const p=$("recentMeetingsPanel"),open=p.classList.toggle("hidden")===false;$("recentMeetingsToggle").dataset.open=open?"true":"false";$("recentMeetingsToggle").setAttribute("aria-expanded",open?"true":"false");$("recentMeetingsChevron").textContent=open?"−":"＋"};
 $("meetingsAddBtn").onclick=()=>{show("today");openMeetingForm()};$("meetingsTodayBtn").onclick=()=>{selected=new Date();selected.setHours(12,0,0,0);loadDay();show("meetings")};$("meetingsAttendanceBtn").onclick=openAttendanceModal;
 $("journalViewBtn").onclick=()=>{if(confirmLeaveDay()){show("journal");window.scrollTo({top:0,behavior:"smooth"})}};
@@ -1091,11 +1794,11 @@ $("journalReaderBack").onclick=closeJournalReader;$("journalReaderClose").onclic
 let journalSwipeStartX=0,journalSwipeStartY=0;
 $("journalReaderPage").addEventListener("touchstart",e=>{const t=e.changedTouches[0];journalSwipeStartX=t.clientX;journalSwipeStartY=t.clientY},{passive:true});
 $("journalReaderPage").addEventListener("touchend",e=>{const t=e.changedTouches[0],dx=t.clientX-journalSwipeStartX,dy=t.clientY-journalSwipeStartY;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.2){moveJournalReader(dx<0?-1:1)}},{passive:true});
-// rj_v50.0: My Journal <-> Today uses the primary swipe track.\n$("menuBtn").onclick=openSidebar;$("sidebarClose").onclick=closeSidebar;$("sidebarOverlay").onclick=closeSidebar;$("sidebarMessagesBtn").onclick=()=>{closeSidebar();openMessages()};$("sidebarEmotionBtn").onclick=()=>{closeSidebar();if(confirmLeaveDay()){repairShow("emotions")}};document.querySelectorAll("[data-side-tab]").forEach(b=>b.onclick=()=>{const tab=b.dataset.sideTab;closeSidebar();if(confirmLeaveDay()){show(tab);if(tab==="helped")initHelped()}});document.querySelectorAll("[data-goal-tab]").forEach(b=>b.onclick=()=>{goalTab=b.dataset.goalTab;renderGoals()});$("addGoalBtn").onclick=()=>openGoalEditor();$("goalModalClose").onclick=closeGoalEditor;$("goalCancelBtn").onclick=closeGoalEditor;$("goalSaveBtn").onclick=saveGoal;$("goalDetailClose").onclick=closeGoalDetail;$("journalReaderMessagesBtn").onclick=openMessages;$("messagesBtn").onclick=openMessages;$("messageIntroClose").onclick=closeMessageIntro;$("messageIntroNotNow").onclick=closeMessageIntro;$("messageIntroWrite").onclick=()=>{closeMessageIntro();openMessageEditor()};$("messageReadClose").onclick=closeMessageReader;$("messageReadDone").onclick=closeMessageReader;$("messageReadList").onclick=showMessageList;$("messagePrev").onclick=()=>{currentMessageIndex=(currentMessageIndex-1+db.messages.length)%db.messages.length;renderMessageReader()};$("messageNext").onclick=()=>{currentMessageIndex=(currentMessageIndex+1)%db.messages.length;renderMessageReader()};$("messageEditorClose").onclick=closeMessageEditor;$("messageEditorCancel").onclick=closeMessageEditor;$("messageEditorSave").onclick=saveMessage;$("addMessageBtn").onclick=()=>openMessageEditor();$("addFriend").onclick=saveFriend;$("cancelFriendEdit").onclick=cancelFriendEdit;$("friendRemindersEnabled").onchange=saveMilestoneSettings;document.querySelectorAll(".milestoneToggle").forEach(x=>x.onchange=saveMilestoneSettings);
+// rj_v50.0: My Journal <-> Today uses the primary swipe track.\n$("menuBtn").onclick=openSidebar;$("sidebarClose").onclick=closeSidebar;$("sidebarOverlay").onclick=closeSidebar;$("sidebarMessagesBtn").onclick=()=>{closeTemplateManager();closeSidebar();openMessages()};$("sidebarEmotionBtn").onclick=()=>{closeTemplateManager();closeSidebar();if(confirmLeaveDay()){repairShow("emotions")}};document.querySelectorAll("[data-side-tab]").forEach(b=>b.onclick=()=>{const tab=b.dataset.sideTab;closeTemplateManager();closeSidebar();if(confirmLeaveDay()){show(tab);if(tab==="helped")initHelped()}});document.querySelectorAll("[data-goal-tab]").forEach(b=>b.onclick=()=>{goalTab=b.dataset.goalTab;renderGoals()});$("addGoalBtn").onclick=()=>openGoalEditor();$("goalModalClose").onclick=closeGoalEditor;$("goalCancelBtn").onclick=closeGoalEditor;$("goalSaveBtn").onclick=saveGoal;$("goalDetailClose").onclick=closeGoalDetail;$("journalReaderMessagesBtn").onclick=openMessages;$("messagesBtn").onclick=openMessages;$("messageIntroClose").onclick=closeMessageIntro;$("messageIntroNotNow").onclick=closeMessageIntro;$("messageIntroWrite").onclick=()=>{closeMessageIntro();openMessageEditor()};$("messageReadClose").onclick=closeMessageReader;$("messageReadDone").onclick=closeMessageReader;$("messageReadList").onclick=showMessageList;$("messagePrev").onclick=()=>{currentMessageIndex=(currentMessageIndex-1+db.messages.length)%db.messages.length;renderMessageReader()};$("messageNext").onclick=()=>{currentMessageIndex=(currentMessageIndex+1)%db.messages.length;renderMessageReader()};$("messageEditorClose").onclick=closeMessageEditor;$("messageEditorCancel").onclick=closeMessageEditor;$("messageEditorSave").onclick=saveMessage;$("addMessageBtn").onclick=()=>openMessageEditor();$("addFriend").onclick=function(e){e.preventDefault();saveFriend()};$("cancelFriendEdit").onclick=cancelFriendEdit;$("friendRemindersEnabled").onchange=saveMilestoneSettings;document.querySelectorAll(".milestoneToggle").forEach(x=>x.onchange=saveMilestoneSettings);
 $("printAllReports").onclick=printAllReports;$("printMeetingAttendance").onclick=openAttendanceModal;$('chairInitialsPrompt').onchange=saveMeetingSettings;$('includeInitialsOnAttendance').onchange=saveMeetingSettings;$('rememberNewMeetings').onchange=saveMeetingSettings;
 $("attendanceModalClose").onclick=closeAttendanceModal;$("attendanceCancel").onclick=closeAttendanceModal;document.querySelectorAll('input[name="attendanceMode"]').forEach(x=>x.onchange=updateAttendanceOptions);document.querySelectorAll('input[name="attendanceCountOption"]').forEach(x=>x.onchange=()=>{$("attendanceCount").value=x.value;updateAttendanceOptions()});$("attendanceFrom").onchange=updateAttendanceOptions;$("attendanceTo").onchange=updateAttendanceOptions;$("attendancePrintBtn").onclick=printSelectedMeetingAttendance;$("exportBackup").onclick=exportBackup;
 $("importBackup").onclick=()=>$("backupFile").click();
-$("backupFile").onchange=e=>{importBackupFile(e.target.files[0]);e.target.value=""};$("todayBtn").onclick=()=>{if(!confirmLeaveDay())return;selected=new Date();selected.setHours(12,0,0,0);loadDay()};$("prevDay").onclick=()=>{if(!confirmLeaveDay())return;selected.setDate(selected.getDate()-1);loadDay()};$("nextDay").onclick=()=>{if(!confirmLeaveDay())return;selected.setDate(selected.getDate()+1);loadDay()};$("saveDay").onclick=saveDay;$("rerollReflection").onclick=()=>{rerollReflection();markDayDirty()};$("addMeeting").onclick=openMeetingForm;$("meetingTemplate").onchange=fillTemplate;$("closeMeetingModal").onclick=closeMeetingForm;$("saveMeeting").onclick=saveMeeting;$("cancelMeeting").onclick=closeMeetingForm;$("prevMonth").onclick=()=>{if(!confirmLeaveDay())return;month.setMonth(month.getMonth()-1);renderCalendar()};$("nextMonth").onclick=()=>{if(!confirmLeaveDay())return;month.setMonth(month.getMonth()+1);renderCalendar()};$("runSearch").onclick=runSearch;$("printReport").onclick=printReport;$("setWholeDay").onclick=()=>document.querySelectorAll(".reportField").forEach(x=>x.checked=true);$("clearFields").onclick=()=>document.querySelectorAll(".reportField").forEach(x=>x.checked=false);$("settingsBtn").onclick=()=>{if(confirmLeaveDay())show("settings")};$("saveRecoverySettings").onclick=saveRecoverySettings;document.querySelectorAll('input[name="themeChoice"]').forEach(x=>x.onchange=()=>setAppearance(x.value));$("darkModeToggle").onchange=()=>setAppearance($("darkModeToggle").checked?"dark":"serene");$("addTemplateBtn").onclick=()=>openTemplateEditor();$("templateModalClose").onclick=closeTemplateEditor;$("templateCancel").onclick=closeTemplateEditor;$("templateSave").onclick=saveTemplate;$("addEmotion").onclick=()=>openEmotionModal();$("emotionModalClose").onclick=closeEmotionModal;$("emotionCancel").onclick=closeEmotionModal;$("emotionSave").onclick=saveEmotion;$("emotionType").onchange=updateEmotionForm;$("emotionWheelOpen").onclick=openEmotionWheel;$("emotionWheelClose").onclick=closeEmotionWheel;$("emotionWheelModal").onclick=e=>{if(e.target===$("emotionWheelModal"))closeEmotionWheel()};$("emotionIntensity").oninput=()=>$("emotionIntensityValue").textContent=Number($("emotionIntensity").value).toFixed(1);$("addCustomEmotion").onclick=()=>{const n=$("customEmotionName").value.trim();if(!n){alert("Enter an emotion name.");return}if(DEFAULT_EMOTIONS.includes(n)){alert("That emotion is already in the list.");return}if(!db.emotionTypes.includes(n))db.emotionTypes.push(n);populateEmotionTypes();$("emotionType").value=n;$("customEmotionWrap").classList.add("hidden");updateEmotionForm();persist();renderCustomEmotions()};$("viewEmotionLogs").onclick=()=>{if(!confirmLeaveDay())return;$("q").value="";show("search");$("from").value="";$("to").value="";runSearch()};/* v38.1 touch lock removed: Emotion Log is natively scrollable in v39.2. */
+$("backupFile").onchange=e=>{importBackupFile(e.target.files[0]);e.target.value=""};$("todayBtn").onclick=()=>{if(!confirmLeaveDay())return;selected=new Date();selected.setHours(12,0,0,0);loadDay()};$("prevDay").onclick=()=>{if(!confirmLeaveDay())return;selected.setDate(selected.getDate()-1);loadDay()};$("nextDay").onclick=()=>{if(!confirmLeaveDay())return;selected.setDate(selected.getDate()+1);loadDay()};$("saveDay").onclick=saveDay;$("rerollReflection").onclick=()=>{rerollReflection();markDayDirty()};$("addMeeting").onclick=openMeetingForm;$("meetingTemplate").onchange=fillTemplate;$("closeMeetingModal").onclick=closeMeetingForm;$("saveMeeting").onclick=saveMeeting;$("cancelMeeting").onclick=closeMeetingForm;$("prevMonth").onclick=()=>{if(!confirmLeaveDay())return;month.setMonth(month.getMonth()-1);renderCalendar()};$("nextMonth").onclick=()=>{if(!confirmLeaveDay())return;month.setMonth(month.getMonth()+1);renderCalendar()};$("runSearch").onclick=runSearch;$("printReport").onclick=printReport;$("setWholeDay").onclick=()=>document.querySelectorAll(".reportField").forEach(x=>x.checked=true);$("clearFields").onclick=()=>document.querySelectorAll(".reportField").forEach(x=>x.checked=false);$("settingsBtn").onclick=()=>{if(confirmLeaveDay())show("settings")};$("saveRecoverySettings").onclick=saveRecoverySettings;document.querySelectorAll('input[name="themeChoice"]').forEach(x=>x.onchange=()=>setAppearance(x.value));const menuOpacitySlider=$("menuOpacitySlider");if(menuOpacitySlider){menuOpacitySlider.oninput=()=>{const pct=Number(menuOpacitySlider.value);db.menuOpacity=pct;document.documentElement.style.setProperty('--sidebar-opacity',(pct/100).toFixed(2));const v=$("menuOpacityValue");if(v)v.textContent=String(pct)};menuOpacitySlider.onchange=()=>{db.menuOpacity=Number(menuOpacitySlider.value);persist();applyMenuOpacity()}};$("darkModeToggle").onchange=()=>setAppearance($("darkModeToggle").checked?"dark":"serene");$("manageTemplatesBtn").onclick=()=>{renderTemplates();$("templateManagerModal").classList.remove("hidden")};$("templateManagerClose").onclick=()=>$("templateManagerModal").classList.add("hidden");$("templateManagerModal").onclick=e=>{if(e.target===$("templateManagerModal"))$("templateManagerModal").classList.add("hidden")};$("managerAddTemplateBtn").onclick=()=>openTemplateEditor();$("meetingsQuickToggle").onclick=()=>{const panel=$("meetingsQuickPanel"),open=panel.classList.toggle("hidden")===false;$("meetingsQuickChevron").textContent=open?"▾":"▸";$("meetingsQuickToggle").setAttribute("aria-expanded",String(open))};$("templateModalClose").onclick=closeTemplateEditor;$("templateCancel").onclick=closeTemplateEditor;$("templateSave").onclick=saveTemplate;$("addEmotion").onclick=()=>openEmotionModal();$("emotionModalClose").onclick=closeEmotionModal;$("emotionCancel").onclick=closeEmotionModal;$("emotionSave").onclick=saveEmotion;$("emotionType").onchange=updateEmotionForm;$("emotionWheelOpen").onclick=openEmotionWheel;$("emotionWheelClose").onclick=closeEmotionWheel;$("emotionWheelModal").onclick=e=>{if(e.target===$("emotionWheelModal"))closeEmotionWheel()};$("emotionIntensity").oninput=()=>$("emotionIntensityValue").textContent=Number($("emotionIntensity").value).toFixed(1);$("addCustomEmotion").onclick=()=>{const n=$("customEmotionName").value.trim();if(!n){alert("Enter an emotion name.");return}if(DEFAULT_EMOTIONS.includes(n)){alert("That emotion is already in the list.");return}if(!db.emotionTypes.includes(n))db.emotionTypes.push(n);populateEmotionTypes();$("emotionType").value=n;$("customEmotionWrap").classList.add("hidden");updateEmotionForm();persist();renderCustomEmotions()};$("viewEmotionLogs").onclick=()=>{if(!confirmLeaveDay())return;$("q").value="";show("search");$("from").value="";$("to").value="";runSearch()};/* v38.1 touch lock removed: Emotion Log is natively scrollable in v39.2. */
 
 let helpedFilter="all";
 function helpedEsc(v){return escHtml(String(v||""));}
@@ -1173,7 +1876,7 @@ function renderEmotionWheelHome(){const b=$("emotionWheelBody");$("emotionWheelT
 function renderEmotionWheelSpecific(group){const b=$("emotionWheelBody");$("emotionWheelTitle").textContent=group;$("emotionWheelSub").textContent="Tap the word that fits best.";b.innerHTML='<button class="secondary emotion-wheel-back" id="emotionWheelBack" type="button">‹ Back to wheel</button><div class="emotion-wheel-choice">Which one feels closest?</div><div class="emotion-wheel-options">'+(EMOTION_WHEEL[group]||[]).map(x=>`<button class="secondary" type="button" data-emotion-choice="${x}">${x}</button>`).join('')+'</div>';$("emotionWheelBack").onclick=renderEmotionWheelHome;b.querySelectorAll('[data-emotion-choice]').forEach(x=>x.onclick=()=>chooseWheelEmotion(x.dataset.emotionChoice))}
 function renderEmotionWheelUnsure(){const b=$("emotionWheelBody");$("emotionWheelTitle").textContent="I don't know what I'm feeling";$("emotionWheelSub").textContent="Choose anything that feels true right now.";b.innerHTML='<button class="secondary emotion-wheel-back" id="emotionWheelBack" type="button">‹ Back to wheel</button><div class="emotion-wheel-options">'+Object.keys(EMOTION_OBSERVATIONS).map(x=>`<button class="secondary" type="button" data-observation="${x}">${x}</button>`).join('')+'</div>';$("emotionWheelBack").onclick=renderEmotionWheelHome;b.querySelectorAll('[data-observation]').forEach(x=>x.onclick=()=>renderEmotionWheelSuggestions(x.dataset.observation))}
 function renderEmotionWheelSuggestions(observation){const b=$("emotionWheelBody"),options=EMOTION_OBSERVATIONS[observation]||[];$("emotionWheelTitle").textContent="Possible emotions";$("emotionWheelSub").textContent="Possibilities, not a diagnosis. Choose what fits.";b.innerHTML='<button class="secondary emotion-wheel-back" id="emotionWheelBack" type="button">‹ Back</button><div class="emotion-wheel-choice">'+esc(observation)+'</div><div class="emotion-wheel-options">'+options.map(x=>`<button class="secondary" type="button" data-suggested-emotion="${x}">${x}</button>`).join('')+'</div>';$("emotionWheelBack").onclick=renderEmotionWheelUnsure;b.querySelectorAll('[data-suggested-emotion]').forEach(x=>x.onclick=()=>chooseWheelEmotion(x.dataset.suggestedEmotion))}
-function updateQuickEnterCount(){const el=$("meetingsQuickCount");if(el)el.textContent=String(db.templates.length)}
+function updateQuickEnterCount(){const n=Array.isArray(db.templates)?db.templates.length:0;const el=$("meetingsQuickCount");if(el)el.textContent=String(n);const settingsCount=$("templateCount");if(settingsCount)settingsCount.textContent=String(n)}
 
 
 // v50.4.2 — optional Daily Check-In reflection prompts
@@ -1187,7 +1890,7 @@ if(checkinReflectToggle&&checkinReflectPanel){
   });
 }
 document.querySelectorAll("#a1,#a2,#a3,#g1,#g2,#g3,#focus,#journal,#reflectionResponse").forEach(el=>el.addEventListener("input",markDayDirty));document.querySelectorAll("#checkinNeed,#checkinAction").forEach(el=>el.addEventListener("input",markDayDirty));document.querySelectorAll("[data-checkin-mood]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-checkin-mood]").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");markDayDirty()});loadDay();initGrowingFields();applyTheme();cleanCounter();renderEmotionToday();renderMessageList();renderGoals();setInterval(cleanCounter,60000);
-if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js");
+if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js?v=50.9.3.8");
 
 /* ===== v41.1 navigation repair ===== */
 (function(){
@@ -1257,6 +1960,14 @@ if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js");
   }
   document.querySelectorAll('.nav').forEach(n=>n.style.display='none');
 
+  // Friends save reliability: capture the tap before any other delegated handler can consume it.
+  document.addEventListener('click',function(e){
+    const button=e.target && e.target.closest ? e.target.closest('#addFriend') : null;
+    if(!button)return;
+    e.preventDefault(); e.stopPropagation(); if(e.stopImmediatePropagation)e.stopImmediatePropagation();
+    try{saveFriend()}catch(err){const status=$v('friendSaveStatus');if(status)status.textContent='Could not save friend: '+(err&&err.message?err.message:'unexpected error');else alert('Could not save friend. Please try again.');}
+  },true);
+
   // Dedicated Clean Time and Friends pages.
   const syncFriendReminderControls=()=>{
     const a=$v('friendRemindersEnabled'),b=$v('friendRemindersEnabledFriends');
@@ -1279,12 +1990,42 @@ if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js");
     if(close){e.preventDefault();e.stopPropagation();closeSidebar();return;}
     const reports=e.target.closest('#sidebarReportsBtn');
     if(reports){e.preventDefault();e.stopPropagation();closeSidebar();repairShow('search');$v('title').textContent='Reports';return;}
+    // v50.8.2: Gratitude Pond is a dedicated top-level screen, not a normal data-side-tab.
+    // Handle it in the app's primary sidebar delegation so mobile Safari cannot leave the
+    // sidebar open when another feature-level listener is added later in the document.
+    const gratitudePond=e.target.closest('#sidebarGratitudePondBtn');
+    if(gratitudePond){
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      try{
+        closeSidebar();
+        if(typeof window.openGratitudePond==='function'){
+          window.openGratitudePond();
+        }else{
+          // Hard fallback: show the dedicated Pond screen even if the feature
+          // initializer has not exposed its launcher yet.
+          document.querySelectorAll('[id$="View"]').forEach(v=>v.classList.add('hidden'));
+          const pond=document.getElementById('gratitudePondView');
+          if(pond)pond.classList.remove('hidden');
+          const title=document.getElementById('title');
+          if(title)title.textContent='Gratitude Pond';
+        }
+      }catch(err){
+        console.error('Gratitude Pond navigation',err);
+        document.querySelectorAll('[id$="View"]').forEach(v=>v.classList.add('hidden'));
+        const pond=document.getElementById('gratitudePondView');
+        if(pond)pond.classList.remove('hidden');
+        const title=document.getElementById('title');
+        if(title)title.textContent='Gratitude Pond';
+      }
+      return;
+    }
     const item=e.target.closest('#sidebar [data-side-tab]');
-    if(item){e.preventDefault();e.stopPropagation();const tab=item.dataset.sideTab;closeSidebar();repairShow(tab);if(tab==="helped"&&typeof initHelped==="function")initHelped();return;}
+    if(item){e.preventDefault();e.stopImmediatePropagation();const tab=item.dataset.sideTab;try{if(typeof window.closeAffirmationsWall==='function')window.closeAffirmationsWall();if(typeof window.closeGratitudePond==='function')window.closeGratitudePond();}catch(err){console.warn('Feature cleanup before sidebar navigation',err)}closeSidebar();repairShow(tab);if(tab==="helped"&&typeof initHelped==="function")initHelped();return;}
     const msg=e.target.closest('#sidebarMessagesBtn,#messagesBtn');
     if(msg){e.preventDefault();e.stopPropagation();closeSidebar();openMessages();return;}
     const emotion=e.target.closest('#sidebarEmotionBtn');
-    if(emotion){e.preventDefault();e.stopPropagation();closeSidebar();repairShow('emotions',{skipConfirm:true});return;}
+    if(emotion){e.preventDefault();e.stopImmediatePropagation();try{if(typeof window.closeAffirmationsWall==='function')window.closeAffirmationsWall();if(typeof window.closeGratitudePond==='function')window.closeGratitudePond();}catch(err){console.warn('Feature cleanup before My Emotions',err)}closeSidebar();repairShow('emotions',{skipConfirm:true});return;}
   },true);
 
   // Make the primary swipe area actually respond on iPhone.
@@ -1460,5 +2201,338 @@ if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js");
   setInterval(bindEmotionsScreen,1500);
 })();
 </script>
-<div id="v50-6-4-about-features" style="display:none"><strong>New in v50.6.4</strong><ul><li>☀️ Daily Check-In with optional reflection prompts</li><li>🧠 My Emotions</li><li>🔎 What Helped Me Before?</li></ul></div><script>document.addEventListener("click",()=>setTimeout(()=>{const a=document.querySelector("[id*=about i],[class*=about i]"),n=document.getElementById("v50-6-4-about-features");if(a&&n&&!a.contains(n)){n.style.display="block";a.appendChild(n)}},30),true)</script>
+<div id="v50-6-4-about-features" style="display:none"><strong>Recovery Journal v50.9.3.26 Ocean & Sunrise Journal Reader Contrast Fix Test</strong><ul><li>☀️ Daily Check-In with optional reflection prompts</li><li>🧠 My Emotions history screen</li><li>🔎 What Helped Me Before? recovery-history search</li><li>✨ Affirmations Wall with customizable notes and doodles</li><li>🌊 Gratitude Pond with existing gratitude reflections, stone browsing, search, and shuffle</li><li>📖 Journal Reader improvements, including Daily Check-In</li><li>🌲 Midnight Forest and 🍷 Dark Burgundy themes</li><li>🤝 Friends clean-date tracking and milestone reminders</li><li>⭐ Favorite meeting templates that sort to the top of Quick Enter</li><li>🔒 Local-first storage and backup/export tools</li></ul></div><script>document.addEventListener("click",()=>setTimeout(()=>{const a=document.querySelector("[id*=about i],[class*=about i]"),n=document.getElementById("v50-6-4-about-features");if(a&&n&&!a.contains(n)){n.style.display="block";a.appendChild(n)}},30),true)</script>
+
+<script id="affirmations-wall-v1-js">
+(function(){
+  const wallState={filter:"all",query:"",shuffle:0,orderIds:[],currentId:null,editingId:null,color:"#F4C2D0",drawing:null};
+  const colors=["#F4D96B","#E8A2B4","#9FD5E7","#B8D3B7","#C9B8DF","#F1E4C2"];
+  function escW(v){return typeof esc==="function"?esc(v??""):String(v??"").replace(/[&<>'"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));}
+  function ensureWall(){db.affirmationWall=Array.isArray(db.affirmationWall)?db.affirmationWall:[];return db.affirmationWall}
+  function allAffirmations(){
+    const out=[], seen=new Set(), wall=ensureWall();
+    Object.keys(db.days||{}).sort().forEach(date=>{
+      const d=db.days[date]||{};
+      [d.a1,d.a2,d.a3].forEach((text,i)=>{
+        text=String(text||"").trim(); if(!text)return;
+        const key=date+"|"+text;
+        if(seen.has(key))return; seen.add(key);
+        out.push({id:"day:"+date+":"+i,text,date,color:colors[(date.charCodeAt(8)||0+i)%colors.length],rotation:((date.charCodeAt(9)||i)%7)-3,doodle:null,favorite:false,source:"Daily Journal",native:false});
+      });
+    });
+    wall.forEach(x=>out.push({...x,native:true}));
+    return out;
+  }
+  function filtered(){
+    let items=allAffirmations();
+    const q=wallState.query.trim().toLowerCase();
+    if(q)items=items.filter(x=>x.text.toLowerCase().includes(q));
+    const now=new Date(), month=now.toISOString().slice(0,7);
+    if(wallState.filter==="recent")items=items.slice().sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,18);
+    if(wallState.filter==="month")items=items.filter(x=>String(x.date).startsWith(month));
+    if(wallState.filter==="doodle")items=items.filter(x=>x.doodle);
+    if(wallState.orderIds.length){
+      const rank=new Map(wallState.orderIds.map((id,i)=>[id,i]));
+      items.sort((a,b)=>{
+        const ai=rank.has(a.id)?rank.get(a.id):Number.MAX_SAFE_INTEGER;
+        const bi=rank.has(b.id)?rank.get(b.id):Number.MAX_SAFE_INTEGER;
+        return ai-bi;
+      });
+    }
+    return items;
+  }
+  function renderWall(){
+    const wall=document.getElementById("awWall");if(!wall)return;
+    const items=filtered();
+    if(!items.length){
+      wall.innerHTML=`<div class="aw-empty"><div class="aw-empty-inner"><div class="big">✨</div><h3>${wallState.query?"Nothing matches that yet.":"Your wall is waiting for your words."}</h3><p>${wallState.query?"Try another word or clear the search.":"Add your first affirmation, or keep writing them in your daily journal and they'll appear here."}</p><button type="button" class="primary" id="awEmptyAdd">＋ Add an Affirmation</button></div></div>`;
+      document.getElementById("awEmptyAdd")?.addEventListener("click",openEditor);return;
+    }
+    wall.innerHTML=items.map((x,i)=>`
+      <button type="button" class="aw-note" data-aw-note="${escW(x.id)}" style="--note:${x.color||colors[i%colors.length]};--rot:${x.rotation??((i%7)-3)}deg">
+        ${x.favorite?'<span class="aw-note-heart">♥</span>':''}
+        <span class="aw-note-text">${escW(x.text)}</span>
+        
+        ${x.doodle?`<img class="aw-note-doodle" src="${x.doodle}" alt="">`:""}
+      </button>`).join("");
+    wall.querySelectorAll("[data-aw-note]").forEach(b=>b.addEventListener("click",()=>openDetail(b.dataset.awNote)));
+  }
+  function setupCanvas(){
+    const c=document.getElementById("awCanvas");if(!c)return;
+    const ctx=c.getContext("2d");ctx.lineCap="round";ctx.lineJoin="round";
+    let drawing=false,last=null;
+    c.__awColor="#25302d";c.__awWidth=7;c.__awHistory=[];c.__awDirty=false;
+    function pos(e){const r=c.getBoundingClientRect(),p=e.touches?.[0]||e;return{x:(p.clientX-r.left)*(c.width/r.width),y:(p.clientY-r.top)*(c.height/r.height)}}
+    function snapshot(){try{c.__awHistory.push(ctx.getImageData(0,0,c.width,c.height));if(c.__awHistory.length>20)c.__awHistory.shift()}catch(_){}}
+    function start(e){e.preventDefault();snapshot();drawing=true;c.__awDirty=true;last=pos(e)}
+    function move(e){if(!drawing)return;e.preventDefault();const p=pos(e);ctx.strokeStyle=c.__awColor;ctx.lineWidth=c.__awWidth;ctx.beginPath();ctx.moveTo(last.x,last.y);ctx.lineTo(p.x,p.y);ctx.stroke();last=p}
+    function end(){drawing=false;last=null}
+    c.addEventListener("pointerdown",start);c.addEventListener("pointermove",move);c.addEventListener("pointerup",end);c.addEventListener("pointercancel",end);c.addEventListener("pointerleave",end);
+    c.__awCtx=ctx;
+    c.__awClear=()=>{ctx.clearRect(0,0,c.width,c.height);c.__awHistory=[];c.__awDirty=false};
+    c.__awUndo=()=>{const img=c.__awHistory.pop();if(img)ctx.putImageData(img,0,0);else ctx.clearRect(0,0,c.width,c.height);c.__awDirty=true};
+  }
+  function stamp(type){
+    const c=document.getElementById("awCanvas"),ctx=c?.__awCtx;if(!c||!ctx)return;
+    c.__awHistory.push(ctx.getImageData(0,0,c.width,c.height));
+    ctx.save();ctx.strokeStyle=c.__awColor;ctx.fillStyle=c.__awColor;ctx.lineWidth=c.__awWidth;ctx.lineCap="round";ctx.lineJoin="round";
+    const x=c.width/2,y=c.height/2;
+    if(type==="sun"){ctx.beginPath();ctx.arc(x,y,34,0,Math.PI*2);ctx.stroke();for(let i=0;i<12;i++){const a=i*Math.PI/6;ctx.beginPath();ctx.moveTo(x+45*Math.cos(a),y+45*Math.sin(a));ctx.lineTo(x+65*Math.cos(a),y+65*Math.sin(a));ctx.stroke();}}
+    if(type==="heart"){ctx.beginPath();ctx.moveTo(x,y+42);ctx.bezierCurveTo(x-65,y+2,x-48,y-48,x,y-18);ctx.bezierCurveTo(x+48,y-48,x+65,y+2,x,y+42);ctx.stroke();}
+    if(type==="star"){for(let i=0;i<8;i++){const a=i*Math.PI/4;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+70*Math.cos(a),y+70*Math.sin(a));ctx.stroke();}}
+    if(type==="flower"){ctx.beginPath();ctx.arc(x,y,13,0,Math.PI*2);ctx.stroke();for(let i=0;i<8;i++){const a=i*Math.PI/4;ctx.beginPath();ctx.ellipse(x+30*Math.cos(a),y+30*Math.sin(a),15,25,a,0,Math.PI*2);ctx.stroke();}}
+    ctx.restore();c.__awDirty=true;
+  }
+  function openEditor(id=null){
+    wallState.editingId=id;document.getElementById("awEditorTitle").textContent=id?"Edit Wall Affirmation":"Add an Affirmation";
+    const item=id?allAffirmations().find(x=>x.id===id):null;
+    document.getElementById("awText").value=item?.text||"";
+    wallState.color=item?.color||colors[Math.floor(Math.random()*colors.length)];
+    const awc=document.getElementById("awCanvas");if(awc){awc.__awColor="#25302d";awc.__awWidth=7;awc.__awClear?.();}
+    document.querySelectorAll("#awDoodleColors .aw-dot").forEach(b=>b.classList.toggle("active",b.dataset.doodleColor==="#25302d"));
+    document.querySelectorAll("#awThicknesses button").forEach(b=>b.classList.toggle("active",b.dataset.doodleWidth==="7"));
+    document.querySelectorAll("#awColors [data-aw-color]").forEach(b=>b.classList.toggle("active",b.dataset.awColor===wallState.color));
+    const c=document.getElementById("awCanvas");if(c?.__awClear)c.__awClear();
+    c.__awDirty=false;if(item?.doodle){const img=new Image();img.onload=()=>{c.__awCtx.drawImage(img,0,0,c.width,c.height);c.__awDirty=false};img.src=item.doodle}
+    document.getElementById("awEditor").classList.remove("hidden");
+    setTimeout(()=>document.getElementById("awText").focus(),50);
+  }
+  function closeEditor(){document.getElementById("awEditor").classList.add("hidden");wallState.editingId=null}
+  function saveEditor(){
+    const text=document.getElementById("awText").value.trim();if(!text){alert("Write something you want to remember.");return}
+    const c=document.getElementById("awCanvas"),drawing=c?.__awDirty?c.toDataURL("image/png"):null;
+    const wall=ensureWall(),existing=wall.find(x=>x.id===wallState.editingId);
+    if(existing){existing.text=text;existing.color=wallState.color;if(c?.__awDirty)existing.doodle=drawing;}
+    else wall.push({id:"wall:"+Date.now()+":"+Math.random().toString(36).slice(2),text,date:new Date().toISOString().slice(0,10),color:wallState.color,rotation:(Math.random()*6-3).toFixed(1),doodle:drawing,favorite:false,source:"Affirmations Wall"});
+    persist();closeEditor();renderWall();
+  }
+  function openDetail(id){
+    const item=allAffirmations().find(x=>x.id===id);if(!item)return;wallState.currentId=id;
+    const note=document.getElementById("awDetailNote");note.style.setProperty("--detail-note",item.color||colors[0]);
+    note.innerHTML=`<div class="detail-text">${escW(item.text)}</div>${item.doodle?`<img src="${item.doodle}" alt="Doodle">`:""}`;
+    document.getElementById("awDetailTitle").textContent=item.text.length>28?item.text.slice(0,28)+"…":item.text;
+    document.getElementById("awDetailMeta").textContent=`${item.date||""} · ${item.source||"Affirmation"}`;
+    document.getElementById("awDetailFavorite").textContent=item.favorite?"♥ Favorited":"♡ Favorite";
+    document.getElementById("awDetailEdit").disabled=!item.native;
+    document.getElementById("awDetailDelete").disabled=!item.native;
+    document.getElementById("awDetail").classList.remove("hidden");
+  }
+  function closeDetail(){document.getElementById("awDetail").classList.add("hidden");wallState.currentId=null}
+  function editCurrent(){const item=ensureWall().find(x=>x.id===wallState.currentId);if(!item)return;closeDetail();openEditor(item.id)}
+  function deleteCurrent(){const id=wallState.currentId;if(!id)return;if(!confirm("Remove this affirmation from your wall?"))return;db.affirmationWall=ensureWall().filter(x=>x.id!==id);persist();closeDetail();renderWall()}
+  function favoriteCurrent(){const item=ensureWall().find(x=>x.id===wallState.currentId);if(!item)return;item.favorite=!item.favorite;persist();openDetail(item.id);renderWall()}
+  function openWall(){
+    // Hide regular content while the wall is open. Navigation away calls
+    // closeAffirmationsWall(), which restores the normal app state.
+    document.querySelectorAll('[id$="View"]').forEach(v=>v.classList.add("hidden"));
+    document.getElementById("affirmationsWallView").classList.remove("hidden");
+    document.querySelector(".personal-greeting")?.classList.add("aw-hide-hero");
+    document.querySelector(".counter")?.classList.add("aw-hide-hero");
+    document.getElementById("friendReminders")?.classList.add("aw-hide-hero");
+    document.getElementById("title").textContent="Affirmations Wall";
+    document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("active"));
+    closeSidebar();renderWall();
+  }
+  window.openAffirmationsWall=openWall;
+  window.renderAffirmationsWall=renderWall;
+
+  document.addEventListener("click",function(e){
+    const t=e.target.closest("#sidebarAffirmationsWallBtn");
+    if(t){e.preventDefault();e.stopPropagation();openWall();return;}
+    if(e.target.closest("#awAddBtn")){e.preventDefault();openEditor();return;}
+    if(e.target.closest("#awEditorClose,#awCancelBtn")){e.preventDefault();closeEditor();return;}
+    if(e.target.closest("#awSaveBtn")){e.preventDefault();saveEditor();return;}
+    if(e.target.closest("#awShuffleBtn")){
+      e.preventDefault();e.stopPropagation();
+      const items=filtered();
+      for(let i=items.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[items[i],items[j]]=[items[j],items[i]];}
+      wallState.orderIds=items.map(x=>x.id);
+      wallState.shuffle++;
+      renderWall();
+      return;
+    }
+    if(e.target.closest("#awClearDrawing")){e.preventDefault();document.getElementById("awCanvas")?.__awClear?.();return;}
+    if(e.target.closest("#awUndoDrawing")){e.preventDefault();document.getElementById("awCanvas")?.__awUndo?.();return;}
+    const dc=e.target.closest("[data-doodle-color]");
+    if(dc){const c=document.getElementById("awCanvas");if(c)c.__awColor=dc.dataset.doodleColor;document.querySelectorAll("#awDoodleColors .aw-dot").forEach(b=>b.classList.toggle("active",b===dc));return;}
+    const dw=e.target.closest("[data-doodle-width]");
+    if(dw){const c=document.getElementById("awCanvas");if(c)c.__awWidth=Number(dw.dataset.doodleWidth);document.querySelectorAll("#awThicknesses button").forEach(b=>b.classList.toggle("active",b===dw));return;}
+    const color=e.target.closest("[data-aw-color]");if(color){wallState.color=color.dataset.awColor;document.querySelectorAll("#awColors [data-aw-color]").forEach(b=>b.classList.toggle("active",b===color));return;}
+    const stampBtn=e.target.closest("[data-aw-stamp]");if(stampBtn){e.preventDefault();stamp(stampBtn.dataset.awStamp);return;}
+    const filter=e.target.closest("[data-aw-filter]");if(filter){wallState.filter=filter.dataset.awFilter;document.querySelectorAll("#awFilters [data-aw-filter]").forEach(b=>b.classList.toggle("active",b===filter));renderWall();return;}
+    if(e.target.closest("#awDetailClose")){closeDetail();return;}
+    if(e.target.closest("#awDetailEdit")){editCurrent();return;}
+    if(e.target.closest("#awDetailDelete")){deleteCurrent();return;}
+    if(e.target.closest("#awDetailFavorite")){favoriteCurrent();return;}
+  },true);
+
+  document.addEventListener("input",function(e){
+    if(e.target.id==="awQuery"){wallState.query=e.target.value;renderWall();}
+  },true);
+
+  // v50.7.3 navigation fix:
+  // The wall is a real top-level screen, but it must never replace/intercept
+  // the app's normal navigation. Always tear it down before another screen opens.
+  window.closeAffirmationsWall = function(){
+    document.getElementById("affirmationsWallView")?.classList.add("hidden");
+    document.querySelectorAll(".aw-hide-hero").forEach(x=>x.classList.remove("aw-hide-hero"));
+    document.getElementById("awEditor")?.classList.add("hidden");
+    document.getElementById("awDetail")?.classList.add("hidden");
+  };
+
+  // Capture the app's existing navigation function without replacing it.
+  const appShow = window.show;
+  if(appShow && !appShow.__awOriginal){
+    appShow.__awOriginal = true;
+    const navShow = function(tab){
+      window.closeAffirmationsWall();
+      return appShow.apply(this, arguments);
+    };
+    navShow.__awOriginal = appShow;
+    window.__awNavigate = navShow;
+  }
+
+  // Listen for ordinary navigation clicks and close the wall first.
+  // This deliberately excludes the Affirmations Wall button itself.
+  document.addEventListener("click", function(e){
+    if(e.target.closest("#sidebarAffirmationsWallBtn")) return;
+    const nav = e.target.closest("[data-side-tab], [data-tab], .nav button, #todayBtn, #settingsBtn");
+    if(nav) window.closeAffirmationsWall();
+  }, true);
+
+  window.addEventListener("load",setupCanvas);
+  document.addEventListener("touchstart",e=>{if(e.target.closest(".aw-modal"))e.stopPropagation()},{passive:true});
+  document.addEventListener("touchmove",e=>{if(e.target.closest(".aw-modal"))e.stopPropagation()},{passive:true});
+  document.addEventListener("DOMContentLoaded",setupCanvas);
+})();
+</script>
+
+
+<script id="aw-order-persistence-v50-7-3">
+(function(){
+  const key="affirmationsWallOrder";
+  document.addEventListener("click",function(e){
+    const b=e.target.closest("#awShuffleBtn"); if(!b)return;
+    const raw=JSON.parse(localStorage.getItem("affirmationWall")||"[]");
+    const ids=raw.map((x,i)=>x.id||("wall-"+i));
+    for(let i=ids.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[ids[i],ids[j]]=[ids[j],ids[i]]}
+    localStorage.setItem(key,JSON.stringify(ids));
+  },true);
+})();
+</script>
+
+<script id="gratitude-pond-v50-8-js">
+(function(){
+  const state={query:"",shuffle:0,currentIndex:0,items:[]};
+  function dayLabel(date){if(!date)return "";try{return new Date(date+"T12:00:00").toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"})}catch(e){return date}}
+  function candidateDays(obj){
+    if(!obj||typeof obj!=="object")return null;
+    if(obj.days&&typeof obj.days==="object")return obj.days;
+    if(obj.data&&obj.data.days&&typeof obj.data.days==="object")return obj.data.days;
+    return null;
+  }
+  function gratitudeCount(days){
+    let n=0; Object.values(days||{}).forEach(d=>{if(!d||typeof d!=="object")return;[d.g1,d.g2,d.g3,d.gratitude1,d.gratitude2,d.gratitude3].forEach(x=>{if(String(x||"").trim())n++});
+      const arr=Array.isArray(d.gratitude)?d.gratitude:(Array.isArray(d.gratitudes)?d.gratitudes:null); if(arr)n+=arr.filter(x=>String(typeof x==="object"?(x.text||x.value||""):x).trim()).length;
+    }); return n;
+  }
+  function hydrateFromStorage(){
+    try{
+      const current=JSON.parse(localStorage.getItem("recoveryJournalV1")||"null");
+      if(current&&current.days&&gratitudeCount(current.days)>gratitudeCount(db.days)) db.days=current.days;
+      const stores=[localStorage,sessionStorage];
+      for(const store of stores){
+        for(let i=0;i<store.length;i++){
+          const key=store.key(i); if(!key||key==="recoveryJournalV1")continue;
+          let parsed=null; try{parsed=JSON.parse(store.getItem(key)||"")}catch(e){continue}
+          const days=candidateDays(parsed); if(!days)continue;
+          if(gratitudeCount(days)>gratitudeCount(db.days)){
+            Object.entries(days).forEach(([date,val])=>{db.days[date]=Object.assign({},db.days[date]||{},val||{})});
+          }
+        }
+      }
+      // Support older/alternate gratitude field names without changing the journal schema.
+      Object.entries(db.days||{}).forEach(([date,d])=>{
+        if(!d||typeof d!=="object")return;
+        const vals=[d.g1,d.g2,d.g3,d.gratitude1,d.gratitude2,d.gratitude3];
+        const arr=Array.isArray(d.gratitude)?d.gratitude:(Array.isArray(d.gratitudes)?d.gratitudes:null);
+        if(arr) arr.slice(0,3).forEach((x,i)=>{if(!vals[i]&&String(typeof x==="object"?(x.text||x.value||""):x).trim()) db.days[date][`g${i+1}`]=String(typeof x==="object"?(x.text||x.value||""):x).trim()});
+        ["gratitude1","gratitude2","gratitude3"].forEach((k,i)=>{if(!db.days[date][`g${i+1}`]&&String(d[k]||"").trim())db.days[date][`g${i+1}`]=String(d[k]).trim()});
+      });
+    }catch(e){console.warn("Gratitude Pond storage scan",e)}
+  }
+  function allGratitudes(){
+    hydrateFromStorage();
+    const out=[];
+    Object.entries(db.days||{}).forEach(([date,d])=>{
+      const vals=[d?.g1,d?.g2,d?.g3];
+      vals.forEach((text,i)=>{if(String(text||"").trim())out.push({id:`${date}:g${i+1}`,date,text:String(text).trim(),slot:i+1})});
+    });
+    return out.sort((a,b)=>(b.date+a.id).localeCompare(a.date+b.id));
+  }
+  function filtered(){
+    let arr=allGratitudes(); const q=state.query.trim().toLowerCase();
+    if(q)arr=arr.filter(x=>x.text.toLowerCase().includes(q));
+    if(state.shuffle)arr=arr.slice().sort((a,b)=>{const aa=Math.sin((a.id.length*17)+(state.shuffle*31)+a.text.length*7);const bb=Math.sin((b.id.length*17)+(state.shuffle*31)+b.text.length*7);return aa-bb});
+    return arr;
+  }
+  function render(){
+    hydrateFromStorage();
+    const pond=document.getElementById("gpPond"); if(!pond)return;
+    state.items=filtered();
+    const count=document.getElementById("gpCount"); if(count)count.textContent=`${state.items.length} reflection${state.items.length===1?"":"s"}`;
+    if(!state.items.length){
+      pond.innerHTML=`<div class="gp-empty"><div class="gp-empty-inner"><div class="gp-empty-icon">🪷</div><h3>${state.query?"Nothing matches that reflection.":"Your pond is waiting for your words."}</h3><p>${state.query?"Try another word or clear the search.":"Your saved gratitude entries will appear here as stones. There is nothing else to maintain here — just a place to come back and notice what mattered."}</p>${!state.query?'<button id="gpEmptyToday" class="primary" type="button">Write Today’s Gratitude</button>':''}</div></div>`;
+      return;
+    }
+    pond.innerHTML=`<div class="gp-water-glow"></div><div class="gp-water-line w1"></div><div class="gp-water-line w2"></div><div class="gp-water-line w3"></div><div class="gp-bank b1"></div><div class="gp-bank b2"></div><div class="gp-bank b3"></div><div class="gp-bank b4"></div><div class="gp-lily l1"></div><div class="gp-lily l2"></div><div class="gp-lily l3"></div><div class="gp-flower f1">✿</div><div class="gp-flower f2">✿</div><div class="gp-flower f3">✦</div><div class="gp-layout">${state.items.map((x,i)=>{
+      const rot=[-3,2,-1,3,-2,1][i%6], lift=[0,12,5,18,7,14][i%6];
+      const mark=["⌁","♡","✦","◦","⌁","☼"][i%6];
+      const text=esc(x.text.length>85?x.text.slice(0,82)+"…":x.text);
+      return `<button type="button" class="gp-stone" data-gp-index="${i}" style="transform:translateY(${lift}px) rotate(${rot}deg)" aria-label="Open gratitude reflection"><span class="gp-stone-mark">${mark}</span><span class="gp-stone-text">${text}</span><span class="gp-stone-date">${dayLabel(x.date)}</span></button>`;
+    }).join("")}</div>`;
+    pond.querySelectorAll("[data-gp-index]").forEach(b=>b.addEventListener("click",()=>{b.classList.remove("is-rippling");void b.offsetWidth;b.classList.add("is-rippling");openDetail(Number(b.dataset.gpIndex))}));
+  }
+  function openDetail(index){
+    if(!state.items.length)return; state.currentIndex=Math.max(0,Math.min(index,state.items.length-1));
+    const x=state.items[state.currentIndex]; if(!x)return;
+    document.getElementById("gpDetailTitle").textContent=x.text.length>28?x.text.slice(0,28)+"…":"Gratitude";
+    document.getElementById("gpDetailStone").innerHTML=`<div class="big">${esc(x.text)}</div>`;
+    document.getElementById("gpDetailDate").textContent=dayLabel(x.date); document.getElementById("gpDetailText").textContent=x.text;
+    document.getElementById("gpDetailPrev").disabled=state.currentIndex<=0; document.getElementById("gpDetailNext").disabled=state.currentIndex>=state.items.length-1;
+    document.getElementById("gpDetail").classList.remove("hidden");
+  }
+  function closeDetail(){document.getElementById("gpDetail")?.classList.add("hidden")}
+  function openPond(){
+    if(window.closeAffirmationsWall)window.closeAffirmationsWall();
+    document.querySelectorAll('[id$="View"]').forEach(v=>v.classList.add("hidden"));
+    document.getElementById("gratitudePondView")?.classList.remove("hidden");
+    document.body.classList.add("gp-mode");
+    document.getElementById("title").textContent="Gratitude Pond";
+    document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("active"));
+    closeSidebar(); render(); window.scrollTo({top:0,behavior:"auto"});
+  }
+  window.openGratitudePond=openPond; window.renderGratitudePond=render;
+  const gpMenuBtn=document.getElementById("sidebarGratitudePondBtn"); if(gpMenuBtn)gpMenuBtn.onclick=function(e){e.preventDefault();e.stopImmediatePropagation();openPond()};
+  window.closeGratitudePond=function(){document.getElementById("gratitudePondView")?.classList.add("hidden");document.body.classList.remove("gp-mode");closeDetail()};
+  document.addEventListener("click",function(e){
+    if(e.target.closest("#sidebarGratitudePondBtn")){e.preventDefault();e.stopImmediatePropagation();openPond();return}
+    if(e.target.closest("#gpTodayBtn,#gpEmptyToday")){e.preventDefault();window.closeGratitudePond();if(typeof show==="function")show("today",{skipConfirm:true});return}
+    if(e.target.closest("#gpShuffleBtn")){e.preventDefault();state.shuffle++;render();return}
+    if(e.target.closest("#gpDetailClose")){closeDetail();return}
+    if(e.target.closest("#gpDetailPrev")){if(state.currentIndex>0)openDetail(state.currentIndex-1);return}
+    if(e.target.closest("#gpDetailNext")){if(state.currentIndex<state.items.length-1)openDetail(state.currentIndex+1);return}
+    if(e.target.closest("#sidebarAffirmationsWallBtn"))window.closeGratitudePond();
+    const nav=e.target.closest("[data-side-tab], [data-tab], .nav button, #todayBtn, #settingsBtn"); if(nav&&!e.target.closest("#sidebarGratitudePondBtn"))window.closeGratitudePond();
+  },true);
+  document.addEventListener("input",function(e){if(e.target.id==="gpQuery"){state.query=e.target.value;state.shuffle=0;render()}},true);
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")closeDetail()});
+})();
+</script>
+<style>.gp-hide-hero{display:none!important}</style>
+
+
+<div id="timePickerModal" class="time-picker-modal hidden" role="dialog" aria-modal="true" aria-labelledby="timePickerTitle"><div class="time-picker-sheet"><div class="row between" style="align-items:center;gap:10px"><div><h2 id="timePickerTitle">Select Meeting Time</h2><p class="muted" style="margin:5px 0 0">Scroll each wheel or use the arrows.</p></div><button class="secondary" id="timePickerClose" type="button" aria-label="Close time picker">✕</button></div><div class="time-picker-wheels"><div class="time-wheel-column"><button type="button" class="time-wheel-arrow" data-wheel="hour" data-step="-1">▲</button><div class="time-wheel" id="timeWheelHour" data-wheel="hour" tabindex="0" aria-label="Hour"></div><button type="button" class="time-wheel-arrow" data-wheel="hour" data-step="1">▼</button><span class="time-wheel-label">HOUR</span></div><span class="time-wheel-colon">:</span><div class="time-wheel-column"><button type="button" class="time-wheel-arrow" data-wheel="minute" data-step="-1">▲</button><div class="time-wheel" id="timeWheelMinute" data-wheel="minute" tabindex="0" aria-label="Minute"></div><button type="button" class="time-wheel-arrow" data-wheel="minute" data-step="1">▼</button><span class="time-wheel-label">MINUTE</span></div><div class="time-wheel-column time-wheel-period"><button type="button" class="time-wheel-arrow" data-wheel="period" data-step="-1">▲</button><div class="time-wheel" id="timeWheelPeriod" data-wheel="period" tabindex="0" aria-label="AM or PM"></div><button type="button" class="time-wheel-arrow" data-wheel="period" data-step="1">▼</button><span class="time-wheel-label">AM / PM</span></div></div><div class="time-picker-preview" id="timePickerPreview">7:00 PM</div><div class="row time-picker-actions"><button class="secondary" id="timePickerCancel" type="button">Cancel</button><button class="primary" id="timePickerSet" type="button">Set Time</button></div></div></div>
+
+<script id="v509313-time-picker">(function(){const $=id=>document.getElementById(id),modal=$('timePickerModal');if(!modal)return;let target=null,draft={hour:7,minute:0,period:'PM'};function parse(v){const m=String(v||'').trim().match(/^\s*(\d{1,2})(?::(\d{1,2}))?\s*([ap]\.?m\.?)?\s*$/i);if(!m)return null;let h=+m[1],n=+(m[2]||0),p=(m[3]||'PM').replace(/\./g,'').toUpperCase();return h>=1&&h<=12&&n>=0&&n<=59?{hour:h,minute:n,period:p==='AM'?'AM':'PM'}:null}function now(){let d=new Date(),h=d.getHours();return{hour:h%12||12,minute:d.getMinutes(),period:h>=12?'PM':'AM'}}function fmt(){return `${draft.hour}:${String(draft.minute).padStart(2,'0')} ${draft.period}`}function build(id,kind,values){let el=$(id);el.innerHTML=values.map(v=>`<div class="time-wheel-option" data-value="${v}" role="option">${kind==='minute'?String(v).padStart(2,'0'):v}</div>`).join('');el.querySelectorAll('.time-wheel-option').forEach(o=>o.addEventListener('click',()=>{draft[kind]=kind==='period'?o.dataset.value:+o.dataset.value;update()}))}function update(keepScroll=false){[['hour','timeWheelHour',Array.from({length:12},(_,i)=>i+1)],['minute','timeWheelMinute',Array.from({length:60},(_,i)=>i)],['period','timeWheelPeriod',['AM','PM']]].forEach(([k,id,values])=>{let el=$(id);if(!el.dataset.built){build(id,k,values);el.dataset.built='1'}let opts=[...el.querySelectorAll('.time-wheel-option')];opts.forEach(o=>{let yes=k==='period'?o.dataset.value===draft[k]:+o.dataset.value===draft[k];o.classList.toggle('selected',yes);o.setAttribute('aria-selected',String(yes))});let sel=opts.find(o=>k==='period'?o.dataset.value===draft[k]:+o.dataset.value===draft[k]);if(sel&&!keepScroll)el.scrollTop=sel.offsetTop-el.offsetTop-el.clientHeight/2+sel.clientHeight/2});$('timePickerPreview').textContent=fmt()}function open(field){target=field;draft=parse(field.value)||now();$('timePickerTitle').textContent=field.id==='templateTime'?'Select Template Time':'Select Meeting Time';modal.classList.remove('hidden');document.activeElement?.blur?.();update()}function close(){modal.classList.add('hidden');target=null}['mTime','templateTime'].forEach(id=>{let f=$(id);if(f){f.readOnly=true;f.setAttribute('inputmode','none');f.addEventListener('click',()=>open(f));f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(f)}})}});document.querySelectorAll('.time-wheel-arrow').forEach(b=>b.addEventListener('click',()=>{let k=b.dataset.wheel,s=+b.dataset.step;if(k==='hour')draft.hour=(draft.hour-1+s+12)%12+1;else if(k==='minute')draft.minute=(draft.minute+s+60)%60;else draft.period=draft.period==='AM'?'PM':'AM';update()}));[['timeWheelHour','hour'],['timeWheelMinute','minute'],['timeWheelPeriod','period']].forEach(([id,k])=>{let el=$(id),timer;el.addEventListener('scroll',()=>{clearTimeout(timer);timer=setTimeout(()=>{let center=el.getBoundingClientRect().top+el.clientHeight/2,best=null,dist=Infinity;el.querySelectorAll('.time-wheel-option').forEach(o=>{let r=o.getBoundingClientRect(),d=Math.abs(r.top+r.height/2-center);if(d<dist){dist=d;best=o}});if(best){let v=k==='period'?best.dataset.value:+best.dataset.value;if(draft[k]!==v){draft[k]=v;update(true)}}},100)},{passive:true});el.addEventListener('keydown',e=>{if(e.key==='ArrowUp'||e.key==='ArrowDown'){e.preventDefault();let s=e.key==='ArrowUp'?-1:1;if(k==='hour')draft.hour=(draft.hour-1+s+12)%12+1;else if(k==='minute')draft.minute=(draft.minute+s+60)%60;else draft.period=draft.period==='AM'?'PM':'AM';update()}})});$('timePickerSet').onclick=()=>{if(target)target.value=fmt();close()};$('timePickerCancel').onclick=close;$('timePickerClose').onclick=close;modal.addEventListener('click',e=>{if(e.target===modal)close()});document.addEventListener('keydown',e=>{if(!modal.classList.contains('hidden')&&e.key==='Escape')close()});})();</script>
 </body></html>
